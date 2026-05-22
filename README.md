@@ -1,4 +1,4 @@
-# sbz
+# szb
 
 Losovač okruhů ke státnicím. Otevři `index.html` v prohlížeči (funguje i na mobilu)
 a klepni na tlačítko – vylosuje se náhodný okruh.
