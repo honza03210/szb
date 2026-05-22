@@ -169,6 +169,21 @@
     font-size: 0.82rem;
     margin: 16px 0 0;
   }
+  .actions {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .actions .toggle {
+    font-size: 0.78rem;
+  }
+  .sub-extra {
+    margin: 0;
+    padding: 0 13px 13px;
+    color: var(--ink);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--line);
+  }
+  .sub-extra strong { color: var(--accent-2); }
 
   .bar {
     position: fixed;
@@ -212,6 +227,9 @@
   </main>
 
   <p class="progress" id="progress"></p>
+  <div class="actions">
+    <button class="toggle" id="resetProgress">Resetovat dokončení</button>
+  </div>
 </div>
 
 <div class="bar">
@@ -655,6 +673,9 @@ const CATEGORIES = [...new Set(TOPICS.map(t => t.cat))];
 let activeFilter = "Vše";
 let bag = [];
 let lastIndex = -1;
+const COMPLETED_COOKIE = "completedTitles";
+const COOKIE_DAYS = 365;
+let completedTitles = loadCompletedTitles();
 
 document.getElementById("count").textContent = String(TOPICS.length);
 
@@ -698,12 +719,14 @@ function pick() {
   const idx = bag.pop();
   lastIndex = idx;
   render(TOPICS[idx]);
+  markTitleCompleted(TOPICS[idx].title);
 
   const total = pool().length;
   const done = total - bag.length;
   document.getElementById("progress").textContent =
     "Téma " + done + " z " + total + " v tomto kole" +
-    (bag.length === 0 ? " · kolo se zamíchá" : "");
+    (bag.length === 0 ? " · kolo se zamíchá" : "") +
+    " · dokončeno titulů: " + completedTitles.size + " z " + TOPICS.length;
 }
 
 function el(tag, cls, text) {
@@ -741,6 +764,12 @@ function render(topic) {
     d.open = true;
     d.appendChild(el("summary", null, s.t));
     d.appendChild(el("p", "sub-def", s.d));
+    const practical = el("p", "sub-extra");
+    practical.innerHTML = "<strong>Praktický příklad:</strong> " + practicalExample(topic.title, s.t);
+    d.appendChild(practical);
+    const ex = el("p", "sub-extra");
+    ex.innerHTML = "<strong>Cvičení:</strong> " + practicalExercise(topic.title, s.t);
+    d.appendChild(ex);
     card.appendChild(d);
     subs.push(d);
   });
@@ -761,8 +790,84 @@ function render(topic) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function practicalExample(title, subtopic) {
+  const s = (title + " " + subtopic).toLowerCase();
+  if (s.includes("gauss") || s.includes("soustav")) return "Správce skladu má 3 neznámé (ks A, B, C) a 3 rovnice z inventury. Převodem na rozšířenou matici a Gaussovou eliminací dopočítá přesné stavy položek.";
+  if (s.includes("determin")) return "Ve 2D grafice testuješ, zda je transformace objektu invertibilní: když det(A)=0, objekt se zploští na přímku a nejde vrátit zpět.";
+  if (s.includes("vlastní čís") || s.includes("pca")) return "U dat zákazníků použij PCA: vlastní vektory kovarianční matice dají hlavní směry variability a umožní zmenšit počet dimenzí.";
+  if (s.includes("sql") || s.includes("transak")) return "V e-shopu běží převod stavu zásob a vytvoření objednávky v jedné transakci, aby při chybě nedošlo k odečtení zásob bez objednávky.";
+  if (s.includes("graf") || s.includes("dijkstra") || s.includes("bfs") || s.includes("dfs")) return "Kurýrní aplikace modeluje město grafem. BFS hledá minimum přestupů, Dijkstra minimum času cesty podle vah hran.";
+  if (s.includes("strom") || s.includes("hald")) return "Scheduler CI/CD ukládá joby do priority queue (halda), aby kritické buildy běžely dřív než nízkoprioritní úlohy.";
+  if (s.includes("statistik") || s.includes("pravděpodob")) return "Marketing vyhodnocuje A/B test newsletteru: porovnává míru prokliku, interval spolehlivosti a statistickou významnost rozdílu.";
+  if (s.includes("síť") || s.includes("tcp") || s.includes("udp") || s.includes("dns")) return "VoIP služba volí UDP kvůli latenci, zatímco přenos souborů používá TCP kvůli spolehlivému doručení a retransmisím.";
+  if (s.includes("bezpeč") || s.includes("šifrov") || s.includes("autent")) return "Firemní API používá OAuth2 + krátkodobé tokeny, TLS a audit logy; incident response pak dohledá, kdo a kdy přistupoval k citlivým datům.";
+  if (s.includes("lineární algebra") || s.includes("matice") || s.includes("vektor")) return "Ve hře reprezentuješ objekt vektorem [x,y,1]ᵀ a maticemi skládáš posun, rotaci i škálování v jednom pipeline.";
+  return "Vyber vlastní projekt (škola/práce) a popiš, kde tento pojem konkrétně ovlivní volbu datové struktury, algoritmu nebo architektury.";
+}
+
+function practicalExercise(title, subtopic) {
+  const s = (title + " " + subtopic).toLowerCase();
+  if (s.includes("gauss") || s.includes("soustav")) return "Zadání: vyřeš soustavu x+y+z=6, 2x−y+3z=14, −x+4y+z=2. Postup: napiš rozšířenou matici, proveď eliminaci, zpětnou substituci. Kontrola: dosaď výsledek do všech 3 rovnic.";
+  if (s.includes("determin")) return "Zadání: spočti determinant matic A=[[2,1,0],[1,3,2],[0,4,1]] a B=[[1,2,3],[2,4,6],[1,0,1]]. Vyhodnoť, která je invertibilní a proč.";
+  if (s.includes("vlastní čís") || s.includes("vektor")) return "Zadání: pro matici [[4,1],[2,3]] najdi vlastní čísla i vlastní vektory. Kontrola: ověř rovnost A·v=λ·v pro každý nalezený pár.";
+  if (s.includes("transak")) return "Zadání: napiš SQL skript s BEGIN; UPDATE účet A −500; UPDATE účet B +500; COMMIT;. Přidej variantu s chybou a ROLLBACK. Ověř konečné zůstatky.";
+  if (s.includes("sql") || s.includes("dotaz")) return "Zadání: nad tabulkami orders, order_items, products vytvoř report TOP 5 kategorií podle tržeb (JOIN+GROUP BY+HAVING). Přidej parametr období od–do.";
+  if (s.includes("dijkstra") || s.includes("graf")) return "Zadání: nakresli vážený graf s 8 vrcholy, spusť Dijkstru ze startu A, zapiš vzdálenosti a předchůdce. Kontrola: rekonstruuj nejkratší cestu do každého vrcholu.";
+  if (s.includes("strom") || s.includes("hald")) return "Zadání: vlož do max-heap hodnoty [7,3,12,1,9,15], proveď dvě operace extract-max a ukaž stav pole haldy po každém kroku.";
+  if (s.includes("statistik")) return "Zadání: pro data [12,14,14,15,18,21,21,30] spočti průměr, medián, modus, rozptyl, směrodatnou odchylku. Interpretuj, zda je dataset ovlivněn outlierem.";
+  if (s.includes("pravděpodob") || s.includes("kombinator")) return "Zadání: (1) kolika způsoby vybereš 3 členy týmu z 10 lidí, (2) jaká je pravděpodobnost aspoň jedné šestky při 4 hodech kostkou.";
+  if (s.includes("síť") || s.includes("tcp") || s.includes("udp")) return "Zadání: změř ping a packet loss mezi dvěma hosty (50 paketů), porovnej TCP vs UDP přenos 10 MB. Napiš doporučení pro chat, stream a upload souboru.";
+  if (s.includes("bezpeč") || s.includes("šifrov") || s.includes("autent")) return "Zadání: navrhni threat model pro školní web (aktiva, hrozby, dopady), navrhni 5 protiopatření (MFA, TLS, rate limit, hash hesel, audit).";
+  if (s.includes("deriv") || s.includes("integr")) return "Zadání: spočti f'(x) pro f(x)=x^3−4x+1 a určitý integrál ∫_0^2 (x^2+1)dx. Ověř výsledek numericky (např. trapezoidní metodou).";
+  return "Zadání: napiš 2–3 věty definice pojmu, 1 praktický scénář a mini-ověření (co změříš nebo zkontroluješ). Přidej konkrétní vstup a očekávaný výstup.";
+}
+
+function getCookie(name) {
+  const parts = document.cookie.split(";").map(v => v.trim());
+  const prefix = name + "=";
+  const found = parts.find(p => p.startsWith(prefix));
+  return found ? decodeURIComponent(found.slice(prefix.length)) : "";
+}
+
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days * 86400000).toUTCString();
+  document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + expires + "; path=/; SameSite=Lax";
+}
+
+function loadCompletedTitles() {
+  try {
+    const raw = getCookie(COMPLETED_COOKIE);
+    if (!raw) return new Set();
+    const arr = JSON.parse(raw);
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveCompletedTitles() {
+  setCookie(COMPLETED_COOKIE, JSON.stringify([...completedTitles]), COOKIE_DAYS);
+}
+
+function resetCompletion(silent = false) {
+  completedTitles.clear();
+  saveCompletedTitles();
+  if (!silent) alert("Dokončení titulů bylo resetováno.");
+}
+
+function markTitleCompleted(title) {
+  completedTitles.add(title);
+  if (completedTitles.size >= TOPICS.length) {
+    alert("Skvělé! Máš dokončené všechny tituly. Dokončení se nyní resetuje.");
+    resetCompletion(true);
+    return;
+  }
+  saveCompletedTitles();
+}
+
 const pickBtn = document.getElementById("pick");
 pickBtn.addEventListener("click", pick);
+document.getElementById("resetProgress").addEventListener("click", () => resetCompletion());
 document.addEventListener("keydown", e => {
   if (e.target.tagName === "SUMMARY") return;
   if (e.code === "Space" || e.code === "Enter") {
