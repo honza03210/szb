@@ -908,294 +908,294 @@ window.STUDY_DATASETS.push({
     },
     "Softwarové a informační systémy": {
       "Vývoj a provoz softwarových systémů": {
-        "ex": "Examinátor může zadat případ: organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Zaměř se na „Vývoj a provoz softwarových systémů“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Konkrétně zapoj pojem „Vývoj a provoz softwarových systémů“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Zakonči jedním rizikem nebo limitem."
       },
       "Použití UML při vývoji software": {
-        "ex": "Examinátor může zadat případ: organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Zaměř se na „Použití UML při vývoji software“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Konkrétně zapoj pojem „Použití UML při vývoji software“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Zakonči jedním rizikem nebo limitem."
       },
       "Aplikované informační systémy": {
-        "ex": "Examinátor může zadat případ: organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Zaměř se na „Aplikované informační systémy“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Konkrétně zapoj pojem „Aplikované informační systémy“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Zakonči jedním rizikem nebo limitem."
       },
       "Architektury rozsáhlých informačních systémů": {
-        "ex": "Examinátor může zadat případ: organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Zaměř se na „Architektury rozsáhlých informačních systémů“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Konkrétně zapoj pojem „Architektury rozsáhlých informačních systémů“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Zakonči jedním rizikem nebo limitem."
       },
       "Metody vedení rozsáhlých projektů": {
-        "ex": "Examinátor může zadat případ: organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Zaměř se na „Metody vedení rozsáhlých projektů“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Konkrétně zapoj pojem „Metody vedení rozsáhlých projektů“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Zakonči jedním rizikem nebo limitem."
       },
       "Řízení provozu IS": {
-        "ex": "Examinátor může zadat případ: organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Zaměř se na „Řízení provozu IS“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Konkrétně zapoj pojem „Řízení provozu IS“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace pořizuje nový klientský portál a musí obhájit, jak požadavky, návrh, testování, nasazení a provoz ovlivní bezpečnost i použitelnost. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Navrhni odpověď jako u státnice: zařaď pojem do životního cyklu IS, ukaž konkrétní rozhodnutí v projektu nebo provozu a zmiň dopad na bezpečnost. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Organizace a řízení kyberbezpečnosti": {
       "Důvěrnost, integrita, dostupnost a nepopiratelnost": {
-        "ex": "Examinátor může zadat případ: po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Zaměř se na „Důvěrnost, integrita, dostupnost a nepopiratelnost“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Konkrétně zapoj pojem „Důvěrnost, integrita, dostupnost a nepopiratelnost“ a zakonči jedním rizikem nebo limitem."
+        "ex": "po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Zakonči jedním rizikem nebo limitem."
       },
       "Bezpečnostní politiky a procedury": {
-        "ex": "Examinátor může zadat případ: po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Zaměř se na „Bezpečnostní politiky a procedury“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Konkrétně zapoj pojem „Bezpečnostní politiky a procedury“ a zakonči jedním rizikem nebo limitem."
+        "ex": "po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Zakonči jedním rizikem nebo limitem."
       },
       "Struktura řízení kyberbezpečnosti": {
-        "ex": "Examinátor může zadat případ: po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Zaměř se na „Struktura řízení kyberbezpečnosti“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Konkrétně zapoj pojem „Struktura řízení kyberbezpečnosti“ a zakonči jedním rizikem nebo limitem."
+        "ex": "po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Zakonči jedním rizikem nebo limitem."
       },
       "Role, odpovědnosti a kompetence": {
-        "ex": "Examinátor může zadat případ: po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Zaměř se na „Role, odpovědnosti a kompetence“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Konkrétně zapoj pojem „Role, odpovědnosti a kompetence“ a zakonči jedním rizikem nebo limitem."
+        "ex": "po větším incidentu vedení zjišťuje, kdo měl rozhodovat, kdo měl mít informace a které politiky byly skutečně vymahatelné. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Připrav odpověď pro zkoušejícího: vysvětli pojem, ukaž odpovědnosti rolí a přidej praktický následek špatného řízení. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Metody autentizace a řízení přístupu": {
       "Metody autentizace": {
-        "ex": "Examinátor může zadat případ: kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Zaměř se na „Metody autentizace“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Konkrétně zapoj pojem „Metody autentizace“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Zakonči jedním rizikem nebo limitem."
       },
       "Řízení přístupu": {
-        "ex": "Examinátor může zadat případ: kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Zaměř se na „Řízení přístupu“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Konkrétně zapoj pojem „Řízení přístupu“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Zakonči jedním rizikem nebo limitem."
       },
       "Biometrické metody autentizace": {
-        "ex": "Examinátor může zadat případ: kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Zaměř se na „Biometrické metody autentizace“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Konkrétně zapoj pojem „Biometrické metody autentizace“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Zakonči jedním rizikem nebo limitem."
       },
       "Elektronický podpis a jeho použití": {
-        "ex": "Examinátor může zadat případ: kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Zaměř se na „Elektronický podpis a jeho použití“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Konkrétně zapoj pojem „Elektronický podpis a jeho použití“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Zakonči jedním rizikem nebo limitem."
       },
       "Autentizace strojů a aplikací": {
-        "ex": "Examinátor může zadat případ: kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Zaměř se na „Autentizace strojů a aplikací“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Konkrétně zapoj pojem „Autentizace strojů a aplikací“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kritický systém má umožnit přístup zaměstnancům, dodavatelům a administrátorům, ale omezit dopad kompromitovaného účtu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem na konkrétním přístupovém scénáři, porovnej vhodné mechanismy a upozorni na typickou slabinu. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Analýza a řízení rizik": {
       "Asset management": {
-        "ex": "Examinátor může zadat případ: nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Zaměř se na „Asset management“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Konkrétně zapoj pojem „Asset management“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Zakonči jedním rizikem nebo limitem."
       },
       "Analýza rizik": {
-        "ex": "Examinátor může zadat případ: nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Zaměř se na „Analýza rizik“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Konkrétně zapoj pojem „Analýza rizik“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Zakonči jedním rizikem nebo limitem."
       },
       "Opatření proti rizikům a jejich účinnost": {
-        "ex": "Examinátor může zadat případ: nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Zaměř se na „Opatření proti rizikům a jejich účinnost“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Konkrétně zapoj pojem „Opatření proti rizikům a jejich účinnost“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Zakonči jedním rizikem nebo limitem."
       },
       "Řízení identity a přístupu, ACL a privilegovaní uživatelé": {
-        "ex": "Examinátor může zadat případ: nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Zaměř se na „Řízení identity a přístupu, ACL a privilegovaní uživatelé“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Konkrétně zapoj pojem „Řízení identity a přístupu, ACL a privilegovaní uživatelé“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Zakonči jedním rizikem nebo limitem."
       },
       "Audit, standardy a hodnocení bezpečnosti": {
-        "ex": "Examinátor může zadat případ: nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Zaměř se na „Audit, standardy a hodnocení bezpečnosti“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Konkrétně zapoj pojem „Audit, standardy a hodnocení bezpečnosti“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nemocnice hodnotí riziko výpadku informačního systému, úniku dat a ransomware útoku před investicí do nových opatření. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Proveď krátkou rizikovou úvahu: aktivum, hrozba, zranitelnost, dopad, opatření a zbytkové riziko. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Bezpečnostní architektura": {
       "Bezpečnost sítí, izolace a segmentace": {
-        "ex": "Examinátor může zadat případ: firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Zaměř se na „Bezpečnost sítí, izolace a segmentace“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Konkrétně zapoj pojem „Bezpečnost sítí, izolace a segmentace“ a zakonči jedním rizikem nebo limitem."
+        "ex": "firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Zakonči jedním rizikem nebo limitem."
       },
       "Firewally": {
-        "ex": "Examinátor může zadat případ: firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Zaměř se na „Firewally“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Konkrétně zapoj pojem „Firewally“ a zakonči jedním rizikem nebo limitem."
+        "ex": "firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Zakonči jedním rizikem nebo limitem."
       },
       "Monitoring, detekce a logování": {
-        "ex": "Examinátor může zadat případ: firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Zaměř se na „Monitoring, detekce a logování“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Konkrétně zapoj pojem „Monitoring, detekce a logování“ a zakonči jedním rizikem nebo limitem."
+        "ex": "firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Zakonči jedním rizikem nebo limitem."
       },
       "Bezpečnost operačních systémů": {
-        "ex": "Examinátor může zadat případ: firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Zaměř se na „Bezpečnost operačních systémů“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Konkrétně zapoj pojem „Bezpečnost operačních systémů“ a zakonči jedním rizikem nebo limitem."
+        "ex": "firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Zakonči jedním rizikem nebo limitem."
       },
       "Bezpečnost dat": {
-        "ex": "Examinátor může zadat případ: firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Zaměř se na „Bezpečnost dat“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Konkrétně zapoj pojem „Bezpečnost dat“ a zakonči jedním rizikem nebo limitem."
+        "ex": "firma odděluje veřejné služby, interní systémy, databáze, správu a zálohy tak, aby chyba v jedné části neohrozila vše. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš architektonické rozhodnutí, které by zkoušející čekal: bezpečnostní hranice, kontrolu, detekci a provozní omezení. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Kyberbezpečnost v organizaci": {
       "Událost, incident, útok, zranitelnost a slabina": {
-        "ex": "Examinátor může zadat případ: SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Zaměř se na „Událost, incident, útok, zranitelnost a slabina“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Konkrétně zapoj pojem „Událost, incident, útok, zranitelnost a slabina“ a zakonči jedním rizikem nebo limitem."
+        "ex": "SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Zakonči jedním rizikem nebo limitem."
       },
       "Role a činnosti bezpečnostního týmu": {
-        "ex": "Examinátor může zadat případ: SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Zaměř se na „Role a činnosti bezpečnostního týmu“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Konkrétně zapoj pojem „Role a činnosti bezpečnostního týmu“ a zakonči jedním rizikem nebo limitem."
+        "ex": "SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Zakonči jedním rizikem nebo limitem."
       },
       "Řešení kyberbezpečnostního incidentu": {
-        "ex": "Examinátor může zadat případ: SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Zaměř se na „Řešení kyberbezpečnostního incidentu“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Konkrétně zapoj pojem „Řešení kyberbezpečnostního incidentu“ a zakonči jedním rizikem nebo limitem."
+        "ex": "SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Zakonči jedním rizikem nebo limitem."
       },
       "Bezpečnostní varování a příklady z praxe": {
-        "ex": "Examinátor může zadat případ: SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Zaměř se na „Bezpečnostní varování a příklady z praxe“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Konkrétně zapoj pojem „Bezpečnostní varování a příklady z praxe“ a zakonči jedním rizikem nebo limitem."
+        "ex": "SOC řeší podezřelé přihlášení, možné zneužití účtu a komunikaci s vlastníkem služby. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Odpověz postupově: co se stalo, kdo rozhoduje, jaké důkazy nebo logy potřebuješ a jaký je další krok. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Kyberútoky": {
       "Životní cyklus kyberútoku": {
-        "ex": "Examinátor může zadat případ: útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Zaměř se na „Životní cyklus kyberútoku“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Konkrétně zapoj pojem „Životní cyklus kyberútoku“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Zakonči jedním rizikem nebo limitem."
       },
       "Advanced Persistent Threat": {
-        "ex": "Examinátor může zadat případ: útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Zaměř se na „Advanced Persistent Threat“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Konkrétně zapoj pojem „Advanced Persistent Threat“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Zakonči jedním rizikem nebo limitem."
       },
       "MITRE ATT&CK taktiky, techniky a procedury": {
-        "ex": "Examinátor může zadat případ: útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Zaměř se na „MITRE ATT&CK taktiky, techniky a procedury“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Konkrétně zapoj pojem „MITRE ATT&CK taktiky, techniky a procedury“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Zakonči jedním rizikem nebo limitem."
       },
       "Průzkum, počáteční přístup a zneužití zranitelnosti": {
-        "ex": "Examinátor může zadat případ: útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Zaměř se na „Průzkum, počáteční přístup a zneužití zranitelnosti“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Konkrétně zapoj pojem „Průzkum, počáteční přístup a zneužití zranitelnosti“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Zakonči jedním rizikem nebo limitem."
       },
       "Spuštění kódu, upevnění přístupu a cílové akce": {
-        "ex": "Examinátor může zadat případ: útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Zaměř se na „Spuštění kódu, upevnění přístupu a cílové akce“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Konkrétně zapoj pojem „Spuštění kódu, upevnění přístupu a cílové akce“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Zakonči jedním rizikem nebo limitem."
       },
       "Obrana na úrovni hostitele a sítě": {
-        "ex": "Examinátor může zadat případ: útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Zaměř se na „Obrana na úrovni hostitele a sítě“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Konkrétně zapoj pojem „Obrana na úrovni hostitele a sítě“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok začal phishingem, pokračoval spuštěním skriptu, laterálním pohybem a pokusem o exfiltraci dat. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Zařaď pojem do fáze útoku, uveď konkrétní techniku útočníka a navrhni prevenci nebo detekci. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Vymezení bezpečnostních studií": {
       "Pojmy bezpečnost, hrozba a riziko": {
-        "ex": "Examinátor může zadat případ: výpadek digitální veřejné služby má technické, společenské, ekonomické i politické dopady. Zaměř se na „Pojmy bezpečnost, hrozba a riziko“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem mimo čisté IT: ukaž chráněné hodnoty, aktéry, dopady a politické nebo společenské souvislosti. Konkrétně zapoj pojem „Pojmy bezpečnost, hrozba a riziko“ a zakonči jedním rizikem nebo limitem."
+        "ex": "výpadek digitální veřejné služby má technické, společenské, ekonomické i politické dopady. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem mimo čisté IT: ukaž chráněné hodnoty, aktéry, dopady a politické nebo společenské souvislosti. Zakonči jedním rizikem nebo limitem."
       },
       "Vnitřní a vnější bezpečnost a sektory": {
-        "ex": "Examinátor může zadat případ: výpadek digitální veřejné služby má technické, společenské, ekonomické i politické dopady. Zaměř se na „Vnitřní a vnější bezpečnost a sektory“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem mimo čisté IT: ukaž chráněné hodnoty, aktéry, dopady a politické nebo společenské souvislosti. Konkrétně zapoj pojem „Vnitřní a vnější bezpečnost a sektory“ a zakonči jedním rizikem nebo limitem."
+        "ex": "výpadek digitální veřejné služby má technické, společenské, ekonomické i politické dopady. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem mimo čisté IT: ukaž chráněné hodnoty, aktéry, dopady a politické nebo společenské souvislosti. Zakonči jedním rizikem nebo limitem."
       },
       "Bezpečnostní politika a její analýza": {
-        "ex": "Examinátor může zadat případ: výpadek digitální veřejné služby má technické, společenské, ekonomické i politické dopady. Zaměř se na „Bezpečnostní politika a její analýza“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli pojem mimo čisté IT: ukaž chráněné hodnoty, aktéry, dopady a politické nebo společenské souvislosti. Konkrétně zapoj pojem „Bezpečnostní politika a její analýza“ a zakonči jedním rizikem nebo limitem."
+        "ex": "výpadek digitální veřejné služby má technické, společenské, ekonomické i politické dopady. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli pojem mimo čisté IT: ukaž chráněné hodnoty, aktéry, dopady a politické nebo společenské souvislosti. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Bezpečnostní strategie": {
       "Strategické dokumenty České republiky": {
-        "ex": "Examinátor může zadat případ: stát stanovuje priority kyberbezpečnosti a potřebuje propojit strategické cíle s institucemi, zdroji a měřitelnými kroky. Zaměř se na „Strategické dokumenty České republiky“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Propoj strategickou úroveň s praxí: cíl, instituce, nástroje, odpovědnost, zdroje a měření výsledků. Konkrétně zapoj pojem „Strategické dokumenty České republiky“ a zakonči jedním rizikem nebo limitem."
+        "ex": "stát stanovuje priority kyberbezpečnosti a potřebuje propojit strategické cíle s institucemi, zdroji a měřitelnými kroky. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Propoj strategickou úroveň s praxí: cíl, instituce, nástroje, odpovědnost, zdroje a měření výsledků. Zakonči jedním rizikem nebo limitem."
       },
       "Význam kyberbezpečnosti ve strategiích": {
-        "ex": "Examinátor může zadat případ: stát stanovuje priority kyberbezpečnosti a potřebuje propojit strategické cíle s institucemi, zdroji a měřitelnými kroky. Zaměř se na „Význam kyberbezpečnosti ve strategiích“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Propoj strategickou úroveň s praxí: cíl, instituce, nástroje, odpovědnost, zdroje a měření výsledků. Konkrétně zapoj pojem „Význam kyberbezpečnosti ve strategiích“ a zakonči jedním rizikem nebo limitem."
+        "ex": "stát stanovuje priority kyberbezpečnosti a potřebuje propojit strategické cíle s institucemi, zdroji a měřitelnými kroky. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Propoj strategickou úroveň s praxí: cíl, instituce, nástroje, odpovědnost, zdroje a měření výsledků. Zakonči jedním rizikem nebo limitem."
       },
       "Bezpečnostní systém ČR a role institucí": {
-        "ex": "Examinátor může zadat případ: stát stanovuje priority kyberbezpečnosti a potřebuje propojit strategické cíle s institucemi, zdroji a měřitelnými kroky. Zaměř se na „Bezpečnostní systém ČR a role institucí“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Propoj strategickou úroveň s praxí: cíl, instituce, nástroje, odpovědnost, zdroje a měření výsledků. Konkrétně zapoj pojem „Bezpečnostní systém ČR a role institucí“ a zakonči jedním rizikem nebo limitem."
+        "ex": "stát stanovuje priority kyberbezpečnosti a potřebuje propojit strategické cíle s institucemi, zdroji a měřitelnými kroky. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Propoj strategickou úroveň s praxí: cíl, instituce, nástroje, odpovědnost, zdroje a měření výsledků. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Kyberválka": {
       "Definice, historie a současné trendy": {
-        "ex": "Examinátor může zadat případ: kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Zaměř se na „Definice, historie a současné trendy“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Konkrétně zapoj pojem „Definice, historie a současné trendy“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Zakonči jedním rizikem nebo limitem."
       },
       "Aktéři a přisouzení kyberútoků": {
-        "ex": "Examinátor může zadat případ: kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Zaměř se na „Aktéři a přisouzení kyberútoků“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Konkrétně zapoj pojem „Aktéři a přisouzení kyberútoků“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Zakonči jedním rizikem nebo limitem."
       },
       "Odstrašení v kyberprostoru": {
-        "ex": "Examinátor může zadat případ: kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Zaměř se na „Odstrašení v kyberprostoru“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Konkrétně zapoj pojem „Odstrašení v kyberprostoru“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Zakonči jedním rizikem nebo limitem."
       },
       "Netwars a kyberkonflikt": {
-        "ex": "Examinátor může zadat případ: kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Zaměř se na „Netwars a kyberkonflikt“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Konkrétně zapoj pojem „Netwars a kyberkonflikt“ a zakonči jedním rizikem nebo limitem."
+        "ex": "kyberoperace vedená v mezinárodním konfliktu kombinuje technický útok, špionáž, informační působení a problém přisouzení. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Rozliš technickou, politickou a právní rovinu a ukaž, proč je v kyberprostoru obtížné určit hranice konfliktu. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Ochrana kritické infrastruktury": {
       "Vymezení kritické infrastruktury": {
-        "ex": "Examinátor může zadat případ: útok na energetiku nebo zdravotnictví může narušit nejen IT, ale i fyzickou službu a důvěru veřejnosti. Zaměř se na „Vymezení kritické infrastruktury“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Začni dopadem na službu, popiš závislosti a navrhni opatření pro odolnost a obnovu. Konkrétně zapoj pojem „Vymezení kritické infrastruktury“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok na energetiku nebo zdravotnictví může narušit nejen IT, ale i fyzickou službu a důvěru veřejnosti. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Začni dopadem na službu, popiš závislosti a navrhni opatření pro odolnost a obnovu. Zakonči jedním rizikem nebo limitem."
       },
       "Kyberútoky na kritickou infrastrukturu": {
-        "ex": "Examinátor může zadat případ: útok na energetiku nebo zdravotnictví může narušit nejen IT, ale i fyzickou službu a důvěru veřejnosti. Zaměř se na „Kyberútoky na kritickou infrastrukturu“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Začni dopadem na službu, popiš závislosti a navrhni opatření pro odolnost a obnovu. Konkrétně zapoj pojem „Kyberútoky na kritickou infrastrukturu“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok na energetiku nebo zdravotnictví může narušit nejen IT, ale i fyzickou službu a důvěru veřejnosti. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Začni dopadem na službu, popiš závislosti a navrhni opatření pro odolnost a obnovu. Zakonči jedním rizikem nebo limitem."
       },
       "Přisouzení a odstrašování": {
-        "ex": "Examinátor může zadat případ: útok na energetiku nebo zdravotnictví může narušit nejen IT, ale i fyzickou službu a důvěru veřejnosti. Zaměř se na „Přisouzení a odstrašování“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Začni dopadem na službu, popiš závislosti a navrhni opatření pro odolnost a obnovu. Konkrétně zapoj pojem „Přisouzení a odstrašování“ a zakonči jedním rizikem nebo limitem."
+        "ex": "útok na energetiku nebo zdravotnictví může narušit nejen IT, ale i fyzickou službu a důvěru veřejnosti. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Začni dopadem na službu, popiš závislosti a navrhni opatření pro odolnost a obnovu. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Právní úprava kyberbezpečnosti v ČR a EU": {
       "Základní instituty a principy": {
-        "ex": "Examinátor může zadat případ: provozovatel důležité služby posuzuje své povinnosti, řízení rizik, hlášení incidentů a roli orgánu dohledu. Zaměř se na „Základní instituty a principy“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli právní institut prakticky: kdo má povinnost, co musí doložit, komu hlásí a jak se posuzuje přiměřenost. Konkrétně zapoj pojem „Základní instituty a principy“ a zakonči jedním rizikem nebo limitem."
+        "ex": "provozovatel důležité služby posuzuje své povinnosti, řízení rizik, hlášení incidentů a roli orgánu dohledu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli právní institut prakticky: kdo má povinnost, co musí doložit, komu hlásí a jak se posuzuje přiměřenost. Zakonči jedním rizikem nebo limitem."
       },
       "Povinné orgány a subjekty": {
-        "ex": "Examinátor může zadat případ: provozovatel důležité služby posuzuje své povinnosti, řízení rizik, hlášení incidentů a roli orgánu dohledu. Zaměř se na „Povinné orgány a subjekty“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli právní institut prakticky: kdo má povinnost, co musí doložit, komu hlásí a jak se posuzuje přiměřenost. Konkrétně zapoj pojem „Povinné orgány a subjekty“ a zakonči jedním rizikem nebo limitem."
+        "ex": "provozovatel důležité služby posuzuje své povinnosti, řízení rizik, hlášení incidentů a roli orgánu dohledu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli právní institut prakticky: kdo má povinnost, co musí doložit, komu hlásí a jak se posuzuje přiměřenost. Zakonči jedním rizikem nebo limitem."
       },
       "Systém zajištění kybernetické bezpečnosti": {
-        "ex": "Examinátor může zadat případ: provozovatel důležité služby posuzuje své povinnosti, řízení rizik, hlášení incidentů a roli orgánu dohledu. Zaměř se na „Systém zajištění kybernetické bezpečnosti“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli právní institut prakticky: kdo má povinnost, co musí doložit, komu hlásí a jak se posuzuje přiměřenost. Konkrétně zapoj pojem „Systém zajištění kybernetické bezpečnosti“ a zakonči jedním rizikem nebo limitem."
+        "ex": "provozovatel důležité služby posuzuje své povinnosti, řízení rizik, hlášení incidentů a roli orgánu dohledu. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli právní institut prakticky: kdo má povinnost, co musí doložit, komu hlásí a jak se posuzuje přiměřenost. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Kyberkriminalita": {
       "Prameny práva": {
-        "ex": "Examinátor může zadat případ: organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Zaměř se na „Prameny práva“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Konkrétně zapoj pojem „Prameny práva“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Zakonči jedním rizikem nebo limitem."
       },
       "Typická trestná činnost": {
-        "ex": "Examinátor může zadat případ: organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Zaměř se na „Typická trestná činnost“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Konkrétně zapoj pojem „Typická trestná činnost“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Zakonči jedním rizikem nebo limitem."
       },
       "Klasifikace, právní kvalifikace a postupy": {
-        "ex": "Examinátor může zadat případ: organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Zaměř se na „Klasifikace, právní kvalifikace a postupy“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Konkrétně zapoj pojem „Klasifikace, právní kvalifikace a postupy“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Zakonči jedním rizikem nebo limitem."
       },
       "Mezinárodní spolupráce": {
-        "ex": "Examinátor může zadat případ: organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Zaměř se na „Mezinárodní spolupráce“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Konkrétně zapoj pojem „Mezinárodní spolupráce“ a zakonči jedním rizikem nebo limitem."
+        "ex": "organizace zjistí kompromitaci účtu, únik dat a podezření na vydírání, přičemž část infrastruktury je v zahraničí. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Spoj technický incident s právním postupem: možné jednání pachatele, důkazy, kvalifikace a přeshraniční spolupráce. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Elektronické důkazy a jejich zajišťování": {
       "Procesní instituty a praktické využití": {
-        "ex": "Examinátor může zadat případ: po incidentu je nutné zajistit notebook, logy a e-mailovou komunikaci tak, aby důkaz nebyl zpochybněn. Zaměř se na „Procesní instituty a praktické využití“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš forenzně čistý postup: zajištění, hash, dokumentace, práce na kopii a řetězec opatrování. Konkrétně zapoj pojem „Procesní instituty a praktické využití“ a zakonči jedním rizikem nebo limitem."
+        "ex": "po incidentu je nutné zajistit notebook, logy a e-mailovou komunikaci tak, aby důkaz nebyl zpochybněn. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš forenzně čistý postup: zajištění, hash, dokumentace, práce na kopii a řetězec opatrování. Zakonči jedním rizikem nebo limitem."
       },
       "Nakládání s elektronickými důkazy": {
-        "ex": "Examinátor může zadat případ: po incidentu je nutné zajistit notebook, logy a e-mailovou komunikaci tak, aby důkaz nebyl zpochybněn. Zaměř se na „Nakládání s elektronickými důkazy“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš forenzně čistý postup: zajištění, hash, dokumentace, práce na kopii a řetězec opatrování. Konkrétně zapoj pojem „Nakládání s elektronickými důkazy“ a zakonči jedním rizikem nebo limitem."
+        "ex": "po incidentu je nutné zajistit notebook, logy a e-mailovou komunikaci tak, aby důkaz nebyl zpochybněn. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš forenzně čistý postup: zajištění, hash, dokumentace, práce na kopii a řetězec opatrování. Zakonči jedním rizikem nebo limitem."
       },
       "Elektronické dokumenty": {
-        "ex": "Examinátor může zadat případ: po incidentu je nutné zajistit notebook, logy a e-mailovou komunikaci tak, aby důkaz nebyl zpochybněn. Zaměř se na „Elektronické dokumenty“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Popiš forenzně čistý postup: zajištění, hash, dokumentace, práce na kopii a řetězec opatrování. Konkrétně zapoj pojem „Elektronické dokumenty“ a zakonči jedním rizikem nebo limitem."
+        "ex": "po incidentu je nutné zajistit notebook, logy a e-mailovou komunikaci tak, aby důkaz nebyl zpochybněn. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Popiš forenzně čistý postup: zajištění, hash, dokumentace, práce na kopii a řetězec opatrování. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Ochrana osobních údajů": {
       "Právní úprava a základní definice": {
-        "ex": "Examinátor může zadat případ: nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Zaměř se na „Právní úprava a základní definice“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Konkrétně zapoj pojem „Právní úprava a základní definice“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Zakonči jedním rizikem nebo limitem."
       },
       "Zásady zpracování a posouzení rizik": {
-        "ex": "Examinátor může zadat případ: nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Zaměř se na „Zásady zpracování a posouzení rizik“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Konkrétně zapoj pojem „Zásady zpracování a posouzení rizik“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Zakonči jedním rizikem nebo limitem."
       },
       "Test proporcionality, účely a právní tituly": {
-        "ex": "Examinátor může zadat případ: nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Zaměř se na „Test proporcionality, účely a právní tituly“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Konkrétně zapoj pojem „Test proporcionality, účely a právní tituly“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Zakonči jedním rizikem nebo limitem."
       },
       "ÚOOÚ a jeho úloha": {
-        "ex": "Examinátor může zadat případ: nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Zaměř se na „ÚOOÚ a jeho úloha“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Konkrétně zapoj pojem „ÚOOÚ a jeho úloha“ a zakonči jedním rizikem nebo limitem."
+        "ex": "nová aplikace zpracovává identifikační údaje, kontakty, logy a někdy i údaje o poloze uživatelů. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Aplikuj zásady GDPR: účel, právní titul, minimalizace, transparentnost, zabezpečení a riziko pro osoby. Zakonči jedním rizikem nebo limitem."
       }
     },
     "Elektronický podpis a elektronická pečeť": {
       "Právní úprava a druhy elektronického podpisu": {
-        "ex": "Examinátor může zadat případ: úřad nebo firma elektronicky doručuje dokumenty a musí prokázat původ, integritu, doručení a právní účinky. Zaměř se na „Právní úprava a druhy elektronického podpisu“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli technologii i právní účinek: identita nebo původ, integrita, certifikát, čas a praktické riziko. Konkrétně zapoj pojem „Právní úprava a druhy elektronického podpisu“ a zakonči jedním rizikem nebo limitem."
+        "ex": "úřad nebo firma elektronicky doručuje dokumenty a musí prokázat původ, integritu, doručení a právní účinky. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli technologii i právní účinek: identita nebo původ, integrita, certifikát, čas a praktické riziko. Zakonči jedním rizikem nebo limitem."
       },
       "Elektronická pečeť": {
-        "ex": "Examinátor může zadat případ: úřad nebo firma elektronicky doručuje dokumenty a musí prokázat původ, integritu, doručení a právní účinky. Zaměř se na „Elektronická pečeť“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli technologii i právní účinek: identita nebo původ, integrita, certifikát, čas a praktické riziko. Konkrétně zapoj pojem „Elektronická pečeť“ a zakonči jedním rizikem nebo limitem."
+        "ex": "úřad nebo firma elektronicky doručuje dokumenty a musí prokázat původ, integritu, doručení a právní účinky. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli technologii i právní účinek: identita nebo původ, integrita, certifikát, čas a praktické riziko. Zakonči jedním rizikem nebo limitem."
       },
       "Datové schránky – právní úprava a praxe": {
-        "ex": "Examinátor může zadat případ: úřad nebo firma elektronicky doručuje dokumenty a musí prokázat původ, integritu, doručení a právní účinky. Zaměř se na „Datové schránky – právní úprava a praxe“ a ukaž, jak by tento pojem změnil konkrétní rozhodnutí, postup nebo kontrolu.",
-        "cv": "Vysvětli technologii i právní účinek: identita nebo původ, integrita, certifikát, čas a praktické riziko. Konkrétně zapoj pojem „Datové schránky – právní úprava a praxe“ a zakonči jedním rizikem nebo limitem."
+        "ex": "úřad nebo firma elektronicky doručuje dokumenty a musí prokázat původ, integritu, doručení a právní účinky. Ukaž, jak by tato situace změnila konkrétní rozhodnutí, postup nebo kontrolu.",
+        "cv": "Vysvětli technologii i právní účinek: identita nebo původ, integrita, certifikát, čas a praktické riziko. Zakonči jedním rizikem nebo limitem."
       }
     }
   },
