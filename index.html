@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d2b53">
+<title>Náhodné téma ke státnicím</title>
+<style>
+  :root {
+    --bg: #0f1424;
+    --card: #1a2138;
+    --card-2: #232c49;
+    --ink: #eef1f8;
+    --muted: #9aa4c4;
+    --accent: #6c8cff;
+    --accent-2: #45d0a8;
+    --line: #2c3556;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100dvh;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: max(16px, env(safe-area-inset-top)) 16px
+             calc(108px + env(safe-area-inset-bottom)) 16px;
+  }
+
+  header { text-align: center; margin: 12px 0 18px; }
+  header h1 { font-size: 1.35rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+  .filters {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    justify-content: center; margin-bottom: 18px;
+  }
+  .chip {
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--muted);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .chip[aria-pressed="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* welcome / empty state */
+  .welcome {
+    text-align: center;
+    padding: 40px 18px;
+    color: var(--muted);
+  }
+  .welcome .dice { font-size: 3.4rem; line-height: 1; margin-bottom: 10px; }
+  .welcome p { margin: 6px 0 0; }
+
+  /* topic card */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px 18px 22px;
+    animation: pop .28s ease;
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: translateY(10px) scale(.99); }
+    to   { opacity: 1; transform: none; }
+  }
+  .card .cat {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent-2);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .card h2 {
+    margin: 0 0 14px;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  .section-label {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+    font-weight: 700;
+    margin: 18px 0 6px;
+  }
+  .definition {
+    background: var(--card-2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 12px 14px;
+    font-size: 1.02rem;
+  }
+  .scope { color: var(--muted); font-size: 0.95rem; }
+
+  .codes { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    background: var(--card-2);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    padding: 4px 9px;
+    border-radius: 7px;
+  }
+
+  .progress {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin: 16px 0 0;
+  }
+
+  /* sticky action bar */
+  .bar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: linear-gradient(to top, var(--bg) 72%, transparent);
+  }
+  .bar .inner { max-width: 640px; margin: 0 auto; }
+  button.pick {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), #8a6cff);
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(108,140,255,.35);
+    transition: transform .08s;
+  }
+  button.pick:active { transform: scale(.98); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🎲 Náhodné téma ke státnicím</h1>
+    <p><span id="count"></span> okruhů · vyber si losem, co si zopakuješ</p>
+  </header>
+
+  <div class="filters" id="filters"></div>
+
+  <main id="stage">
+    <div class="welcome">
+      <div class="dice">🎯</div>
+      <p>Klepni na tlačítko dole a vylosuje se ti náhodný okruh.</p>
+      <p>Každý okruh dostaneš jednou, než se kolo zamíchá znovu.</p>
+    </div>
+  </main>
+
+  <p class="progress" id="progress"></p>
+</div>
+
+<div class="bar">
+  <div class="inner">
+    <button class="pick" id="pick">Vybrat náhodné téma</button>
+  </div>
+</div>
+
+<script>
+const TOPICS = [
+  { cat: "Matematika a teoretická informatika", title: "Lineární algebra",
+    codes: ["MB151"],
+    scope: "Operace s vektory a maticemi, vlastnosti lineárních operací a skalárního součinu. Gaussova eliminace, determinant. Vlastní čísla a vektory, jejich geometrický význam, inverzní matice, vektorové podprostory, vektorové báze, lineární transformace.",
+    def: "Lineární algebra je odvětví matematiky zabývající se vektory, vektorovými prostory a lineárními zobrazeními mezi nimi. Ústředním nástrojem jsou matice, které reprezentují lineární transformace i soustavy lineárních rovnic. Umožňuje řešit soustavy rovnic (Gaussova eliminace), analyzovat transformace pomocí vlastních čísel a vektorů a popisovat geometrii prostoru." },
+
+  { cat: "Matematika a teoretická informatika", title: "Základy matematické analýzy",
+    codes: ["IB000", "MB152"],
+    scope: "Relace a zobrazení, vlastnosti reálných funkcí, polynomy, spojité funkce a limity, derivace, neurčitý a určitý integrál, geometrický význam. Diferenciální počet.",
+    def: "Matematická analýza studuje spojité změny pomocí pojmů limita, spojitost, derivace a integrál. Derivace popisuje okamžitou rychlost změny funkce (sklon tečny), zatímco integrál vyjadřuje akumulaci, například obsah plochy pod grafem. Diferenciální počet je základem pro modelování spojitých procesů." },
+
+  { cat: "Matematika a teoretická informatika", title: "Kombinatorika a pravděpodobnost",
+    codes: ["IB000", "MB153"],
+    scope: "Elementární kombinatorika (kombinace, permutace, variace), řešení jednoduchých kombinatorických úloh. Pravděpodobnost, podmíněná pravděpodobnost (Bayesova věta).",
+    def: "Kombinatorika se zabývá počítáním a uspořádáním objektů – kombinacemi, permutacemi a variacemi. Pravděpodobnost kvantifikuje míru očekávatelnosti náhodných jevů číslem mezi 0 a 1. Podmíněná pravděpodobnost a Bayesova věta popisují, jak nová informace mění naše odhady." },
+
+  { cat: "Matematika a teoretická informatika", title: "Popisná statistika",
+    codes: ["MB153"],
+    scope: "Popisná statistika, střední hodnota, medián, rozptyl, korelace. Odhady statistik a jejich spolehlivost. Distribuční funkce, rozdělení náhodných veličin a jejich příklady.",
+    def: "Popisná statistika shrnuje data pomocí číselných charakteristik, jako jsou střední hodnota, medián, rozptyl a korelace. Náhodné veličiny a jejich rozdělení, popsané distribuční funkcí, modelují, jak jsou hodnoty v datech rozloženy. Odhady statistik se snaží z výběru usuzovat na vlastnosti celé populace." },
+
+  { cat: "Matematika a teoretická informatika", title: "Elementární teorie čísel",
+    codes: ["MB154"],
+    scope: "Dělitelnost, Euklidův algoritmus, modulární operace, prvočíselnost a její testování, aplikace teorie čísel (RSA, DSA, lineární a polynomiální kódy).",
+    def: "Teorie čísel zkoumá vlastnosti celých čísel, zejména dělitelnost, prvočísla a modulární aritmetiku (počítání se zbytky). Euklidův algoritmus efektivně hledá největší společný dělitel. Tyto poznatky tvoří matematický základ moderní kryptografie, například RSA, i samoopravných kódů." },
+
+  { cat: "Matematika a teoretická informatika", title: "Grafy a jejich prohledávání",
+    codes: ["IB000", "IB002"],
+    scope: "Typy grafů, stromy, stupně vrcholů, orientované grafy, reprezentace grafů. Algoritmy prohledávání grafu do hloubky a do šířky a jejich využití. Komponenty souvislosti.",
+    def: "Graf je matematická struktura tvořená vrcholy a hranami, která modeluje vztahy mezi objekty. Prohledávání do hloubky (DFS) a do šířky (BFS) jsou základní algoritmy systematického procházení grafu. Slouží mimo jiné k nalezení cest, komponent souvislosti a topologickému uspořádání." },
+
+  { cat: "Matematika a teoretická informatika", title: "Grafové algoritmy",
+    codes: ["IB000", "IB002"],
+    scope: "Ohodnocené grafy, definice nejkratší cesty, minimální kostry grafu, algoritmy pro hledání nejkratších cest (Dijkstrův, Bellman-Fordův algoritmus) a minimálních koster v grafu.",
+    def: "Tato oblast se zabývá algoritmy nad ohodnocenými grafy, kde mají hrany přiřazené váhy. Algoritmy pro nejkratší cestu (Dijkstrův, Bellman-Fordův) hledají cestu s minimálním součtem vah. Algoritmy minimální kostry propojují všechny vrcholy s nejmenší celkovou cenou." },
+
+  { cat: "Matematika a teoretická informatika", title: "Stromové datové struktury",
+    codes: ["IB002"],
+    scope: "Binární vyhledávací stromy, B-stromy, červeno-černé stromy, haldy, související operace a jejich složitost. Typické implementace, příklady použití.",
+    def: "Stromové datové struktury organizují data hierarchicky a umožňují rychlé vyhledávání, vkládání a mazání. Vyvážené stromy, jako červeno-černé nebo B-stromy, zaručují logaritmickou složitost operací. Halda navíc udržuje prvek s nejvyšší či nejnižší prioritou snadno dostupný." },
+
+  { cat: "Matematika a teoretická informatika", title: "Návrh algoritmů",
+    codes: ["IB002", "IB015"],
+    scope: "Metoda rozděl a panuj, výhody a nevýhody použití rekurze, odstranění rekurze. Vysvětlení principů a implementace řadících rekurzivních algoritmů. Vztah rekurze a matematické indukce.",
+    def: "Návrh algoritmů zkoumá obecné techniky tvorby efektivních algoritmů. Metoda rozděl a panuj řeší problém rozdělením na menší podproblémy, jejich vyřešením a sloučením výsledků. Rekurze úzce souvisí s matematickou indukcí a je přirozeným nástrojem pro řadicí algoritmy jako quicksort či mergesort." },
+
+  { cat: "Matematika a teoretická informatika", title: "Funkcionální programování",
+    codes: ["IB015"],
+    scope: "Funkcionální programovací paradigma (princip výpočtu, redukční krok, redukční strategie a jejich vlastnosti, příklady). Funkce vyšších řádů a jejich využití. Nepojmenované funkce. Schopnost elementárního programování v Haskellu.",
+    def: "Funkcionální programování je paradigma, v němž je výpočet chápán jako vyhodnocování výrazů a aplikace funkcí, nikoli jako posloupnost příkazů měnících stav. Klíčové jsou funkce vyšších řádů, které přijímají nebo vracejí funkce, a nepojmenované (lambda) funkce. Reprezentativním jazykem je Haskell." },
+
+  { cat: "Matematika a teoretická informatika", title: "Regulární jazyky",
+    codes: ["IB005"],
+    scope: "Chomského hierarchie formálních jazyků. Regulární jazyky, jejich reprezentace a převody mezi nimi. Varianty konečných automatů. Nedeterminismus a determinizace automatů. Uzávěrové vlastnosti regulárních jazyků.",
+    def: "Regulární jazyky tvoří nejnižší úroveň Chomského hierarchie formálních jazyků. Lze je popsat regulárními výrazy a rozpoznávat konečnými automaty, deterministickými i nedeterministickými. Jsou uzavřené na operace jako sjednocení, průnik či doplněk." },
+
+  { cat: "Matematika a teoretická informatika", title: "Bezkontextové jazyky a jejich reprezentace",
+    codes: ["IB005"],
+    scope: "Varianty zásobníkových automatů (metody akceptování, determinismus a nedeterminismus, rozšířené zásobníkové automaty). Nedeterministická syntaktická analýza. Uzávěrové vlastnosti bezkontextových jazyků.",
+    def: "Bezkontextové jazyky jsou silnější třídou formálních jazyků popsanou bezkontextovými gramatikami a rozpoznávanou zásobníkovými automaty. Díky zásobníku zvládají vnořené struktury, například správné párování závorek, což regulární jazyky neumí. Tvoří teoretický základ syntaktické analýzy programovacích jazyků." },
+
+  { cat: "Matematika a teoretická informatika", title: "Rozhodnutelnost",
+    codes: ["IB107"],
+    scope: "Pojem algoritmického problému a algoritmu. Turingův stroj a problém zastavení. Rozhodnutelnost a částečná rozhodnutelnost, nerozhodnutelnost. Metoda redukce, diagonalizace.",
+    def: "Teorie rozhodnutelnosti zkoumá, které problémy lze vůbec vyřešit algoritmem. Turingův stroj formalizuje pojem algoritmu a problém zastavení je klasickým příkladem nerozhodnutelného problému. K důkazu nerozhodnutelnosti slouží metody jako redukce a diagonalizace." },
+
+  { cat: "Matematika a teoretická informatika", title: "Složitost",
+    codes: ["IB107"],
+    scope: "Složitost algoritmu versus složitost problému. Složitostní třídy (P, NP, PSPACE) a vztahy mezi nimi, příklady problémů z jednotlivých tříd. Těžkost a úplnost problému v dané třídě, polynomiální redukce problémů, NP-úplné úlohy.",
+    def: "Teorie složitosti zkoumá, kolik prostředků – času a paměti – řešení problému nutně vyžaduje. Složitostní třídy P, NP a PSPACE klasifikují problémy podle jejich obtížnosti. NP-úplné problémy jsou nejtěžší v NP a otázka, zda P = NP, patří k největším otevřeným problémům informatiky." },
+
+  { cat: "Matematika a teoretická informatika", title: "Principy strojového učení",
+    codes: ["IB031"],
+    scope: "Učení s učitelem a bez učitele. Proces trénování modelů a vyhodnocování výsledků. Učení rozhodovacích stromů. Metoda k nejbližších sousedů. (Naivní) Bayesovský klasifikátor, logistická regrese. Detekce anomálií.",
+    def: "Strojové učení umožňuje počítačům získávat znalosti z dat místo explicitního naprogramování. Při učení s učitelem se model trénuje na označených příkladech, při učení bez učitele hledá strukturu v neoznačených datech. Mezi základní modely patří rozhodovací stromy, metoda k nejbližších sousedů a Bayesovský klasifikátor." },
+
+  { cat: "Matematika a teoretická informatika", title: "Metody strojového učení",
+    codes: ["IB031"],
+    scope: "Lineární regrese a metoda nejmenších čtverců. Hierarchické shlukování, algoritmus k-means. Neuronové sítě: Model umělého neuronu, vícevrstvé sítě a jejich vyjadřovací schopnosti. Učení modelů pomocí gradientního sestupu.",
+    def: "Tato oblast pokrývá konkrétní techniky strojového učení. Lineární regrese prokládá data přímkou metodou nejmenších čtverců, shlukování pomocí k-means seskupuje podobné body. Neuronové sítě skládají umělé neurony do vrstev a učí se gradientním sestupem, který minimalizuje chybu." },
+
+  { cat: "Matematika a teoretická informatika", title: "Umělá inteligence",
+    codes: ["PB016"],
+    scope: "Vymezení umělé inteligence, Turingův test. Prohledávání stavového prostoru - neinformované a heuristické. Problémy s omezujícími podmínkami. Hry a základní herní strategie v umělé inteligenci (minimax, alfa-beta, ohodnocovací funkce).",
+    def: "Umělá inteligence se zabývá tvorbou systémů schopných úloh vyžadujících inteligenci. Mnoho problémů řeší jako prohledávání stavového prostoru, ať už neinformované, nebo s využitím heuristik. Ve hrách dvou hráčů se uplatňují algoritmy minimax a alfa-beta ořezávání." },
+
+  { cat: "Matematika a teoretická informatika", title: "Matematická logika",
+    codes: ["IB000", "PB016"],
+    scope: "Výroková logika, predikátová logika. Splnitelnost, pravdivost, dokazatelnost. Důkazové metody, rezoluční metoda. Reprezentace a vyvozování znalostí.",
+    def: "Matematická logika formalizuje uvažování a dokazování. Výroková logika pracuje s výroky a logickými spojkami, predikátová logika přidává kvantifikátory a umožňuje vyjádřit vztahy mezi objekty. Klíčovými pojmy jsou splnitelnost, pravdivost a dokazatelnost; rezoluční metoda je základem automatického dokazování." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Strukturování a řízení běhu programu",
+    codes: ["PB006"],
+    scope: "Podprogramy, rozsahy jmen, předávání hodnot, výjimky. Objektově orientované programování. Zapouzdření, dědičnost, polymorfismus - principy, použití a implementace. Realizace v jazycích C#, C++ nebo Java (dle vlastní volby).",
+    def: "Tato oblast pokrývá způsoby strukturování programu pomocí podprogramů, rozsahů jmen a ošetření výjimek. Objektově orientované programování organizuje kód kolem objektů a stojí na třech pilířích: zapouzdření (skrytí implementace), dědičnosti (sdílení vlastností) a polymorfismu (jednotné rozhraní pro různé typy)." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Principy nízkoúrovňového programování",
+    codes: ["PB071 || PB111"],
+    scope: "Paměťový model programu; správa paměti, dynamická alokace, práce s uživatelskými datovými strukturami. Nízkoúrovňová práce s pamětí, ukazatel, pole a ukazatelová aritmetika. Způsoby ladění programu (debugging).",
+    def: "Nízkoúrovňové programování pracuje přímo s pamětí počítače. Programátor sám spravuje dynamickou alokaci a používá ukazatele a ukazatelovou aritmetiku pro přístup k datovým strukturám a polím. Důležitou dovedností je ladění (debugging) chyb v práci s pamětí." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Architektury",
+    codes: ["PB150 || PB151"],
+    scope: "Číselné soustavy, vztahy mezi soustavami, zobrazení celého čísla v počítači, aritmetika. Kódy, vnitřní, vnější, detekční a opravné. Obvody a paměti: parametry, architektura. Procesor, programování, mikroprogramování. Architektury: RISC/CISC, vyrovnávací paměti.",
+    def: "Architektura počítače popisuje, jak je počítač postaven a jak zpracovává data. Zahrnuje reprezentaci čísel v různých soustavách, jejich uložení a aritmetiku, detekční a opravné kódy, stavbu obvodů a pamětí i návrh procesoru. Rozlišují se přístupy RISC a CISC a využití vyrovnávacích pamětí (cache)." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Databáze",
+    codes: ["PB154"],
+    scope: "Relační model dat, relační schéma, klíče relačních schémat, relační algebra (projekce, selekce, agregace, přejmenování), spojování relací. Funkční závislosti, normální formy (1NF, 2NF, 3NF, Boyce-Coddova NF), vztahy mezi normálními formami. Dekompozice relačních schémat, normalizace schématu.",
+    def: "Relační model organizuje data do tabulek (relací) propojených pomocí klíčů. Relační algebra poskytuje operace pro dotazování, jako projekce, selekce a spojení. Normální formy a normalizace pomocí funkčních závislostí odstraňují redundanci a anomálie v návrhu databáze." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "SQL, transakce a zpracování dotazů",
+    codes: ["PB154"],
+    scope: "Syntaxe a sémantika příkazů. Příkazy pro dotazování a aktualizaci dat, agregační funkce, triggery a uložené procedury, definici dat, integritní omezení. Transakční zpracování, jeho vlastnosti. Základní principy vyhodnocování dotazů (náklady na vyhodnocení dotazu, využití indexování a hašování).",
+    def: "SQL je standardní jazyk pro dotazování a správu relačních databází – výběr, aktualizaci, agregaci i definici dat. Transakce sdružuje operace do jednoho celku se zaručenými vlastnostmi (ACID). Databázový systém optimalizuje vyhodnocení dotazů pomocí indexů a hašování." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Operační systémy",
+    codes: ["PB152"],
+    scope: "Architektura operačního systému, architektura jádra, základní režimy procesoru. Programovací rozhraní, knihovny. Uživatel, přístupová práva, virtualizace. Virtuální paměť, proces a stránkové tabulky. Vlákno, plánování vláken a procesů. Souběžnost, uváznutí, přidělování zdrojů. Vznik procesu a spuštění programu v systémech POSIX, copy-on-write.",
+    def: "Operační systém spravuje hardware a poskytuje programům jednotné rozhraní. Zajišťuje virtuální paměť a stránkování, plánuje procesy a vlákna na procesor a řídí přístupová práva. Řeší také souběžnost, přidělování zdrojů a hrozbu uváznutí (deadlocku)." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Souborové systémy",
+    codes: ["PB152"],
+    scope: "Blokové zařízení, bloková vrstva, I/O plánovač, RAID, šifrování disku. Obyčejné soubory, alokace volného místa, fragmentace. Adresářová struktura a její reprezentace na disku. Vstup a výstup mapovaný do paměti.",
+    def: "Souborový systém organizuje data na blokovém zařízení do souborů a adresářů. Řeší alokaci volného místa, fragmentaci a reprezentaci adresářové struktury na disku. Zahrnuje i blokovou vrstvu, I/O plánovač, RAID a šifrování disku." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Sítě",
+    codes: ["PB156"],
+    scope: "Modely vrstev počítačových sítí (ISO/OSI, TCP/IP): funkcionalita a součinnost vrstev, adresace. Fyzická vrstva, signály a jejich kódování, řízení přístupu k médiu. Propojování počítačových sítí. Síťové protokoly, přepínání a směrování, multicast. Zajištěný přenos dat, sestavení a ukončení spojení. Transportní protokoly.",
+    def: "Počítačové sítě umožňují komunikaci mezi počítači a jsou popsány vrstevnatými modely (ISO/OSI, TCP/IP), kde každá vrstva poskytuje službu vrstvě vyšší. Pokrývají kódování signálů na fyzické vrstvě, řízení přístupu k médiu, adresaci, směrování a přepínání i zajištěný přenos dat transportními protokoly." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Síťové aplikace a bezpečnost",
+    codes: ["PB156"],
+    scope: "Základní aplikační protokoly: doručování pošty, přenos souborů, web, jmenná služba. Principy popisu a zajištění kvality služby, použití pro multimédia. Zabezpečení síťové komunikace, autentizace a šifrování, zabezpečení na jednotlivých protokolových vrstvách.",
+    def: "Tato oblast pokrývá aplikační protokoly pro e-mail, přenos souborů, web a jmennou službu (DNS). Zabývá se zajištěním kvality služby (QoS), kterou potřebují například multimédia. Důležité je i zabezpečení komunikace pomocí autentizace a šifrování na jednotlivých vrstvách." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Základy informační bezpečnosti",
+    codes: ["PV080"],
+    scope: "Základní bezpečnostní funkce a jejich zajištění – důvěrnost, integrita, dostupnost, nepopiratelnost původu. Kryptografická primitiva, protokoly. Řízení rizik, audit, bezpečnostní operace, standardy, hodnocení bezpečnosti.",
+    def: "Informační bezpečnost stojí na zajištění důvěrnosti, integrity, dostupnosti a nepopiratelnosti původu informací. K tomu využívá kryptografická primitiva a protokoly. Zahrnuje také řízení rizik, audit, bezpečnostní operace a hodnocení podle standardů." },
+
+  { cat: "Programové, výpočetní a informační systémy", title: "Informační bezpečnost",
+    codes: ["PV080"],
+    scope: "Řízení identity a přístupu. Ochrana soukromí – koncepty a metody. Síťové útoky. Bezpečné programování a vývoj SW. Použitelná bezpečnost.",
+    def: "Tato oblast se zaměřuje na praktickou ochranu systémů a dat. Patří sem řízení identity a přístupu, ochrana soukromí, obrana proti síťovým útokům a zásady bezpečného vývoje softwaru. Uplatňuje se i použitelná bezpečnost, která zohledňuje lidský faktor." }
+];
+
+const CATEGORIES = [...new Set(TOPICS.map(t => t.cat))];
+
+let activeFilter = "Vše";
+let bag = [];
+let lastIndex = -1;
+
+document.getElementById("count").textContent = TOPICS.length;
+
+// --- filter chips ---
+const filtersEl = document.getElementById("filters");
+["Vše", ...CATEGORIES].forEach(name => {
+  const btn = document.createElement("button");
+  btn.className = "chip";
+  btn.textContent = name === "Matematika a teoretická informatika" ? "Matematika a TI"
+                  : name === "Programové, výpočetní a informační systémy" ? "Programové systémy"
+                  : name;
+  btn.title = name;
+  btn.setAttribute("aria-pressed", name === activeFilter);
+  btn.addEventListener("click", () => {
+    activeFilter = name;
+    [...filtersEl.children].forEach(c => c.setAttribute("aria-pressed", c === btn));
+    bag = [];
+    pick();
+  });
+  filtersEl.appendChild(btn);
+});
+
+function pool() {
+  return TOPICS
+    .map((t, i) => i)
+    .filter(i => activeFilter === "Vše" || TOPICS[i].cat === activeFilter);
+}
+
+function refillBag() {
+  bag = pool();
+  for (let i = bag.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [bag[i], bag[j]] = [bag[j], bag[i]];
+  }
+  // don't immediately repeat the last shown topic
+  if (bag.length > 1 && bag[bag.length - 1] === lastIndex) {
+    [bag[0], bag[bag.length - 1]] = [bag[bag.length - 1], bag[0]];
+  }
+}
+
+function pick() {
+  if (bag.length === 0) refillBag();
+  const idx = bag.pop();
+  lastIndex = idx;
+  render(TOPICS[idx]);
+
+  const total = pool().length;
+  const done = total - bag.length;
+  document.getElementById("progress").textContent =
+    `Téma ${done} z ${total} v tomto kole` + (bag.length === 0 ? " · kolo se zamíchá" : "");
+}
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function render(topic) {
+  const card = el("article", "card");
+  card.appendChild(el("span", "cat", topic.cat));
+  card.appendChild(el("h2", null, topic.title));
+
+  card.appendChild(el("div", "section-label", "Definice"));
+  card.appendChild(el("p", "definition", topic.def));
+
+  card.appendChild(el("div", "section-label", "Co okruh zahrnuje"));
+  card.appendChild(el("p", "scope", topic.scope));
+
+  const codes = el("div", "codes");
+  topic.codes.forEach(c => codes.appendChild(el("span", "code", c)));
+  card.appendChild(codes);
+
+  const stage = document.getElementById("stage");
+  stage.innerHTML = "";
+  stage.appendChild(card);
+}
+
+const pickBtn = document.getElementById("pick");
+pickBtn.addEventListener("click", pick);
+document.addEventListener("keydown", e => {
+  if (e.code === "Space" || e.code === "Enter") {
+    e.preventDefault();
+    pick();
+  }
+});
+</script>
+</body>
+</html>
