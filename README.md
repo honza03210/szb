@@ -10,11 +10,14 @@ U každého okruhu dostaneš:
 
 Dílčí pojmy lze tlačítkem „Skrýt definice“ sbalit a zkoušet se sám.
 
-29 okruhů ze dvou skupin (Matematika a TI, Programové systémy). Filtr nahoře omezí
-losování na jednu skupinu. Každý okruh přijde jednou za kolo, než se sada zamíchá.
+Okruhy jsou rozdělené do samostatných datových souborů. V hamburger menu vlevo nahoře
+vyber studijní plán, například `Informatika`, `Programování a vývoj aplikací` nebo
+`B-CS Kyberbezpečnost`. Filtr nahoře omezí losování na jednu skupinu. Každý okruh
+přijde jednou za kolo, než se sada zamíchá.
 
 V rozbalovacím seznamu si lze vybrat konkrétní okruh – pak tlačítko losuje jen jeho
 jednotlivé dílčí pojmy (jeden pojem na kartě). Návrat ke kompletním okruhům: vyber
 v seznamu „losovat celé okruhy“, nebo klepni na některý filtr skupiny.
 
-Vše je v jediném souboru `index.html`, bez internetu a bez instalace.
+Aplikace je statická: `index.html` načítá datové soubory `Informatika.js`, `PVA.js`
+a `CS.js`. Funguje bez internetu a bez instalace.
