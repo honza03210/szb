@@ -169,6 +169,21 @@
     font-size: 0.82rem;
     margin: 16px 0 0;
   }
+  .actions {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .actions .toggle {
+    font-size: 0.78rem;
+  }
+  .sub-extra {
+    margin: 0;
+    padding: 0 13px 13px;
+    color: var(--ink);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--line);
+  }
+  .sub-extra strong { color: var(--accent-2); }
 
   .bar {
     position: fixed;
@@ -212,6 +227,9 @@
   </main>
 
   <p class="progress" id="progress"></p>
+  <div class="actions">
+    <button class="toggle" id="resetProgress">Resetovat dokončení</button>
+  </div>
 </div>
 
 <div class="bar">
@@ -655,6 +673,9 @@ const CATEGORIES = [...new Set(TOPICS.map(t => t.cat))];
 let activeFilter = "Vše";
 let bag = [];
 let lastIndex = -1;
+const COMPLETED_COOKIE = "completedTitles";
+const COOKIE_DAYS = 365;
+let completedTitles = loadCompletedTitles();
 
 document.getElementById("count").textContent = String(TOPICS.length);
 
@@ -698,12 +719,14 @@ function pick() {
   const idx = bag.pop();
   lastIndex = idx;
   render(TOPICS[idx]);
+  markTitleCompleted(TOPICS[idx].title);
 
   const total = pool().length;
   const done = total - bag.length;
   document.getElementById("progress").textContent =
     "Téma " + done + " z " + total + " v tomto kole" +
-    (bag.length === 0 ? " · kolo se zamíchá" : "");
+    (bag.length === 0 ? " · kolo se zamíchá" : "") +
+    " · dokončeno titulů: " + completedTitles.size + " z " + TOPICS.length;
 }
 
 function el(tag, cls, text) {
@@ -741,6 +764,12 @@ function render(topic) {
     d.open = true;
     d.appendChild(el("summary", null, s.t));
     d.appendChild(el("p", "sub-def", s.d));
+    const practical = el("p", "sub-extra");
+    practical.innerHTML = "<strong>Praktický příklad:</strong> " + practicalExample(topic.title, s.t);
+    d.appendChild(practical);
+    const ex = el("p", "sub-extra");
+    ex.innerHTML = "<strong>Cvičení:</strong> " + practicalExercise(topic.title, s.t);
+    d.appendChild(ex);
     card.appendChild(d);
     subs.push(d);
   });
@@ -761,8 +790,96 @@ function render(topic) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function practicalExample(title, subtopic) {
+  const s = (title + " " + subtopic).toLowerCase();
+  if (s.includes("operace s vektory") || s.includes("maticemi")) return "Zkouškový příklad: Sečti vektory a=(1,−2,3), b=(4,0,−1) a spočítej součin matic A(2×3)·B(3×2). U výsledku komentuj rozměry i proč obecně neplatí A·B=B·A.";
+  if (s.includes("skalární součin") || s.includes("ortogon")) return "Zkouškový příklad: Pro vektory u=(1,2,2), v=(2,−1,0) spočítej skalární součin, délky vektorů a úhel mezi nimi. Rozhodni, zda jsou vektory kolmé.";
+  if (s.includes("gauss")) return "Zkouškový příklad: Vyřeš soustavu 3 lineárních rovnic Gaussovou eliminací a slovně vysvětli, kdy soustava má jedno, žádné nebo nekonečně mnoho řešení.";
+  if (s.includes("determin")) return "Zkouškový příklad: U matice 3×3 spočítej determinant a rozhodni invertibilitu. Doplň geometrický význam hodnoty det(A) (změna objemu/orientace).";
+  if (s.includes("vlastní čís") || s.includes("vlastní vektor")) return "Zkouškový příklad: Najdi vlastní čísla a vlastní vektory matice 2×2 a vysvětli jejich geometrický význam (směry, které se transformací jen škálují).";
+  if (s.includes("inverzní matice")) return "Zkouškový příklad: Ověř, zda má matice A inverzi, spočítej A⁻¹ a použij ji k řešení soustavy A·x=b.";
+  if (s.includes("podprostor")) return "Zkouškový příklad: Rozhodni, zda množina vektorů tvoří podprostor R^3 (ověř nulový vektor, uzavřenost na sčítání a násobení skalárem).";
+  if (s.includes("báze") || s.includes("dimenze")) return "Zkouškový příklad: Zjisti, zda dané vektory v R^3 jsou lineárně nezávislé, a určete bázi i dimenzi generovaného prostoru.";
+  if (s.includes("lineární transformace")) return "Zkouškový příklad: Je dáno zobrazení T(x,y)=(2x−y, x+3y). Ověř linearitu, napiš matici transformace a určete obraz bázových vektorů.";
+  if (s.includes("sql") || s.includes("relace") || s.includes("normaliz")) return "Zkouškový příklad: Na schématu databáze navrhni tabulky do 3NF, definuj PK/FK a ukaž, jak zabráníš anomáliím při aktualizaci.";
+  if (s.includes("transak")) return "Zkouškový příklad: Popiš převod peněz mezi účty jako transakci a vysvětli, jak se projeví vlastnosti ACID při chybě mezi dvěma UPDATE.";
+  if (s.includes("graf") || s.includes("dijkstra") || s.includes("bfs") || s.includes("dfs")) return "Zkouškový příklad: Na daném grafu proveď BFS/DFS od zadaného vrcholu, a u vážené verze vypočti nejkratší cesty Dijkstrovým algoritmem.";
+  if (s.includes("strom") || s.includes("halda")) return "Zkouškový příklad: Ukaž operace insert a extract-min na binární haldě a porovnej složitost s neuspořádaným polem.";
+  if (s.includes("pravděpodob") || s.includes("statistik")) return "Zkouškový příklad: Z datového vzorku spočítej průměr, medián, rozptyl a navrhni vhodný statistický test pro porovnání dvou skupin.";
+  if (s.includes("síť") || s.includes("tcp") || s.includes("udp") || s.includes("dns")) return "Zkouškový příklad: Vysvětli cestu HTTP požadavku přes DNS, TCP handshake a TLS, a porovnej vhodnost TCP/UDP pro různé aplikace.";
+  if (s.includes("bezpeč") || s.includes("šifrov") || s.includes("autent")) return "Zkouškový příklad: Navrhni autentizaci webu (hash hesel, MFA, session/token), popiš rizika MITM a roli certifikátů v TLS.";
+  if (s.includes("deriv") || s.includes("integr") || s.includes("analýz")) return "Zkouškový příklad: Derivuj funkci, najdi extrémy a pomocí určitého integrálu vyjádři obsah/akumulaci v daném intervalu.";
+  return "Zkouškový příklad: Definuj pojem přesně, uveď jednu větu s praktickým použitím v informatice a jeden krátký kontra-příklad, kdy podmínky neplatí.";
+}
+
+function practicalExercise(title, subtopic) {
+  const s = (title + " " + subtopic).toLowerCase();
+  if (s.includes("operace s vektory") || s.includes("maticemi")) return "Cvičení: (1) spočítej 2a−b pro a=(2,1,−1), b=(1,3,0), (2) vypočti A·B pro A=[[1,2],[0,1]], B=[[3,1],[2,4]], (3) ověř, že B·A dává jiný výsledek.";
+  if (s.includes("skalární součin") || s.includes("ortogon")) return "Cvičení: Pro u=(1,0,1), v=(2,1,−2) spočítej u·v, |u|, |v| a cos(φ). Závěr: rozhodni, zda jsou vektory kolmé nebo svírají ostrý/tupý úhel.";
+  if (s.includes("gauss")) return "Cvičení: Vyřeš soustavu x+y+z=4, 2x−y+z=1, 3x+y−z=9 Gaussovou eliminací. Na konci určete hodnost matice a počet řešení.";
+  if (s.includes("determin")) return "Cvičení: Spočítej det([[1,2,0],[0,3,4],[2,0,1]]) a podle výsledku rozhodni, zda je matice regulární. Pokud ano, naznač postup výpočtu inverze.";
+  if (s.includes("vlastní čís") || s.includes("vlastní vektor")) return "Cvičení: Pro A=[[2,1],[1,2]] najdi vlastní čísla i vlastní vektory. Ověř výpočet dosazením do rovnice A·v=λ·v.";
+  if (s.includes("inverzní matice")) return "Cvičení: Najdi A⁻¹ pro A=[[2,1],[5,3]] a řeš A·x=b pro b=(1,4). Výsledek zkontroluj přímým dosazením.";
+  if (s.includes("podprostor")) return "Cvičení: Rozhodni, zda M={(x,y,z) | x+y+z=0} je podprostor R^3. Pokud ano, najdi jednu jeho bázi.";
+  if (s.includes("báze") || s.includes("dimenze")) return "Cvičení: Pro vektory v1=(1,0,1), v2=(0,1,1), v3=(1,1,2) určete lineární závislost/nezávislost a dimenzi jejich obalu.";
+  if (s.includes("lineární transformace")) return "Cvičení: Ověř linearitu T(x,y)=(x+2y,3x−y), sestav matici T v kanonické bázi a spočítej T(2,−1).";
+  if (s.includes("sql") || s.includes("normaliz")) return "Cvičení: U relace STUDENT(Predmet, Ucitel, Mistnost, Cas) navrhni dekompozici do 3NF a zdůvodni funkční závislosti.";
+  if (s.includes("transak")) return "Cvičení: Napiš pseudokód transakce převodu: BEGIN, debit, credit, COMMIT/ROLLBACK. U každého kroku určete, kterou vlastnost ACID chrání.";
+  if (s.includes("graf") || s.includes("dijkstra") || s.includes("bfs") || s.includes("dfs")) return "Cvičení: Na grafu se 7 vrcholy proveď BFS i DFS od A (zapiš pořadí). Poté přidej váhy a spočítej nejkratší cesty z A Dijkstrem.";
+  if (s.includes("strom") || s.includes("halda")) return "Cvičení: Z pole [9,4,7,1,−2,6,5] vytvoř min-heap a proveď dvě operace extract-min. Po každém kroku napiš reprezentaci haldy.";
+  if (s.includes("pravděpodob") || s.includes("statistik")) return "Cvičení: Ze vzorku [5,7,7,9,10,10,12] spočítej průměr, medián, modus, rozptyl a navrhni, zda bys pro porovnání dvou tříd použil t-test nebo neparametrický test.";
+  if (s.includes("síť") || s.includes("tcp") || s.includes("udp") || s.includes("dns")) return "Cvičení: Popiš kroky navázání HTTPS spojení od DNS dotazu po první odpověď serveru. Vyjmenuj, co řeší TCP a co TLS.";
+  if (s.includes("bezpeč") || s.includes("šifrov") || s.includes("autent")) return "Cvičení: Navrhni bezpečné ukládání hesel (salt+hash), politiku MFA a obnovu hesla. Uveď dva útoky, které tím mitigujete.";
+  if (s.includes("deriv") || s.includes("integr") || s.includes("analýz")) return "Cvičení: Pro f(x)=x^3−3x určete intervaly růstu/klesání, lokální extrémy a spočítej ∫_0^2 (x^2+1)dx.";
+  return "Cvičení: Připrav si 90sekundovou ústní odpověď: definice, klíčová věta/vlastnost, krátký výpočet nebo algoritmický krok a typická aplikační situace.";
+}
+
+function getCookie(name) {
+  const parts = document.cookie.split(";").map(v => v.trim());
+  const prefix = name + "=";
+  const found = parts.find(p => p.startsWith(prefix));
+  return found ? decodeURIComponent(found.slice(prefix.length)) : "";
+}
+
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days * 86400000).toUTCString();
+  document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + expires + "; path=/; SameSite=Lax";
+}
+
+function loadCompletedTitles() {
+  try {
+    const raw = getCookie(COMPLETED_COOKIE);
+    if (!raw) return new Set();
+    const arr = JSON.parse(raw);
+    return new Set(Array.isArray(arr) ? arr : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveCompletedTitles() {
+  setCookie(COMPLETED_COOKIE, JSON.stringify([...completedTitles]), COOKIE_DAYS);
+}
+
+function resetCompletion(silent = false) {
+  completedTitles.clear();
+  saveCompletedTitles();
+  if (!silent) alert("Dokončení titulů bylo resetováno.");
+}
+
+function markTitleCompleted(title) {
+  completedTitles.add(title);
+  if (completedTitles.size >= TOPICS.length) {
+    alert("Skvělé! Máš dokončené všechny tituly. Dokončení se nyní resetuje.");
+    resetCompletion(true);
+    return;
+  }
+  saveCompletedTitles();
+}
+
 const pickBtn = document.getElementById("pick");
 pickBtn.addEventListener("click", pick);
+document.getElementById("resetProgress").addEventListener("click", () => resetCompletion());
 document.addEventListener("keydown", e => {
   if (e.target.tagName === "SUMMARY") return;
   if (e.code === "Space" || e.code === "Enter") {
