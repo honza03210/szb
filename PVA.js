@@ -1411,7 +1411,7 @@ window.STUDY_DATASETS.push({
     "SQL, transakce a zpracování dotazů": {
       "Syntaxe a sémantika příkazů": {
         "ex": "Dotaz SELECT jméno FROM Student WHERE ročník=1 je deklarativní – říká, co chceme; tentýž výsledek lze získat i jinak zapsaným dotazem.",
-        "cv": "Napiš SQL dotaz, který vrátí jména a e-maily studentů 2. ročníku seřazené podle příjmení."
+        "cv": "Dostaneš tabulky Student(id, jmeno, prijmeni, rocnik, email) a Zapis(student_id, predmet). Napiš dotaz na studenty 2. ročníku zapsané v předmětu IB002 a vysvětli význam JOIN a WHERE."
       },
       "Příkazy pro dotazování a aktualizaci dat": {
         "ex": "SELECT data čte, INSERT přidá řádek, UPDATE … WHERE změní vybrané řádky a DELETE … WHERE je smaže.",
@@ -1431,11 +1431,11 @@ window.STUDY_DATASETS.push({
       },
       "Transakční zpracování a jeho vlastnosti": {
         "ex": "Převod peněz mezi účty je transakce: oba UPDATE proběhnou celé, nebo se při chybě mezi nimi vše vrátí příkazem ROLLBACK – atomicita brání ztrátě peněz.",
-        "cv": "Zapiš pseudokódem transakci převodu částky mezi dvěma účty a u každé vlastnosti ACID uveď, který krok ji zajišťuje."
+        "cv": "Zapiš transakci převodu peněz mezi účty a vysvětli, jak se projeví atomicita, konzistence, izolace a trvalost při chybě uprostřed operace."
       },
       "Základní principy vyhodnocování dotazů": {
         "ex": "Dotaz hledající studenta podle id projde bez indexu celou tabulku, s indexem (B-stromem) nad id ho najde v čase O(log n).",
-        "cv": "Vysvětli, jak by se zrychlil dotaz WHERE příjmení='Novák' přidáním indexu, a uveď cenu, kterou index přináší."
+        "cv": "Vysvětli, proč index na prijmeni zrychlí SELECT s WHERE prijmeni='Novák', ale může zpomalit INSERT a zabírat místo."
       }
     },
     "Operační systémy": {
@@ -1613,7 +1613,7 @@ window.STUDY_DATASETS.push({
     "Aplikované informační systémy": {
       "Definice AIS": {
         "ex": "Nemocniční AIS eviduje pacienty, vyšetření, výsledky a ordinace léků. Kromě aplikace obsahuje databázi, role lékařů a sester, proces příjmu pacienta, pravidla přístupu a integrace na laboratorní systém.",
-        "cv": "U univerzitního studijního systému identifikuj data, uživatele, procesy a hlavní cíle systému."
+        "cv": "Examinátor ti zadá univerzitní studijní systém. Urči jeho aktéry, data, procesy, integrační vazby a bezpečnostní požadavky."
       },
       "Oblasti použití IS: státní správa, výroba, zdravotnictví, sklady a obchod": {
         "ex": "Skladový IS sleduje příjem zboží, umístění položek, rezervace pro objednávky a expedici. Ve výrobě by analogický systém navíc řešil kusovníky, výrobní příkazy a sledování rozpracovanosti.",
@@ -1621,11 +1621,11 @@ window.STUDY_DATASETS.push({
       },
       "Architektury rozsáhlých informačních systémů": {
         "ex": "Třívrstvá architektura oddělí webové UI, aplikační server s obchodní logikou a databázi. Díky tomu lze škálovat webové servery zvlášť a databázi chránit před přímým přístupem klientů.",
-        "cv": "Navrhni hrubou architekturu informačního systému pro síť skladů včetně integrací na účetnictví a dopravce."
+        "cv": "Navrhni architekturu informačního systému pro síť skladů: UI, aplikační služby, databáze, integrace na účetnictví a dopravce, monitoring a bezpečnostní hranice."
       },
       "Metody vedení rozsáhlých projektů": {
         "ex": "Při zavádění ERP se nejprve mapují procesy a požadavky, poté se plánují etapy, migrace dat, školení a akceptační testy. Změna požadavků musí projít řízením dopadu na cenu, čas a rizika.",
-        "cv": "Popiš plán zavedení nového AIS ve firmě: fáze, hlavní rizika a způsob ověření, že systém splňuje požadavky."
+        "cv": "Představ si výměnu ERP systému. Popiš fáze projektu, práci s požadavky, migraci dat, akceptační testování, školení a řízení změn."
       },
       "Řízení provozu IS": {
         "ex": "Provoz AIS zahrnuje monitoring dostupnosti, logů a výkonu, pravidelné zálohy a postup obnovy. Incident typu výpadek databáze má mít jasný eskalační postup a měřený čas obnovy.",
@@ -1639,7 +1639,7 @@ window.STUDY_DATASETS.push({
       },
       "Algebraické, grafické a algoritmické minimalizační metody": {
         "ex": "Funkci AB + A¬B lze algebraicky upravit na A(B+¬B)=A. Karnaughova mapa ukáže totéž seskupením dvou sousedních jedniček lišících se jen v proměnné B.",
-        "cv": "Minimalizuj funkci F(A,B,C)=Σm(1,3,5,7) a popiš, jak bys výsledek získal Karnaughovou mapou."
+        "cv": "Minimalizuj F(A,B,C)=Σm(1,3,5,7), vysvětli výsledek pravdivostní tabulkou nebo Karnaughovou mapou a řekni, proč proměnné A a B vypadnou."
       },
       "Optimalizace zpoždění, logických prvků a testovatelnosti": {
         "ex": "Dvouúrovňový součin-součet může mít malé zpoždění, ale více hradel. Naopak sdílení mezivýrazů šetří hradla, může však prodloužit kritickou cestu a zkomplikovat testování vnitřních uzlů.",
@@ -1651,7 +1651,7 @@ window.STUDY_DATASETS.push({
       },
       "Sekvenční obvody a kódování vnitřních stavů": {
         "ex": "Automat se čtyřmi stavy lze kódovat dvěma bity binárně nebo čtyřmi bity one-hot. One-hot spotřebuje více klopných obvodů, ale často zjednoduší přechodovou logiku.",
-        "cv": "Porovnej binární a one-hot kódování stavů pro automat s osmi stavy."
+        "cv": "Examinátor zadá automat s osmi stavy. Porovnej binární a one-hot kódování z hlediska počtu klopných obvodů, složitosti logiky a detekce neplatných stavů."
       },
       "Typy a vlastnosti klopných obvodů": {
         "ex": "D klopný obvod při aktivní hraně hodin uloží hodnotu D na výstup Q. Pokud se D změní těsně před hranou a poruší setup time, výstup může být metastabilní.",
@@ -1659,17 +1659,17 @@ window.STUDY_DATASETS.push({
       },
       "Základní sekvenční konstrukční prvky": {
         "ex": "Synchronní čítač modulo 4 používá dva klopné obvody a prochází stavy 00, 01, 10, 11. Řadič procesoru je složitější sekvenční obvod, který generuje posloupnost řídicích signálů pro instrukce.",
-        "cv": "Navrhni stavovou posloupnost čítače modulo 3 a určete minimální počet klopných obvodů."
+        "cv": "Navrhni čítač modulo 3: vyjmenuj stavy, minimální počet klopných obvodů a přechody včetně návratu z neplatného stavu."
       }
     },
     "Paralelní systémy": {
       "Dekompozice, mapování a komunikační primitiva": {
         "ex": "Násobení velké matice lze dekomponovat po blocích řádků. Každé vlákno počítá jiné řádky výsledku a na konci se výsledky spojí; komunikace je minimální, pokud mají vlákna potřebná vstupní data.",
-        "cv": "Navrhni dekompozici pro paralelní výpočet součtu velkého pole a určete, kde je potřeba komunikace nebo synchronizace."
+        "cv": "Navrhni paralelní výpočet histogramu velkého pole hodnot. Urči dekompozici, lokální výsledky, sloučení a místo synchronizace."
       },
       "Výkonnostní analýza paralelních algoritmů": {
         "ex": "Pokud 90 % programu lze paralelizovat a 10 % zůstane sekvenčních, Amdahlův zákon dává při nekonečně mnoha procesorech maximální zrychlení 1/0,1 = 10.",
-        "cv": "Spočítej zrychlení podle Amdahlova zákona pro program, kde 80 % času lze paralelizovat, při použití 4 procesorů."
+        "cv": "Spočítej zrychlení podle Amdahlova zákona pro program, kde 80 % času lze paralelizovat, při 4 procesorech, a interpretuj limit."
       },
       "Paralelní algoritmy se sdílenou pamětí": {
         "ex": "Dvě vlákna inkrementující společnou proměnnou bez synchronizace mohou ztratit aktualizaci. Operace read-modify-write není atomická; je nutný mutex, atomická proměnná nebo redukce.",
@@ -1677,7 +1677,7 @@ window.STUDY_DATASETS.push({
       },
       "OpenMP standard": {
         "ex": "#pragma omp parallel for rozdělí iterace cyklu mezi vlákna. Pro součet hodnot je nutné použít reduction(+:sum), aby každé vlákno mělo lokální akumulátor a výsledky se bezpečně sloučily.",
-        "cv": "Napiš kostru OpenMP paralelního cyklu pro výpočet maxima pole a vysvětli, proč je potřeba redukce."
+        "cv": "Napiš kostru OpenMP paralelního cyklu pro maximum pole a vysvětli, proč nelze bezpečně zapisovat do jedné sdílené proměnné bez redukce."
       },
       "POSIX Threads": {
         "ex": "V pthreads se vytvoří vlákno pomocí pthread_create a čeká se na něj pomocí pthread_join. Sdílenou frontu je nutné chránit pthread_mutex_t, jinak mohou dvě vlákna poškodit její vnitřní stav.",
@@ -1689,13 +1689,13 @@ window.STUDY_DATASETS.push({
       },
       "Paralelní algoritmy s distribuovanou pamětí a MPI": {
         "ex": "V MPI může proces 0 rozeslat části pole pomocí Scatter, každý proces spočítá lokální součet a Reduce je sečte do globálního výsledku. Data se nesdílí pamětí, ale kopírují zprávami.",
-        "cv": "Navrhni MPI postup pro výpočet skalárního součinu dvou vektorů rozdělených mezi procesy."
+        "cv": "Navrhni MPI postup pro skalární součin dvou vektorů rozdělených mezi procesy a vysvětli rozdíl proti sdílené paměti."
       }
     },
     "Moderní značkovací jazyky": {
       "Základní standardy rodiny XML": {
         "ex": "XML určí syntaxi elementů, XPath vybere například všechny elementy book, XML Schema ověří, že book má povinné isbn, a XSLT převede seznam knih do HTML tabulky.",
-        "cv": "Přiřaď XML, XML Schema, XPath, XQuery a XSLT k jejich hlavní roli v práci s XML dokumentem."
+        "cv": "Přiřaď XML, XML Schema, XPath, XQuery a XSLT k jejich roli při validaci, výběru dat, dotazování a transformaci dokumentu."
       },
       "Aplikace XML pro dokumenty a data": {
         "ex": "Formát faktury v XML je datově orientovaný: má pravidelné elementy částek, položek a identifikátorů. XHTML článek je dokumentově orientovaný: záleží na pořadí odstavců a smíšeném textu.",
@@ -1707,15 +1707,15 @@ window.STUDY_DATASETS.push({
       },
       "Jazyky schémat (XML Schema)": {
         "ex": "Schéma může určit, že element vek je celé číslo nezáporné a element osoba musí obsahovat právě jedno jmeno. Dokument s textem abc ve vek pak není validní.",
-        "cv": "Navrhni jednoduché XML Schema pravidlo pro element student s povinným atributem id a elementem jmeno."
+        "cv": "Navrhni schéma pro element student s povinným atributem id, elementem jmeno a volitelným elementem email. Vysvětli, co znamená validní dokument."
       },
       "Navigace a dotazování v XML datech (XPath, XQuery)": {
         "ex": "XPath výraz /knihovna/kniha[@rok>2020]/nazev vybere názvy knih v elementech kniha s atributem rok větším než 2020.",
-        "cv": "Napiš XPath výraz, který vybere e-maily všech studentů s atributem rocnik=\"2\"."
+        "cv": "Napiš XPath výraz pro e-maily studentů druhého ročníku v dokumentu skola/student[@rocnik=\"2\"]/email a vysvětli jednotlivé části výrazu."
       },
       "Transformace XML (XSLT)": {
         "ex": "XSLT šablona match=\"kniha\" může pro každý element kniha vytvořit HTML řádek tabulky s názvem a autorem. Transformace odděluje data od prezentačního výstupu.",
-        "cv": "Popiš, jak by XSLT převedlo XML seznam knih na HTML seznam ul/li."
+        "cv": "Popiš, jak by XSLT převedlo XML seznam knih na HTML tabulku a proč je výhodné oddělit data od prezentace."
       }
     }
   },
@@ -2161,7 +2161,7 @@ window.STUDY_DATASETS.push({
     "SQL, transakce a zpracování dotazů": {
       "Syntaxe a sémantika příkazů": {
         "ex": "SQL dotaz má syntaktickou stránku, tedy povolený tvar příkazu, a sémantiku, tedy jaký výsledek nad databází označuje. SELECT jméno FROM Student WHERE ročník=1 vybírá atribut jméno z řádků splňujících podmínku. SŘBD rozhoduje, jaký fyzický plán pro tento deklarativní požadavek použije.",
-        "cv": "SELECT jmeno, email FROM Student WHERE rocnik = 2 ORDER BY prijmeni; Pokud se atributy jmenují s diakritikou, odpovídající varianta je SELECT jméno, email FROM Student WHERE ročník = 2 ORDER BY příjmení. WHERE filtruje druhý ročník a ORDER BY určuje řazení výsledku."
+        "cv": "Dotaz může být: SELECT s.jmeno, s.prijmeni, s.email FROM Student s JOIN Zapis z ON z.student_id = s.id WHERE s.rocnik = 2 AND z.predmet = 'IB002' ORDER BY s.prijmeni. JOIN spojuje řádky podle vazby student_id, WHERE filtruje jen druhý ročník a konkrétní předmět."
       },
       "Příkazy pro dotazování a aktualizaci dat": {
         "ex": "SELECT nemění data, pouze vrací výsledek. INSERT vloží nový řádek, UPDATE mění existující řádky vybrané podmínkou a DELETE je odstraní. U UPDATE a DELETE je WHERE zásadní; bez něj se operace provede nad celou tabulkou.",
@@ -2181,11 +2181,11 @@ window.STUDY_DATASETS.push({
       },
       "Transakční zpracování a jeho vlastnosti": {
         "ex": "Převod peněz se nesmí provést jen napůl. BEGIN zahájí transakci, první UPDATE odečte částku, druhý ji připíše. Pokud druhý krok selže, ROLLBACK vrátí i první změnu; teprve COMMIT trvale uloží obě změny.",
-        "cv": "BEGIN; UPDATE Ucet SET zustatek=zustatek-:castka WHERE id=:z; UPDATE Ucet SET zustatek=zustatek+:castka WHERE id=:c; COMMIT; při chybě ROLLBACK. Atomicitu zajišťuje commit/rollback, konzistenci omezení a kontrola zůstatku, izolaci zámky nebo MVCC, trvanlivost zápis transakčního logu před potvrzením."
+        "cv": "Transakce začne BEGIN, zkontroluje zůstatek, odečte částku z účtu A, přičte ji na účet B a skončí COMMIT. Při chybě se provede ROLLBACK. Atomicita zajistí všechno nebo nic, konzistence zachová pravidla účtů, izolace skryje mezistav před jinými transakcemi a trvalost po commitu udrží výsledek i po pádu."
       },
       "Základní principy vyhodnocování dotazů": {
         "ex": "Bez indexu musí databáze porovnat id s každým řádkem, tedy sekvenční průchod. B-stromový index nad id umožní navigaci podle klíče v logaritmickém počtu kroků a potom načtení odpovídajícího řádku. Optimalizátor volí plán podle odhadu selektivity a ceny.",
-        "cv": "Index nad příjmení umožní rychle najít rozsah záznamů s hodnotou 'Novák' místo čtení celé tabulky. Cena indexu je dodatečné místo na disku a pomalejší INSERT/UPDATE/DELETE, protože se musí udržovat i indexová struktura. U málo selektivních hodnot nemusí index pomoci."
+        "cv": "Bez indexu databáze typicky skenuje tabulku. B-stromový index umožní rychle najít rozsah řádků s daným příjmením a pak dohledat záznamy. Cena je úložiště navíc a aktualizace indexu při INSERT, UPDATE nebo DELETE. Optimalizátor navíc nemusí index použít, pokud filtr vrací velkou část tabulky."
       }
     },
     "Operační systémy": {
@@ -2363,7 +2363,7 @@ window.STUDY_DATASETS.push({
     "Aplikované informační systémy": {
       "Definice AIS": {
         "ex": "AIS je sociotechnický celek: software bez procesů, datové odpovědnosti a uživatelských rolí nestačí. U nemocnice jsou klíčové entity pacient, návštěva, vyšetření a medikace; procesy zahrnují příjem, vyšetření a propuštění. Přístupová práva chrání citlivá data.",
-        "cv": "Data: studenti, předměty, zápisy, známky. Uživatelé: studenti, vyučující, studijní oddělení, administrátoři. Procesy: registrace předmětů, hodnocení, kontrola studia. Cílem je evidence studia, samoobsluha a spolehlivé podklady pro rozhodování."
+        "cv": "Aktéři jsou studenti, vyučující, studijní oddělení a administrátoři. Data zahrnují identity, předměty, zápisy, hodnocení a platby. Procesy jsou zápis předmětů, evidence zkoušek, komunikace a reporting. Integrace míří na identity, e-mail, ekonomický systém a e-learning. Bezpečnost řeší role, audit známek, dostupnost v zápisových špičkách a ochranu osobních údajů."
       },
       "Oblasti použití IS: státní správa, výroba, zdravotnictví, sklady a obchod": {
         "ex": "Skladový IS je transakční systém s důrazem na přesnost zásob a rychlou expedici. Výrobní IS navíc plánuje návaznosti operací, materiálové potřeby a kapacity strojů. Oba vyžadují aktuální data a integraci s ekonomickým systémem.",
@@ -2371,11 +2371,11 @@ window.STUDY_DATASETS.push({
       },
       "Architektury rozsáhlých informačních systémů": {
         "ex": "Oddělení vrstev omezuje závislosti: UI neobsahuje SQL dotazy a databáze není vystavena internetu. Integrace se řeší API nebo message brokerem. U rozsáhlého IS je důležitá i observabilita, autentizace a autorizační služba.",
-        "cv": "Architektura: webové a mobilní UI, aplikační služby pro zásoby a objednávky, centrální databáze, message broker pro události, API na účetnictví a dopravce. Sklady mohou mít lokální čtečky čárových kódů, které komunikují přes aplikační API."
+        "cv": "Vhodná je vrstvená nebo servisní architektura: webové UI a mobilní terminály, API nebo aplikační služby pro skladové operace, databáze zásob, fronty pro události a integrace na účetnictví i dopravce. Bezpečnostní hranice oddělí klienty, služby, databázi a administraci. Monitoring sleduje dostupnost, chyby integrací a výkon v expedičních špičkách."
       },
       "Metody vedení rozsáhlých projektů": {
         "ex": "ERP projekt má vysoké organizační riziko, protože mění procesy. Proto nestačí programovat: je nutné řídit stakeholdery, migraci, testování i školení. Akceptace se váže na scénáře reálné práce, ne pouze na technickou instalaci.",
-        "cv": "Fáze: analýza procesů, návrh cílového řešení, implementace, migrace dat, integrační a akceptační testy, školení, pilot, ostrý provoz. Rizika: nejasné požadavky, špatná data, odpor uživatelů, integrace. Ověření: akceptační scénáře a měřitelné požadavky."
+        "cv": "Projekt začne cíli a mapováním procesů, pokračuje požadavky a výběrem řešení, návrhem integrací, konfigurací nebo vývojem, migrací dat, testy, školením a pilotem. Akceptace ověřuje procesy na reálných scénářích. Změny požadavků mají projít posouzením dopadu na cenu, čas a riziko."
       },
       "Řízení provozu IS": {
         "ex": "Monitoring musí hlídat nejen server, ale i aplikační metriky, například počet chyb přihlášení nebo frontu nezpracovaných zpráv. Zálohy musí být pravidelně testované obnovou. Jinak existuje jen domněnka, že data lze obnovit.",
@@ -2389,7 +2389,7 @@ window.STUDY_DATASETS.push({
       },
       "Algebraické, grafické a algoritmické minimalizační metody": {
         "ex": "Výraz AB + A¬B obsahuje společný faktor A. Protože B+¬B=1, zůstane A. Obvod se zjednoduší z kombinace dvou AND a jednoho OR na pouhý signál A.",
-        "cv": "Mintermy 1,3,5,7 odpovídají všem kombinacím, kde C=1 bez ohledu na A a B. Karnaughova mapa umožní seskupit všechny čtyři jedničky do jedné skupiny. Minimalizovaný výsledek je F=C."
+        "cv": "Mintermy 1, 3, 5, 7 odpovídají všem kombinacím, kde C=1 bez ohledu na A a B. Karnaughova mapa dovolí seskupit všechny čtyři jedničky, takže F=C. Proměnné A a B se ve skupině mění, a proto nejsou ve výsledném implicantu."
       },
       "Optimalizace zpoždění, logických prvků a testovatelnosti": {
         "ex": "Kritická cesta určuje maximální frekvenci synchronního obvodu. Přidání paralelní logiky nebo pipeline registru může zrychlit časování, i když zvýší počet prvků. Testovatelný návrh může přidat scan chain, který zvyšuje režii, ale usnadňuje odhalení vad.",
@@ -2401,7 +2401,7 @@ window.STUDY_DATASETS.push({
       },
       "Sekvenční obvody a kódování vnitřních stavů": {
         "ex": "Kódování stavů není jen formální detail. Binární kód šetří registry, ale přechodová logika může být složitější. One-hot používá jeden klopný obvod na stav, ale přechody se často vyjadřují jednodušeji.",
-        "cv": "Osm stavů binárně potřebuje ceil(log2 8)=3 klopné obvody, one-hot potřebuje 8. Binární kód šetří hardware stavu, one-hot může zjednodušit dekódování stavů a zrychlit řadič v FPGA."
+        "cv": "Binární kódování osmi stavů potřebuje 3 klopné obvody, one-hot 8. Binární šetří registry, ale přechodová logika může být složitější. One-hot často zjednoduší logiku a dekódování stavů, ale spotřebuje více klopných obvodů. U obou je třeba řešit neplatné nebo porušené stavy a reset."
       },
       "Typy a vlastnosti klopných obvodů": {
         "ex": "Setup a hold time jsou minimální intervaly stability vstupu kolem hrany hodin. Jejich porušení může vést k metastabilitě, kdy se výstup po určitou dobu nechová jako platná 0 nebo 1.",
@@ -2409,17 +2409,17 @@ window.STUDY_DATASETS.push({
       },
       "Základní sekvenční konstrukční prvky": {
         "ex": "Čítač je konečný automat se zvláštní posloupností stavů. Řadič je obecnější automat, jehož výstupy ovládají datovou cestu, například povolení zápisu registru nebo výběr vstupu multiplexoru.",
-        "cv": "Modulo 3 má stavy 00, 01, 10 a potom návrat na 00; stav 11 je nepoužitý a měl by být ošetřen návratem do platného stavu. Minimální počet klopných obvodů je ceil(log2 3)=2."
+        "cv": "Modulo 3 potřebuje alespoň 2 klopné obvody, protože dva bity kódují čtyři stavy. Použitelné stavy jsou 00, 01, 10 a po 10 následuje 00. Stav 11 je neplatný a návrh by ho měl při další hraně převést bezpečně na 00, aby se automat po chybě zotavil."
       }
     },
     "Paralelní systémy": {
       "Dekompozice, mapování a komunikační primitiva": {
         "ex": "Bloková dekompozice matice snižuje režii plánování a zlepšuje lokalitu cache. Špatné mapování může nechat některé procesory nečinné, zatímco jiné stále počítají. Cílem je vysoká paralelita a nízká komunikace.",
-        "cv": "Pole rozdělíme na bloky, každý worker spočítá lokální součet svého bloku. Komunikace je potřeba jen při závěrečném sloučení lokálních součtů, například redukcí nebo chráněným přičtením do globální sumy."
+        "cv": "Pole lze rozdělit na bloky mezi vlákna nebo procesy. Každý počítá lokální histogram, čímž se vyhne souběžným zápisům do sdílených čítačů. Na konci se lokální histogramy redukují součtem po kategoriích. Synchronizace je potřeba při závěrečném sloučení nebo při použití sdíleného histogramu s atomickými operacemi."
       },
       "Výkonnostní analýza paralelních algoritmů": {
         "ex": "Amdahlův zákon: S(p)=1/((1-f)+f/p). Pro f=0,9 a p→∞ zůstane jmenovatel 0,1, tedy maximum 10. Přidávání procesorů nepomůže odstranit sekvenční část.",
-        "cv": "S(4)=1/((1−0,8)+0,8/4)=1/(0,2+0,2)=2,5. Efektivita je S/p=2,5/4=0,625. Zbytek výkonu ztrácí sekvenční část a paralelní režie."
+        "cv": "Amdahlův zákon: S = 1 / ((1 - p) + p/n). Pro p=0,8 a n=4 je S = 1 / (0,2 + 0,8/4) = 1 / 0,4 = 2,5. I s nekonečně mnoha procesory by limit byl 1/0,2 = 5, protože sekvenční část zůstává bottleneckem."
       },
       "Paralelní algoritmy se sdílenou pamětí": {
         "ex": "Závod nastane, když výsledek závisí na proložení operací vláken. Inkrement x++ obsahuje načtení, zvýšení a zápis; dvě vlákna mohou načíst stejnou starou hodnotu a zapsat stejný výsledek.",
@@ -2427,7 +2427,7 @@ window.STUDY_DATASETS.push({
       },
       "OpenMP standard": {
         "ex": "Redukce v OpenMP řeší častý vzor lokální výpočet plus globální sloučení. Bez reduction by všechna vlákna zapisovala do stejné proměnné sum a vznikl by závod.",
-        "cv": "Kostra: #pragma omp parallel for reduction(max:maxVal) for (...) maxVal = max(maxVal, a[i]);. Redukce je potřeba, protože maximum je sdílená agregace a prostý zápis z více vláken by byl závod."
+        "cv": "Použije se například #pragma omp parallel for reduction(max:maxValue) nad cyklem pro prvky pole. Bez redukce by více vláken současně četlo a zapisovalo maxValue, takže by vznikl datový závod a ztracené aktualizace. Redukce dá vláknům lokální maximum a na konci je sloučí."
       },
       "POSIX Threads": {
         "ex": "Pthreads dávají větší kontrolu než OpenMP, ale také více odpovědnosti. Je třeba řešit životnost předaných argumentů, synchronizaci a návratové hodnoty. pthread_join brání tomu, aby hlavní vlákno skončilo dřív než pracovní.",
@@ -2439,13 +2439,13 @@ window.STUDY_DATASETS.push({
       },
       "Paralelní algoritmy s distribuovanou pamětí a MPI": {
         "ex": "MPI explicitně zviditelňuje cenu komunikace. Algoritmus, který ve sdílené paměti jen čte pole, musí v MPI data nejprve rozdělit a výsledky explicitně sesbírat. Proto je důležité minimalizovat počet a objem zpráv.",
-        "cv": "Proces 0 rozdělí oba vektory pomocí Scatter. Každý proces spočítá lokální součet součinů své části. MPI_Reduce s operací SUM sečte lokální výsledky do globálního skalárního součinu na procesu 0."
+        "cv": "Proces 0 nebo kolektivní operace rozdělí části vektorů mezi procesy, každý proces spočítá lokální součet součinů a MPI_Reduce sečte lokální výsledky do globální hodnoty. V distribuované paměti procesy nesdílí proměnné přímo; data se předávají zprávami, například Scatter, Broadcast a Reduce."
       }
     },
     "Moderní značkovací jazyky": {
       "Základní standardy rodiny XML": {
         "ex": "Jednotlivé standardy mají oddělené odpovědnosti: XML je syntaxe stromu, XML Schema typový kontrakt, XPath adresace uzlů, XQuery dotazování a XSLT transformace. Díky tomu lze nástroje kombinovat.",
-        "cv": "XML zapisuje data, XML Schema validuje strukturu a typy, XPath vybírá části dokumentu, XQuery pokládá dotazy nad XML daty a XSLT převádí XML do jiného formátu."
+        "cv": "XML definuje syntaxi dokumentu, XML Schema popisuje povolenou strukturu a datové typy, XPath vybírá uzly, XQuery dotazuje kolekce XML dat a XSLT transformuje XML do jiného XML, HTML nebo textu. U odpovědi je dobré ukázat tok: dokument, validace, výběr, dotaz, transformace."
       },
       "Aplikace XML pro dokumenty a data": {
         "ex": "XML je vhodné tam, kde je důležitá interoperabilita, hierarchie a validace. Pro velmi objemná nebo výkonově citlivá data může být nevhodné kvůli velikosti a nákladům parsování.",
@@ -2457,15 +2457,15 @@ window.STUDY_DATASETS.push({
       },
       "Jazyky schémat (XML Schema)": {
         "ex": "Validita je silnější než dobře utvořenost. Dokument může mít správně uzavřené značky, ale být nevalidní, pokud chybí povinný element nebo má hodnota špatný typ.",
-        "cv": "Schéma může definovat element student jako complexType s atributem id use=\"required\" typu xs:string a sekvencí obsahující element jmeno typu xs:string. Validátor pak odmítne studenta bez id nebo bez jména."
+        "cv": "Schéma by určilo element student jako komplexní typ, povinný atribut id, povinný element jmeno typu string a volitelný email s minOccurs=0. Validní dokument je nejen dobře utvořený XML, ale navíc splňuje pravidla schématu: pořadí, povinné části, typy hodnot a omezení."
       },
       "Navigace a dotazování v XML datech (XPath, XQuery)": {
         "ex": "XPath je výrazový jazyk pro výběr uzlů; predikát v hranatých závorkách filtruje podle atributu, pozice nebo podmínky. XQuery nad tím staví celé dotazy včetně konstrukce výsledků.",
-        "cv": "Výraz může být //student[@rocnik=\"2\"]/email. Dvojité lomítko hledá studenty kdekoliv v dokumentu, predikát filtruje druhý ročník a /email vybere jejich e-mailové elementy."
+        "cv": "Výraz může být /skola/student[@rocnik=\"2\"]/email. Lomítka vybírají cestu od kořene, student vybere elementy student, predikát [@rocnik=\"2\"] filtruje podle atributu a /email vrátí jejich e-mailové elementy. Relativní varianta by mohla začínat //student, pokud nezáleží na přesné poloze."
       },
       "Transformace XML (XSLT)": {
         "ex": "XSLT používá šablony řízené strukturou vstupu, ne ruční průchod jako běžný imperativní program. Pro každý nalezený uzel se použije nejvhodnější šablona a vytvoří se výstupní strom.",
-        "cv": "Šablona pro kořen vytvoří <ul>, potom apply-templates na všechny knihy. Šablona pro kniha vytvoří <li> s hodnotou elementu nazev, případně autora. Výstupem je HTML seznam odpovídající XML datům."
+        "cv": "XSLT definuje šablony pro vybrané elementy, například kořen knihovna a jednotlivé kniha. Pro každou knihu vytvoří řádek tabulky a hodnoty elementů nazev a autor vloží do buněk. Výhoda je, že stejná XML data lze transformovat do HTML, textu nebo jiného XML bez změny zdrojových dat."
       }
     }
   }
