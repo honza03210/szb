@@ -60,33 +60,6 @@
     font-weight: 600;
   }
 
-  .titlepick { margin: 0 0 18px; text-align: center; }
-  .titlepick label {
-    display: block;
-    color: var(--muted);
-    font-size: 0.8rem;
-    margin-bottom: 7px;
-  }
-  .titlepick select {
-    width: 100%;
-    max-width: 440px;
-    font-family: inherit;
-    font-size: 0.92rem;
-    color: var(--ink);
-    background-color: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 11px 36px 11px 13px;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8"><path d="M1 1l5 5 5-5" stroke="%239aa4c4" stroke-width="2" fill="none" stroke-linecap="round"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 13px center;
-  }
-  .titlepick select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-
   .welcome { text-align: center; padding: 36px 18px; color: var(--muted); }
   .welcome .dice { font-size: 3.2rem; line-height: 1; margin-bottom: 10px; }
   .welcome p { margin: 6px 0 0; }
@@ -230,17 +203,11 @@
 
   <div class="filters" id="filters"></div>
 
-  <div class="titlepick">
-    <label for="titleSelect">Nebo si vyber konkrétní okruh a losuj jen jeho dílčí pojmy:</label>
-    <select id="titleSelect"></select>
-  </div>
-
   <main id="stage">
     <div class="welcome">
       <div class="dice">🎯</div>
       <p>Klepni na tlačítko dole a vylosuje se ti náhodný okruh.</p>
       <p>Dostaneš souhrnnou definici a ke každému dílčímu pojmu samostatné vysvětlení.</p>
-      <p>Nebo si nahoře vyber konkrétní okruh – pak se losují jeho jednotlivé dílčí pojmy.</p>
     </div>
   </main>
 
@@ -685,73 +652,31 @@ const TOPICS = [
 
 const CATEGORIES = [...new Set(TOPICS.map(t => t.cat))];
 
-const pickBtn = document.getElementById("pick");
-const progressEl = document.getElementById("progress");
-
-let activeFilter = "Vše";    // platí jen v režimu celých okruhů
-let activeTitleIdx = null;   // null = losovat okruhy; číslo = vybraný okruh, losují se jeho pojmy
+let activeFilter = "Vše";
 let bag = [];
-let lastKey = -1;
+let lastIndex = -1;
 
 document.getElementById("count").textContent = String(TOPICS.length);
 
-function shortCat(name) {
-  return name === "Matematika a teoretická informatika" ? "Matematika a TI"
-       : name === "Programové, výpočetní a informační systémy" ? "Programové systémy"
-       : name;
-}
-function pojemMode() { return activeTitleIdx !== null; }
-
-// --- filtr podle skupiny (chips) ---
 const filtersEl = document.getElementById("filters");
 ["Vše", ...CATEGORIES].forEach(name => {
   const btn = document.createElement("button");
   btn.className = "chip";
-  btn.textContent = name === "Vše" ? "Vše" : shortCat(name);
+  btn.textContent = name === "Matematika a teoretická informatika" ? "Matematika a TI"
+                  : name === "Programové, výpočetní a informační systémy" ? "Programové systémy"
+                  : name;
   btn.title = name;
-  btn.dataset.filter = name;
   btn.setAttribute("aria-pressed", String(name === activeFilter));
   btn.addEventListener("click", () => {
     activeFilter = name;
-    activeTitleIdx = null;
-    titleSelect.value = "";
-    syncChips();
+    [...filtersEl.children].forEach(c => c.setAttribute("aria-pressed", String(c === btn)));
     bag = [];
-    lastKey = -1;
     pick();
   });
   filtersEl.appendChild(btn);
 });
 
-function syncChips() {
-  [...filtersEl.children].forEach(c =>
-    c.setAttribute("aria-pressed",
-      String(!pojemMode() && c.dataset.filter === activeFilter)));
-}
-
-// --- výběr konkrétního okruhu podle názvu ---
-const titleSelect = document.getElementById("titleSelect");
-titleSelect.appendChild(new Option("— losovat celé okruhy —", ""));
-CATEGORIES.forEach(cat => {
-  const og = document.createElement("optgroup");
-  og.label = shortCat(cat);
-  TOPICS.forEach((t, i) => {
-    if (t.cat === cat) og.appendChild(new Option(t.title, String(i)));
-  });
-  titleSelect.appendChild(og);
-});
-titleSelect.addEventListener("change", () => {
-  activeTitleIdx = titleSelect.value === "" ? null : Number(titleSelect.value);
-  syncChips();
-  bag = [];
-  lastKey = -1;
-  pick();
-});
-
 function pool() {
-  if (pojemMode()) {
-    return TOPICS[activeTitleIdx].scope.map((_, i) => i);
-  }
   return TOPICS
     .map((t, i) => i)
     .filter(i => activeFilter === "Vše" || TOPICS[i].cat === activeFilter);
@@ -763,7 +688,7 @@ function refillBag() {
     const j = Math.floor(Math.random() * (i + 1));
     [bag[i], bag[j]] = [bag[j], bag[i]];
   }
-  if (bag.length > 1 && bag[bag.length - 1] === lastKey) {
+  if (bag.length > 1 && bag[bag.length - 1] === lastIndex) {
     [bag[0], bag[bag.length - 1]] = [bag[bag.length - 1], bag[0]];
   }
 }
@@ -771,21 +696,14 @@ function refillBag() {
 function pick() {
   if (bag.length === 0) refillBag();
   const idx = bag.pop();
-  lastKey = idx;
-
-  if (pojemMode()) {
-    renderPojem(TOPICS[activeTitleIdx], idx);
-  } else {
-    render(TOPICS[idx]);
-  }
+  lastIndex = idx;
+  render(TOPICS[idx]);
 
   const total = pool().length;
   const done = total - bag.length;
-  pickBtn.textContent = pojemMode() ? "Další dílčí pojem" : "Vybrat náhodné téma";
-  progressEl.textContent = pojemMode()
-    ? "Dílčí pojem " + done + " z " + total + " · " + TOPICS[activeTitleIdx].title
-    : "Téma " + done + " z " + total + " v tomto kole" +
-      (bag.length === 0 ? " · kolo se zamíchá" : "");
+  document.getElementById("progress").textContent =
+    "Téma " + done + " z " + total + " v tomto kole" +
+    (bag.length === 0 ? " · kolo se zamíchá" : "");
 }
 
 function el(tag, cls, text) {
@@ -843,29 +761,10 @@ function render(topic) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function renderPojem(topic, idx) {
-  const s = topic.scope[idx];
-  const card = el("article", "card");
-  card.appendChild(el("span", "cat", topic.title));
-  card.appendChild(el("h2", null, s.t));
-
-  card.appendChild(el("div", "section-label", "Definice dílčího pojmu"));
-  card.appendChild(el("p", "definition", s.d));
-
-  const codes = el("div", "codes");
-  topic.codes.forEach(c => codes.appendChild(el("span", "code", c)));
-  card.appendChild(codes);
-
-  const stage = document.getElementById("stage");
-  stage.innerHTML = "";
-  stage.appendChild(card);
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
+const pickBtn = document.getElementById("pick");
 pickBtn.addEventListener("click", pick);
 document.addEventListener("keydown", e => {
-  // nech klávesy projít, když je vybraný interaktivní prvek (tlačítko, select, pojem…)
-  if (["SUMMARY", "BUTTON", "SELECT", "OPTION", "INPUT", "TEXTAREA"].includes(e.target.tagName)) return;
+  if (e.target.tagName === "SUMMARY") return;
   if (e.code === "Space" || e.code === "Enter") {
     e.preventDefault();
     pick();
