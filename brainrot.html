@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#07090f">
+<title>🧠 Informatika Brainrot</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<style>
+  :root {
+    --bg: #07090f;
+    --ink: #f2f5ff;
+    --muted: #9aa6cc;
+    --line: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    overflow: hidden;
+  }
+
+  .feed {
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .feed::-webkit-scrollbar { display: none; }
+
+  .reel {
+    height: 100dvh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: grid;
+    place-items: center;
+    padding: max(14px, env(safe-area-inset-top)) 14px max(14px, env(safe-area-inset-bottom));
+    position: relative;
+    isolation: isolate;
+  }
+  .reel::before {
+    content: "";
+    position: absolute; inset: 0; z-index: -1;
+    background: var(--g, linear-gradient(160deg, #1a1f3a, #0b1020));
+    opacity: .9;
+  }
+  .reel::after {
+    content: "";
+    position: absolute; inset: 0; z-index: -1;
+    background: radial-gradient(120% 80% at 50% 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 100%);
+  }
+
+  .reel-card {
+    width: min(560px, 94vw);
+    max-height: 86dvh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 20px 16px;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: rgba(10,13,24,.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);
+    animation: rise .4s cubic-bezier(.2,.7,.2,1);
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(22px) scale(.985); } }
+
+  .reel-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    font-size: .74rem; font-weight: 700; letter-spacing: .01em;
+    padding: 6px 11px; border-radius: 999px;
+    background: rgba(255,255,255,.10); border: 1px solid var(--line);
+    color: #fff;
+  }
+  .cat {
+    font-size: .66rem; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--muted); font-weight: 700;
+  }
+
+  .reel-title {
+    margin: 2px 0 0;
+    font-size: clamp(1.5rem, 6.2vw, 2.05rem);
+    line-height: 1.12; letter-spacing: -.02em;
+    background: var(--title, linear-gradient(92deg, #fff, #c9d6ff));
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+
+  .reel-def {
+    margin: 0;
+    overflow-y: auto;
+    font-size: 1.02rem; line-height: 1.55;
+    color: #e7ecff;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding-right: 4px;
+  }
+  .reel-def::-webkit-scrollbar { width: 6px; }
+  .reel-def::-webkit-scrollbar-thumb { background: rgba(255,255,255,.18); border-radius: 999px; }
+  .reel-def .katex { font-size: 1.02em; }
+
+  .reel-codes { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 4px; }
+  .code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .72rem; padding: 3px 8px; border-radius: 7px;
+    background: rgba(255,255,255,.07); border: 1px solid var(--line); color: var(--muted);
+  }
+
+  .brand {
+    position: fixed; top: max(12px, env(safe-area-inset-top)); left: 0; right: 0;
+    text-align: center; z-index: 5; pointer-events: none;
+    font-size: .82rem; font-weight: 800; letter-spacing: .02em;
+    color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.6);
+  }
+  .home {
+    position: fixed; top: max(12px, env(safe-area-inset-top));
+    left: max(12px, env(safe-area-inset-left)); z-index: 6;
+    width: 40px; height: 40px; display: grid; place-items: center;
+    border-radius: 12px; text-decoration: none; font-size: 1.2rem;
+    color: #fff; background: rgba(10,13,24,.6); border: 1px solid var(--line);
+    backdrop-filter: blur(8px);
+  }
+
+  .hint {
+    position: absolute; left: 0; right: 0; bottom: 26px; z-index: 4;
+    text-align: center; color: rgba(255,255,255,.78); font-size: .82rem; font-weight: 600;
+    animation: bob 1.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes bob { 0%,100% { transform: translateY(0); opacity: .65; } 50% { transform: translateY(7px); opacity: 1; } }
+</style>
+</head>
+<body>
+<a class="home" href="index.html" aria-label="Zpět na hlavní appku">←</a>
+<div class="brand">🧠 informatika brainrot</div>
+<div class="feed" id="feed" tabindex="0"></div>
+
+<script src="Informatika.js"></script>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/contrib/auto-render.min.js"></script>
+<script>
+const DATASETS = window.STUDY_DATASETS || [];
+const DATA = DATASETS.find(d => d.id === "informatika") || DATASETS[0] || { topics: [] };
+const LABELS = DATA.categoryLabels || {};
+
+// Flatten every subtopic (dílčí pojem) into a bite-sized card item.
+const ITEMS = [];
+(DATA.topics || []).forEach(topic => {
+  (topic.scope || []).forEach(s => {
+    ITEMS.push({
+      okruh: topic.title,
+      cat: LABELS[topic.cat] || topic.cat,
+      codes: topic.codes || [],
+      title: s.t,
+      def: s.d
+    });
+  });
+});
+
+const GRADIENTS = [
+  "linear-gradient(160deg,#2a1370,#0b1020)",
+  "linear-gradient(160deg,#0c4a4a,#08111d)",
+  "linear-gradient(160deg,#5a1840,#0d0a1c)",
+  "linear-gradient(160deg,#163a6e,#080d18)",
+  "linear-gradient(160deg,#5a3a10,#100a18)",
+  "linear-gradient(160deg,#143d22,#08111a)",
+  "linear-gradient(160deg,#3a1550,#0a0e1c)",
+  "linear-gradient(160deg,#10395a,#0a0c16)"
+];
+const TITLES = [
+  "linear-gradient(92deg,#fff,#b9c6ff)",
+  "linear-gradient(92deg,#aeffe6,#7fd0ff)",
+  "linear-gradient(92deg,#ffc6e8,#ff9ec4)",
+  "linear-gradient(92deg,#cfe0ff,#9ab8ff)",
+  "linear-gradient(92deg,#ffe1a8,#ffb877)",
+  "linear-gradient(92deg,#bff7c9,#7fe0a8)",
+  "linear-gradient(92deg,#e6c6ff,#b79bff)",
+  "linear-gradient(92deg,#bfe8ff,#86c5ff)"
+];
+
+const feed = document.getElementById("feed");
+
+// shuffle-bag so concepts don't repeat until the whole set has been seen
+let bag = [];
+function nextItem() {
+  if (!bag.length) {
+    bag = [...ITEMS.keys()];
+    for (let i = bag.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [bag[i], bag[j]] = [bag[j], bag[i]];
+    }
+  }
+  return ITEMS[bag.pop()];
+}
+
+let made = 0;
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function makeReel(item, idx) {
+  const reel = el("section", "reel");
+  reel.style.setProperty("--g", GRADIENTS[idx % GRADIENTS.length]);
+
+  const card = el("article", "reel-card");
+  card.style.setProperty("--title", TITLES[idx % TITLES.length]);
+
+  const top = el("div", "reel-top");
+  top.appendChild(el("span", "chip", "📚 " + item.okruh));
+  top.appendChild(el("span", "cat", item.cat));
+  card.appendChild(top);
+
+  card.appendChild(el("h2", "reel-title", item.title));
+
+  const def = el("div", "reel-def");
+  def.textContent = item.def;
+  card.appendChild(def);
+
+  if (item.codes.length) {
+    const codes = el("div", "reel-codes");
+    item.codes.forEach(c => codes.appendChild(el("span", "code", c)));
+    card.appendChild(codes);
+  }
+
+  reel.appendChild(card);
+
+  if (idx === 0) {
+    const hint = el("div", "hint", "scrolluj nahoru pro další ↑");
+    reel.appendChild(hint);
+  }
+  return reel;
+}
+
+function typeset(root) {
+  if (typeof renderMathInElement !== "function") return;
+  renderMathInElement(root, {
+    delimiters: [
+      { left: "$$", right: "$$", display: true },
+      { left: "\\(", right: "\\)", display: false }
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"]
+  });
+}
+
+function appendBatch(n) {
+  const frag = document.createDocumentFragment();
+  const fresh = [];
+  for (let i = 0; i < n; i++) {
+    const reel = makeReel(nextItem(), made++);
+    fresh.push(reel);
+    frag.appendChild(reel);
+  }
+  feed.appendChild(frag);
+  fresh.forEach(typeset);
+}
+
+// infinite feed: prefetch a batch whenever we get within ~2 screens of the end
+let topping = false;
+function maybeExtend() {
+  if (topping) return;
+  if (feed.scrollTop + feed.clientHeight * 2 >= feed.scrollHeight) {
+    topping = true;
+    appendBatch(4);
+    setTimeout(() => { topping = false; }, 250);
+  }
+}
+
+if (!ITEMS.length) {
+  feed.innerHTML = '<section class="reel"><article class="reel-card"><h2 class="reel-title">Nic k zobrazení</h2><div class="reel-def">Nepodařilo se načíst data Informatiky.</div></article></section>';
+} else {
+  appendBatch(5);
+}
+
+// hide the swipe hint after the first move; keep the feed topped up
+feed.addEventListener("scroll", () => {
+  const h = document.querySelector(".hint");
+  if (h && feed.scrollTop > 40) h.remove();
+  maybeExtend();
+}, { passive: true });
+
+// desktop: arrows / space / j,k step between reels
+feed.addEventListener("keydown", e => {
+  const dir = (e.key === "ArrowDown" || e.key === " " || e.key === "j") ? 1
+            : (e.key === "ArrowUp" || e.key === "k") ? -1 : 0;
+  if (!dir) return;
+  e.preventDefault();
+  feed.scrollBy({ top: dir * window.innerHeight, behavior: "smooth" });
+  maybeExtend();
+});
+feed.focus();
+</script>
+</body>
+</html>

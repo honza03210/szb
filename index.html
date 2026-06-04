@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f1424">
 <title>Náhodné téma ke státnicím</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
 <style>
   :root {
     --bg: #0f1424;
@@ -329,6 +330,8 @@
 <script src="Informatika.js"></script>
 <script src="PVA.js"></script>
 <script src="CS.js"></script>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/katex/contrib/auto-render.min.js"></script>
 <script>
 const DATASETS = window.STUDY_DATASETS || [];
 const DATASET_BY_ID = new Map();
@@ -552,7 +555,20 @@ function render(topic) {
   const stage = document.getElementById("stage");
   stage.innerHTML = "";
   stage.appendChild(card);
+  typesetMath(card);
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function typesetMath(root) {
+  if (typeof renderMathInElement !== "function") return;
+  renderMathInElement(root, {
+    delimiters: [
+      { left: "$$", right: "$$", display: true },
+      { left: "\\(", right: "\\)", display: false }
+    ],
+    throwOnError: false,
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"]
+  });
 }
 
 function detailFor(topic, subtopic) {
