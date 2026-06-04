@@ -18,7 +18,7 @@ window.STUDY_DATASETS.push({
       "scope": [
         {
           "t": "Operace s vektory a maticemi",
-          "d": "Vektory lze sčítat po složkách a násobit skalárem; matice navíc můžeme násobit mezi sebou, kde násobení odpovídá skládání lineárních zobrazení. Násobení matic není komutativní \\((A\\cdot B \\ne  B\\cdot A)\\) a je definováno jen pro kompatibilní rozměry. Transponování matice prohazuje její řádky a sloupce."
+          "d": "Vektory lze sčítat po složkách a násobit skalárem; matice navíc můžeme násobit mezi sebou, kde násobení odpovídá skládání lineárních zobrazení. Násobení matic není komutativní (A·B ≠ B·A) a je definováno jen pro kompatibilní rozměry. Transponování matice prohazuje její řádky a sloupce."
         },
         {
           "t": "Vlastnosti lineárních operací a skalární součin",
@@ -30,15 +30,15 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Determinant",
-          "d": "Determinant je číslo přiřazené čtvercové matici, které vyjadřuje, kolikrát daná transformace zvětší objem a zda mění orientaci. Matice je regulární (invertibilní) právě tehdy, když je její determinant nenulový. Počítá se rozvojem podle řádku či sloupce, Gaussovou eliminací, nebo Sarrusovým pravidlem pro matice \\(3\\times 3\\)."
+          "d": "Determinant je číslo přiřazené čtvercové matici, které vyjadřuje, kolikrát daná transformace zvětší objem a zda mění orientaci. Matice je regulární (invertibilní) právě tehdy, když je její determinant nenulový. Počítá se rozvojem podle řádku či sloupce, Gaussovou eliminací, nebo Sarrusovým pravidlem pro matice 3×3."
         },
         {
           "t": "Vlastní čísla a vektory a jejich geometrický význam",
-          "d": "Vlastní vektor matice je nenulový vektor, jehož směr se transformací nemění – pouze se škáluje. Příslušné vlastní číslo udává faktor tohoto škálování (platí \\(A\\cdot v = \\lambda \\cdot v)\\). Geometricky vlastní vektory určují „osy“ transformace; využívají se například při diagonalizaci matic nebo v analýze hlavních komponent (PCA)."
+          "d": "Vlastní vektor matice je nenulový vektor, jehož směr se transformací nemění – pouze se škáluje. Příslušné vlastní číslo udává faktor tohoto škálování (platí A·v = λ·v). Geometricky vlastní vektory určují „osy“ transformace; využívají se například při diagonalizaci matic nebo v analýze hlavních komponent (PCA)."
         },
         {
           "t": "Inverzní matice",
-          "d": "Inverzní matice \\(A^{-1}\\) je matice, pro kterou platí \\(A\\cdot A^{-1}\\) = I (jednotková matice). Existuje pouze pro čtvercové regulární matice s nenulovým determinantem. Geometricky reprezentuje opačnou transformaci a umožňuje řešit soustavu \\(A\\cdot x\\) = b jako x = \\(A^{-1}\\cdot b\\)."
+          "d": "Inverzní matice A⁻¹ je matice, pro kterou platí A·A⁻¹ = I (jednotková matice). Existuje pouze pro čtvercové regulární matice s nenulovým determinantem. Geometricky reprezentuje opačnou transformaci a umožňuje řešit soustavu A·x = b jako x = A⁻¹·b."
         },
         {
           "t": "Vektorové podprostory",
@@ -73,7 +73,7 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Polynomy",
-          "d": "Polynom je funkce tvaru \\(a_{n}x^{n} + \\dots  + a_{1}x + a_{0}\\). Je definovaný na celém ℝ, je spojitý a hladký (libovolně derivovatelný). Stupeň polynomu omezuje počet jeho kořenů i jeho chování v nekonečnu."
+          "d": "Polynom je funkce tvaru aₙxⁿ + … + a₁x + a₀. Je definovaný na celém ℝ, je spojitý a hladký (libovolně derivovatelný). Stupeň polynomu omezuje počet jeho kořenů i jeho chování v nekonečnu."
         },
         {
           "t": "Spojité funkce a limity",
@@ -123,7 +123,7 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Korelace",
-          "d": "Korelace (korelační koeficient) vyjadřuje míru a směr lineárního vztahu mezi dvěma veličinami číslem od \\(-1\\) do +1. Hodnota blízká ±1 značí silný vztah, hodnota blízká 0 jeho absenci. Důležité je, že korelace sama o sobě neznamená příčinnou souvislost (kauzalitu)."
+          "d": "Korelace (korelační koeficient) vyjadřuje míru a směr lineárního vztahu mezi dvěma veličinami číslem od −1 do +1. Hodnota blízká ±1 značí silný vztah, hodnota blízká 0 jeho absenci. Důležité je, že korelace sama o sobě neznamená příčinnou souvislost (kauzalitu)."
         },
         {
           "t": "Odhady statistik a jejich spolehlivost",
@@ -154,7 +154,7 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Stromy",
-          "d": "Strom je souvislý graf bez cyklů; mezi každými dvěma vrcholy v něm vede právě jedna cesta. Strom s n vrcholy má přesně \\(n-1\\) hran. Zakořeněný strom má vyznačený kořen a hierarchickou strukturu rodič–potomek."
+          "d": "Strom je souvislý graf bez cyklů; mezi každými dvěma vrcholy v něm vede právě jedna cesta. Strom s n vrcholy má přesně n−1 hran. Zakořeněný strom má vyznačený kořen a hierarchickou strukturu rodič–potomek."
         },
         {
           "t": "Stupně vrcholů",
@@ -235,7 +235,7 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Související operace a jejich složitost",
-          "d": "Mezi základní operace patří vyhledání, vložení, smazání a u haldy nalezení extrému. U vyvážených stromů mají složitost \\(O(\\log n)\\), u nevyváženého BST až O(n). Volba struktury je kompromisem mezi rychlostí operací, paměťovou náročností a složitostí implementace."
+          "d": "Mezi základní operace patří vyhledání, vložení, smazání a u haldy nalezení extrému. U vyvážených stromů mají složitost O(log n), u nevyváženého BST až O(n). Volba struktury je kompromisem mezi rychlostí operací, paměťovou náročností a složitostí implementace."
         },
         {
           "t": "Typické implementace a příklady použití",
@@ -266,7 +266,7 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Řadicí rekurzivní algoritmy",
-          "d": "Mergesort dělí pole na poloviny, ty rekurzivně seřadí a poté slévá; má stabilní složitost \\(O(n\\log n)\\) a vyžaduje pomocnou paměť. Quicksort volí pivot, rozdělí pole na menší a větší prvky a rekurzivně řadí části; v průměru \\(O(n\\log n)\\), v nejhorším případě \\(O(n^{2})\\). Oba jsou ukázkou metody rozděl a panuj."
+          "d": "Mergesort dělí pole na poloviny, ty rekurzivně seřadí a poté slévá; má stabilní složitost O(n log n) a vyžaduje pomocnou paměť. Quicksort volí pivot, rozdělí pole na menší a větší prvky a rekurzivně řadí části; v průměru O(n log n), v nejhorším případě O(n²). Oba jsou ukázkou metody rozděl a panuj."
         },
         {
           "t": "Vztah rekurze a matematické indukce",
@@ -326,7 +326,7 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Varianty konečných automatů",
-          "d": "Konečný automat se skládá ze stavů, abecedy, přechodové funkce, počátečního stavu a množiny přijímajících stavů. Rozlišujeme deterministický (DKA), nedeterministický (NKA) a nedeterministický s \\(\\varepsilon -p\\)řechody. Všechny tyto varianty rozpoznávají právě třídu regulárních jazyků."
+          "d": "Konečný automat se skládá ze stavů, abecedy, přechodové funkce, počátečního stavu a množiny přijímajících stavů. Rozlišujeme deterministický (DKA), nedeterministický (NKA) a nedeterministický s ε-přechody. Všechny tyto varianty rozpoznávají právě třídu regulárních jazyků."
         },
         {
           "t": "Nedeterminismus a determinizace automatů",
@@ -382,7 +382,7 @@ window.STUDY_DATASETS.push({
       "codes": [
         "IB110"
       ],
-      "def": "Teorie složitosti navazuje na teorii vyčíslitelnosti: zatímco ta zkoumá, zda problém vůbec lze vyřešit, teorie složitosti zkoumá, kolik prostředků – především času a paměti – řešení nutně vyžaduje. Rozlišujeme složitost algoritmu (kolik prostředků spotřebuje konkrétní algoritmus) a složitost problému (kolik prostředků potřebuje nejlepší možný algoritmus pro daný problém). Problémy se podle náročnosti řadí do složitostních tříd. Třída P obsahuje problémy řešitelné v polynomiálním čase (považované za efektivně řešitelné), třída NP problémy, jejichž řešení lze v polynomiálním čase ověřit, a PSPACE problémy řešitelné v polynomiálním prostoru. Platí P \\(\\subseteq \\) NP \\(\\subseteq \\) PSPACE, ale zda jsou tyto inkluze ostré, je otevřené – otázka P vs. NP je nejslavnějším otevřeným problémem informatiky. Klíčovým nástrojem je polynomiální redukce, pomocí níž se definuje těžkost a úplnost: NP-úplné problémy jsou ty nejtěžší v NP – pokud by se jediný z nich vyřešil v polynomiálním čase, platilo by P = NP.",
+      "def": "Teorie složitosti navazuje na teorii vyčíslitelnosti: zatímco ta zkoumá, zda problém vůbec lze vyřešit, teorie složitosti zkoumá, kolik prostředků – především času a paměti – řešení nutně vyžaduje. Rozlišujeme složitost algoritmu (kolik prostředků spotřebuje konkrétní algoritmus) a složitost problému (kolik prostředků potřebuje nejlepší možný algoritmus pro daný problém). Problémy se podle náročnosti řadí do složitostních tříd. Třída P obsahuje problémy řešitelné v polynomiálním čase (považované za efektivně řešitelné), třída NP problémy, jejichž řešení lze v polynomiálním čase ověřit, a PSPACE problémy řešitelné v polynomiálním prostoru. Platí P ⊆ NP ⊆ PSPACE, ale zda jsou tyto inkluze ostré, je otevřené – otázka P vs. NP je nejslavnějším otevřeným problémem informatiky. Klíčovým nástrojem je polynomiální redukce, pomocí níž se definuje těžkost a úplnost: NP-úplné problémy jsou ty nejtěžší v NP – pokud by se jediný z nich vyřešil v polynomiálním čase, platilo by P = NP.",
       "scope": [
         {
           "t": "Složitost algoritmu versus složitost problému",
@@ -390,11 +390,11 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Složitostní třídy (P, NP, PSPACE)",
-          "d": "Třída P obsahuje rozhodovací problémy řešitelné deterministicky v polynomiálním čase – považují se za prakticky zvládnutelné. Třída NP obsahuje problémy, u nichž lze navržené řešení (certifikát) ověřit v polynomiálním čase. Třída PSPACE zahrnuje problémy řešitelné v polynomiálním prostoru a platí P \\(\\subseteq \\) NP \\(\\subseteq \\) PSPACE."
+          "d": "Třída P obsahuje rozhodovací problémy řešitelné deterministicky v polynomiálním čase – považují se za prakticky zvládnutelné. Třída NP obsahuje problémy, u nichž lze navržené řešení (certifikát) ověřit v polynomiálním čase. Třída PSPACE zahrnuje problémy řešitelné v polynomiálním prostoru a platí P ⊆ NP ⊆ PSPACE."
         },
         {
           "t": "Vztahy mezi třídami a příklady problémů",
-          "d": "Mezi třídami platí inkluze P \\(\\subseteq \\) NP \\(\\subseteq \\) PSPACE, ostrost těchto inkluzí je však otevřená. Do P patří například třídění nebo hledání nejkratší cesty, do NP problém SAT či barvení grafu, do PSPACE třeba vyhodnocování kvantifikovaných formulí. Otázka, zda P = NP, je nejznámějším otevřeným problémem oboru."
+          "d": "Mezi třídami platí inkluze P ⊆ NP ⊆ PSPACE, ostrost těchto inkluzí je však otevřená. Do P patří například třídění nebo hledání nejkratší cesty, do NP problém SAT či barvení grafu, do PSPACE třeba vyhodnocování kvantifikovaných formulí. Otázka, zda P = NP, je nejznámějším otevřeným problémem oboru."
         },
         {
           "t": "Těžkost a úplnost problému",
@@ -554,7 +554,7 @@ window.STUDY_DATASETS.push({
         },
         {
           "t": "Funkční závislosti",
-          "d": "Funkční závislost X \\(\\to \\) Y znamená, že hodnoty atributů X jednoznačně určují hodnoty atributů Y. Popisuje vnitřní vztahy v datech a je východiskem pro odvozování klíčů a pro normalizaci. Z dané množiny závislostí lze pomocí Armstrongových axiomů odvozovat další."
+          "d": "Funkční závislost X → Y znamená, že hodnoty atributů X jednoznačně určují hodnoty atributů Y. Popisuje vnitřní vztahy v datech a je východiskem pro odvozování klíčů a pro normalizaci. Z dané množiny závislostí lze pomocí Armstrongových axiomů odvozovat další."
         },
         {
           "t": "Normální formy (1NF, 2NF, 3NF, BCNF)",
@@ -972,74 +972,74 @@ window.STUDY_DATASETS.push({
   "detail": {
     "Lineární algebra": {
       "Operace s vektory a maticemi": {
-        "ex": "Pro \\(a=(1,-2,3)\\) a \\(b=(4,0,-1)\\) je \\(a+b=(5,-2,2)\\) a \\(3a=(3,-6,9);\\) součin matice A typu \\(2\\times 3\\) s maticí B typu \\(3\\times 2\\) dá matici \\(2\\times 2,\\) kdežto \\(B\\cdot A\\) vyjde \\(3\\times 3\\) – už z rozměrů je vidět, proč \\(A\\cdot B\\ne B\\cdot A\\).",
-        "cv": "Spočítej \\(2a-b\\) pro \\(a=(2,1,-1),\\) b=(1,3,0), vynásob A=\\(\\begin{pmatrix}1 & 2\\\\0 & 1\\end{pmatrix}\\) s B=\\(\\begin{pmatrix}3 & 1\\\\2 & 4\\end{pmatrix}\\) a ověř, že \\(B\\cdot A\\) dává jiný výsledek."
+        "ex": "Pro a=(1,−2,3) a b=(4,0,−1) je a+b=(5,−2,2) a 3a=(3,−6,9); součin matice A typu 2×3 s maticí B typu 3×2 dá matici 2×2, kdežto B·A vyjde 3×3 – už z rozměrů je vidět, proč A·B≠B·A.",
+        "cv": "Spočítej 2a−b pro a=(2,1,−1), b=(1,3,0), vynásob A=[[1,2],[0,1]] s B=[[3,1],[2,4]] a ověř, že B·A dává jiný výsledek."
       },
       "Vlastnosti lineárních operací a skalární součin": {
-        "ex": "Skalární součin \\(u\\cdot v=(1,2,2)\\cdot (2,-1,0)=2-2+0=0,\\) takže vektory jsou kolmé; jejich délky jsou |u|=3 a \\(|v|=\\sqrt{5}\\).",
-        "cv": "Pro u=(1,0,1) a \\(v=(2,1,-2)\\) spočítej \\(u\\cdot v,\\) |u|, |v| a cos \\(\\varphi \\) a rozhodni, zda je úhel ostrý, pravý, nebo tupý."
+        "ex": "Skalární součin u·v=(1,2,2)·(2,−1,0)=2−2+0=0, takže vektory jsou kolmé; jejich délky jsou |u|=3 a |v|=√5.",
+        "cv": "Pro u=(1,0,1) a v=(2,1,−2) spočítej u·v, |u|, |v| a cos φ a rozhodni, zda je úhel ostrý, pravý, nebo tupý."
       },
       "Gaussova eliminace": {
-        "ex": "Soustava x+y+z=6, \\(2x-y+z=3, x+2y-z=2\\) se řádkovými úpravami převede na schodovitý tvar a zpětnou substitucí vyjde x=1, y=2, z=3.",
-        "cv": "Vyřeš soustavu x+y+z=4, \\(2x-y+z=1, 3x+y-z=9\\) Gaussovou eliminací a z výsledného tvaru urči hodnost matice a počet řešení."
+        "ex": "Soustava x+y+z=6, 2x−y+z=3, x+2y−z=2 se řádkovými úpravami převede na schodovitý tvar a zpětnou substitucí vyjde x=1, y=2, z=3.",
+        "cv": "Vyřeš soustavu x+y+z=4, 2x−y+z=1, 3x+y−z=9 Gaussovou eliminací a z výsledného tvaru urči hodnost matice a počet řešení."
       },
       "Determinant": {
-        "ex": "Pro A=\\(\\begin{pmatrix}2 & 1\\\\3 & 4\\end{pmatrix}\\) je \\(det(A)=2\\cdot 4-1\\cdot 3=5\\ne 0,\\) matice je tedy regulární; geometricky transformace A zvětší obsah pětkrát.",
-        "cv": "Spočítej det(\\(\\begin{pmatrix}1 & 2 & 0\\\\0 & 3 & 4\\\\2 & 0 & 1\\end{pmatrix}\\)) rozvojem podle prvního sloupce a podle znaménka výsledku rozhodni o regularitě a orientaci."
+        "ex": "Pro A=[[2,1],[3,4]] je det(A)=2·4−1·3=5≠0, matice je tedy regulární; geometricky transformace A zvětší obsah pětkrát.",
+        "cv": "Spočítej det([[1,2,0],[0,3,4],[2,0,1]]) rozvojem podle prvního sloupce a podle znaménka výsledku rozhodni o regularitě a orientaci."
       },
       "Vlastní čísla a vektory a jejich geometrický význam": {
-        "ex": "U A=\\(\\begin{pmatrix}2 & 0\\\\0 & 3\\end{pmatrix}\\) jsou vlastní čísla 2 a 3 s vlastními vektory (1,0) a (0,1) – transformace pouze natáhne osu x dvakrát a osu y třikrát.",
-        "cv": "Pro A=\\(\\begin{pmatrix}2 & 1\\\\1 & 2\\end{pmatrix}\\) najdi vlastní čísla z rovnice \\(det(A-\\lambda I)=0,\\) dopočítej vlastní vektory a ověř je dosazením do \\(A\\cdot v=\\lambda \\cdot v\\)."
+        "ex": "U A=[[2,0],[0,3]] jsou vlastní čísla 2 a 3 s vlastními vektory (1,0) a (0,1) – transformace pouze natáhne osu x dvakrát a osu y třikrát.",
+        "cv": "Pro A=[[2,1],[1,2]] najdi vlastní čísla z rovnice det(A−λI)=0, dopočítej vlastní vektory a ověř je dosazením do A·v=λ·v."
       },
       "Inverzní matice": {
-        "ex": "Pro A=\\(\\begin{pmatrix}2 & 1\\\\5 & 3\\end{pmatrix}\\) je det(A)=1, takže \\(A^{-1}=\\begin{pmatrix}3 & -1\\\\-5 & 2\\end{pmatrix}\\); soustavu \\(A\\cdot x=b\\) pak řešíme jako \\(x=A^{-1}\\cdot b\\).",
-        "cv": "Najdi \\(A^{-1}\\) pro A=\\(\\begin{pmatrix}2 & 1\\\\5 & 3\\end{pmatrix}\\), vyřeš pomocí ní \\(A\\cdot x=b\\) s b=(1,4) a výsledek zkontroluj dosazením."
+        "ex": "Pro A=[[2,1],[5,3]] je det(A)=1, takže A⁻¹=[[3,−1],[−5,2]]; soustavu A·x=b pak řešíme jako x=A⁻¹·b.",
+        "cv": "Najdi A⁻¹ pro A=[[2,1],[5,3]], vyřeš pomocí ní A·x=b s b=(1,4) a výsledek zkontroluj dosazením."
       },
       "Vektorové podprostory": {
-        "ex": "Rovina x+y+z=0 v \\(R^{3}\\) je podprostor: obsahuje nulový vektor a součet i násobek jejích vektorů opět splňuje rovnici; rovina x+y+z=1 podprostorem není.",
-        "cv": "Rozhodni, zda M=\\(\\{(x,y,z) | x+y+z=0\\}\\) je podprostor \\(R^{3}\\) – ověř všechny tři podmínky – a pokud ano, najdi jeho bázi."
+        "ex": "Rovina x+y+z=0 v R³ je podprostor: obsahuje nulový vektor a součet i násobek jejích vektorů opět splňuje rovnici; rovina x+y+z=1 podprostorem není.",
+        "cv": "Rozhodni, zda M={(x,y,z) | x+y+z=0} je podprostor R³ – ověř všechny tři podmínky – a pokud ano, najdi jeho bázi."
       },
       "Vektorové báze": {
-        "ex": "Vektory (1,0,0), (0,1,0), (0,0,1) tvoří kanonickou bázi \\(R^{3};\\) báze (1,1,0), (0,1,1), (1,0,1) je jiná, dimenze prostoru ale zůstává 3.",
+        "ex": "Vektory (1,0,0), (0,1,0), (0,0,1) tvoří kanonickou bázi R³; báze (1,1,0), (0,1,1), (1,0,1) je jiná, dimenze prostoru ale zůstává 3.",
         "cv": "Pro v1=(1,0,1), v2=(0,1,1), v3=(1,1,2) rozhodni o lineární nezávislosti a urči dimenzi prostoru, který generují."
       },
       "Lineární transformace": {
-        "ex": "Zobrazení \\(T(x,y)=(2x-y,\\) x+3y) je lineární; jeho matice v kanonické bázi je \\(\\begin{pmatrix}2 & -1\\\\1 & 3\\end{pmatrix}\\) a obrazem bázového vektoru (1,0) je (2,1).",
-        "cv": "Ověř linearitu T(x,y)=(x+2y, \\(3x-y),\\) sestav jeho matici v kanonické bázi a spočítej \\(T(2,-1)\\)."
+        "ex": "Zobrazení T(x,y)=(2x−y, x+3y) je lineární; jeho matice v kanonické bázi je [[2,−1],[1,3]] a obrazem bázového vektoru (1,0) je (2,1).",
+        "cv": "Ověř linearitu T(x,y)=(x+2y, 3x−y), sestav jeho matici v kanonické bázi a spočítej T(2,−1)."
       }
     },
     "Základy matematické analýzy": {
       "Relace a zobrazení": {
-        "ex": "Relace „je dělitelem“ na \\(\\{1,2,3,4\\}\\) obsahuje dvojice jako (2,4); zobrazení \\(f(x)=x^{2}\\) z R do R není prosté, protože \\(f(-1)=f(1)\\).",
-        "cv": "Pro f(x)=2x+1 a \\(g(x)=x^{2}\\) rozhodni u každé, zda je z R do R injektivní, surjektivní, nebo bijektivní, a zdůvodni to."
+        "ex": "Relace „je dělitelem“ na {1,2,3,4} obsahuje dvojice jako (2,4); zobrazení f(x)=x² z R do R není prosté, protože f(−1)=f(1).",
+        "cv": "Pro f(x)=2x+1 a g(x)=x² rozhodni u každé, zda je z R do R injektivní, surjektivní, nebo bijektivní, a zdůvodni to."
       },
       "Vlastnosti reálných funkcí": {
-        "ex": "Funkce \\(f(x)=x^{2}\\) má definiční obor R, je sudá \\((f(-x)=f(x)),\\) zdola omezená nulou a na \\((-\\infty ,0)\\) klesající, na \\((0,\\infty )\\) rostoucí.",
-        "cv": "U funkce \\(f(x)=1/(x-2)\\) urči definiční obor, monotonii a rozhodni o sudosti, lichosti a omezenosti."
+        "ex": "Funkce f(x)=x² má definiční obor R, je sudá (f(−x)=f(x)), zdola omezená nulou a na (−∞,0) klesající, na (0,∞) rostoucí.",
+        "cv": "U funkce f(x)=1/(x−2) urči definiční obor, monotonii a rozhodni o sudosti, lichosti a omezenosti."
       },
       "Polynomy": {
-        "ex": "Polynom \\(p(x)=x^{3}-x\\) má kořeny \\(-1,\\) 0, 1, je definovaný na celém R a v \\(+\\infty \\) roste nade všechny meze, protože vedoucí člen má lichý stupeň.",
-        "cv": "Pro \\(p(x)=x^{3}-4x\\) najdi všechny reálné kořeny, urči stupeň a popiš chování polynomu v ±\\(\\infty \\)."
+        "ex": "Polynom p(x)=x³−x má kořeny −1, 0, 1, je definovaný na celém R a v +∞ roste nade všechny meze, protože vedoucí člen má lichý stupeň.",
+        "cv": "Pro p(x)=x³−4x najdi všechny reálné kořeny, urči stupeň a popiš chování polynomu v ±∞."
       },
       "Spojité funkce a limity": {
-        "ex": "Funkce \\(f(x)=(x^{2}-1)/(x-1)\\) není v bodě 1 definovaná, ale limita pro \\(x\\to 1\\) je 2; doplněním f(1)=2 vznikne spojitá funkce.",
-        "cv": "Spočítej limitu \\((x^{2}-4)/(x-2)\\) pro \\(x\\to 2\\) a rozhodni, jakou hodnotou v bodě 2 funkci dodefinovat, aby byla spojitá."
+        "ex": "Funkce f(x)=(x²−1)/(x−1) není v bodě 1 definovaná, ale limita pro x→1 je 2; doplněním f(1)=2 vznikne spojitá funkce.",
+        "cv": "Spočítej limitu (x²−4)/(x−2) pro x→2 a rozhodni, jakou hodnotou v bodě 2 funkci dodefinovat, aby byla spojitá."
       },
       "Derivace": {
-        "ex": "Pro \\(f(x)=x^{3}-3x\\) je f′\\((x)=3x^{2}-3;\\) z f′(x)=0 plynou body x=±1, kde má funkce lokální extrémy (maximum v \\(-1,\\) minimum v 1).",
-        "cv": "Derivuj \\(f(x)=x^{3}-3x,\\) urči intervaly monotonie a najdi a klasifikuj všechny lokální extrémy."
+        "ex": "Pro f(x)=x³−3x je f′(x)=3x²−3; z f′(x)=0 plynou body x=±1, kde má funkce lokální extrémy (maximum v −1, minimum v 1).",
+        "cv": "Derivuj f(x)=x³−3x, urči intervaly monotonie a najdi a klasifikuj všechny lokální extrémy."
       },
       "Neurčitý a určitý integrál": {
-        "ex": "Primitivní funkcí k \\(x^{2}\\) je \\(x^{3}/3,\\) takže podle Newtonovy–Leibnizovy věty je \\(\\int _{0}^{2} x^{2}\\) dx = \\([x^{3}/3]_{0}^{2}\\) = 8/3.",
-        "cv": "Spočítej \\(\\int _{0}^{2} (x^{2}+1)\\) dx tak, že najdeš primitivní funkci a dosadíš meze."
+        "ex": "Primitivní funkcí k x² je x³/3, takže podle Newtonovy–Leibnizovy věty je ∫₀² x² dx = [x³/3]₀² = 8/3.",
+        "cv": "Spočítej ∫₀² (x²+1) dx tak, že najdeš primitivní funkci a dosadíš meze."
       },
       "Geometrický význam": {
-        "ex": "Derivace f′(2) funkce \\(f(x)=x^{2}\\) je 4 – sklon tečny v bodě (2,4); určitý integrál \\(\\int _{0}^{1}\\) x dx = 1/2 je obsah trojúhelníka pod grafem.",
-        "cv": "Pro \\(f(x)=x^{2}\\) napiš rovnici tečny v bodě x=1 a spočítej obsah plochy mezi grafem a osou x na intervalu [0,1]."
+        "ex": "Derivace f′(2) funkce f(x)=x² je 4 – sklon tečny v bodě (2,4); určitý integrál ∫₀¹ x dx = 1/2 je obsah trojúhelníka pod grafem.",
+        "cv": "Pro f(x)=x² napiš rovnici tečny v bodě x=1 a spočítej obsah plochy mezi grafem a osou x na intervalu [0,1]."
       },
       "Diferenciální počet": {
-        "ex": "Vyšetření \\(f(x)=x^{3}-3x:\\) z první derivace plynou extrémy v ±1, z druhé derivace inflexní bod v 0, Taylorův polynom v bodě 0 začíná \\(-3x\\).",
-        "cv": "Proveď úplné vyšetření průběhu funkce \\(f(x)=x^{3}-3x:\\) definiční obor, monotonie, extrémy, konvexita a inflexní bod."
+        "ex": "Vyšetření f(x)=x³−3x: z první derivace plynou extrémy v ±1, z druhé derivace inflexní bod v 0, Taylorův polynom v bodě 0 začíná −3x.",
+        "cv": "Proveď úplné vyšetření průběhu funkce f(x)=x³−3x: definiční obor, monotonie, extrémy, konvexita a inflexní bod."
       }
     },
     "Popisná statistika": {
@@ -1068,12 +1068,12 @@ window.STUDY_DATASETS.push({
         "cv": "Z výběru o velikosti n s průměrem 50 vysvětli, jak se změní šířka 95% konfidenčního intervalu, když n zvětšíš čtyřikrát."
       },
       "Distribuční funkce": {
-        "ex": "Pro hod kostkou je distribuční funkce F schodovitá: F(3)=1/2, protože \\(P(X\\le 3)=3/6,\\) a roste od 0 do 1.",
+        "ex": "Pro hod kostkou je distribuční funkce F schodovitá: F(3)=1/2, protože P(X≤3)=3/6, a roste od 0 do 1.",
         "cv": "Náhodná veličina nabývá hodnot 1,2,3 s pravděpodobnostmi 0,2; 0,5; 0,3. Sestav a načrtni její distribuční funkci."
       },
       "Rozdělení náhodných veličin a jejich příklady": {
         "ex": "Počet líců při 10 hodech mincí má binomické rozdělení, počet e-mailů za hodinu Poissonovo a výška lidí přibližně normální (Gaussovo) rozdělení.",
-        "cv": "Pro každou situaci urči vhodné rozdělení: hod kostkou \\(20\\times ,\\) čekací doba na dalšího zákazníka, chyba měření délky."
+        "cv": "Pro každou situaci urči vhodné rozdělení: hod kostkou 20×, čekací doba na dalšího zákazníka, chyba měření délky."
       }
     },
     "Grafy a jejich prohledávání": {
@@ -1090,11 +1090,11 @@ window.STUDY_DATASETS.push({
         "cv": "Graf má 5 vrcholů se stupni 3,3,2,2,2. Spočítej počet hran a rozhodni, zda takový graf může existovat."
       },
       "Orientované grafy": {
-        "ex": "V orientovaném grafu závislostí úloh hrana \\(A\\to B\\) znamená „A musí být před B“; orientovaný cyklus by znamenal neřešitelnou závislost.",
-        "cv": "Pro orientovaný graf s hranami \\(A\\to B, B\\to C, C\\to A\\) urči vstupní a výstupní stupně vrcholů a rozhodni o existenci orientovaného cyklu."
+        "ex": "V orientovaném grafu závislostí úloh hrana A→B znamená „A musí být před B“; orientovaný cyklus by znamenal neřešitelnou závislost.",
+        "cv": "Pro orientovaný graf s hranami A→B, B→C, C→A urči vstupní a výstupní stupně vrcholů a rozhodni o existenci orientovaného cyklu."
       },
       "Reprezentace grafů": {
-        "ex": "Graf se 4 vrcholy a hranami AB, BC se zapíše buď maticí sousednosti \\(4\\times 4\\) (16 buněk), nebo seznamy sousedů, které jsou u řídkého grafu úspornější.",
+        "ex": "Graf se 4 vrcholy a hranami AB, BC se zapíše buď maticí sousednosti 4×4 (16 buněk), nebo seznamy sousedů, které jsou u řídkého grafu úspornější.",
         "cv": "Pro graf s vrcholy 1–4 a hranami 1–2, 2–3, 3–4, 4–1 sestav matici sousednosti i seznamy sousedů a porovnej jejich paměťovou náročnost."
       },
       "Algoritmy prohledávání do hloubky a do šířky a jejich využití": {
@@ -1102,7 +1102,7 @@ window.STUDY_DATASETS.push({
         "cv": "Na grafu se 7 vrcholy proveď BFS i DFS od vrcholu A a zapiš pořadí navštívení vrcholů u obou prohledávání."
       },
       "Komponenty souvislosti": {
-        "ex": "Graf s hranami AB, CD má dvě komponenty souvislosti \\(\\{A,B\\}\\) a \\(\\{C,D\\}\\); opakovaným spuštěním DFS z nenavštívených vrcholů je všechny najdeme.",
+        "ex": "Graf s hranami AB, CD má dvě komponenty souvislosti {A,B} a {C,D}; opakovaným spuštěním DFS z nenavštívených vrcholů je všechny najdeme.",
         "cv": "V grafu s vrcholy A–F a hranami AB, BC, DE urči počet komponent souvislosti a vypiš, které vrcholy do nich patří."
       }
     },
@@ -1112,7 +1112,7 @@ window.STUDY_DATASETS.push({
         "cv": "Navrhni ohodnocený graf 4 měst se vzdálenostmi a urči, která dvojice měst je spojena nejdražší hranou."
       },
       "Definice nejkratší cesty": {
-        "ex": "V grafu s hranami \\(A\\to B\\) (5), \\(A\\to C\\) (2), \\(C\\to B\\) (1) je nejkratší cesta z A do B přes C s délkou 3, ne přímá hrana délky 5.",
+        "ex": "V grafu s hranami A→B (5), A→C (2), C→B (1) je nejkratší cesta z A do B přes C s délkou 3, ne přímá hrana délky 5.",
         "cv": "V ohodnoceném grafu se 4 vrcholy najdi ručně nejkratší cestu mezi dvěma vrcholy a vysvětli, proč u záporného cyklu cesta nemusí být definována."
       },
       "Minimální kostry grafu": {
@@ -1130,7 +1130,7 @@ window.STUDY_DATASETS.push({
     },
     "Stromové datové struktury": {
       "Binární vyhledávací stromy": {
-        "ex": "Vložením klíčů 5,3,8,1,4 vznikne BST, v němž hledání čísla 4 projde \\(5\\to 3\\to 4;\\) vložení vzestupné posloupnosti 1,2,3,4,5 ho ale zvrhne na seznam.",
+        "ex": "Vložením klíčů 5,3,8,1,4 vznikne BST, v němž hledání čísla 4 projde 5→3→4; vložení vzestupné posloupnosti 1,2,3,4,5 ho ale zvrhne na seznam.",
         "cv": "Postupně vlož klíče 7,3,9,1,5,8 do prázdného BST, nakresli výsledný strom a vyznač cestu při hledání klíče 5."
       },
       "B-stromy": {
@@ -1143,10 +1143,10 @@ window.STUDY_DATASETS.push({
       },
       "Haldy": {
         "ex": "Pole [1,3,2,7,4] splňuje vlastnost min-haldy: kořen 1 je nejmenší prvek dostupný v O(1) a každý rodič je menší než jeho potomci.",
-        "cv": "Z pole \\([9,4,7,1,-2,6,5]\\) vybuduj min-haldu, proveď dvě operace extract-min a po každé zapiš stav haldy."
+        "cv": "Z pole [9,4,7,1,−2,6,5] vybuduj min-haldu, proveď dvě operace extract-min a po každé zapiš stav haldy."
       },
       "Související operace a jejich složitost": {
-        "ex": "Vyhledání ve vyváženém BST trvá \\(O(\\log n)\\), v BST zvrhlém na seznam ale O(n) – proto se používají samovyvažující stromy.",
+        "ex": "Vyhledání ve vyváženém BST trvá O(log n), v BST zvrhlém na seznam ale O(n) – proto se používají samovyvažující stromy.",
         "cv": "Sestav tabulku složitosti operací insert, delete a search pro vyvážený BST, nevyvážený BST a haldu."
       },
       "Typické implementace a příklady použití": {
@@ -1156,7 +1156,7 @@ window.STUDY_DATASETS.push({
     },
     "Návrh algoritmů": {
       "Metoda rozděl a panuj": {
-        "ex": "Binární vyhledávání rozdělí seřazené pole na polovinu, zahodí tu, kde hledaný prvek být nemůže, a tím dosáhne složitosti \\(O(\\log n)\\).",
+        "ex": "Binární vyhledávání rozdělí seřazené pole na polovinu, zahodí tu, kde hledaný prvek být nemůže, a tím dosáhne složitosti O(log n).",
         "cv": "Popiš mergesort jako metodu rozděl a panuj: urči krok rozdělení, řešení podproblémů a sloučení, a odvoď jeho složitost."
       },
       "Výhody a nevýhody použití rekurze": {
@@ -1168,12 +1168,12 @@ window.STUDY_DATASETS.push({
         "cv": "Přepiš rekurzivní výpočet faktoriálu na iterativní verzi s cyklem a vysvětli, co se tím ušetří."
       },
       "Řadicí rekurzivní algoritmy": {
-        "ex": "Mergesort má vždy \\(O(n\\log n)\\), zatímco quicksort se při špatné volbě pivotu (například na již seřazeném poli) zhorší na \\(O(n^{2})\\).",
+        "ex": "Mergesort má vždy O(n log n), zatímco quicksort se při špatné volbě pivotu (například na již seřazeném poli) zhorší na O(n²).",
         "cv": "Seřaď pole [5,2,8,1,9,3] mergesortem a zapiš stav po každém slévání; pak totéž proveď quicksortem s prvním prvkem jako pivotem."
       },
       "Vztah rekurze a matematické indukce": {
         "ex": "Správnost rekurzivního výpočtu faktoriálu se dokáže indukcí: báze fact(0)=1 odpovídá ukončovací podmínce, indukční krok rekurzivnímu volání.",
-        "cv": "Indukcí dokaž, že rekurzivní funkce \\(sum(n)=n+sum(n-1)\\) s sum(0)=0 vrací n(n+1)/2."
+        "cv": "Indukcí dokaž, že rekurzivní funkce sum(n)=n+sum(n−1) s sum(0)=0 vrací n(n+1)/2."
       }
     },
     "Funkcionální programování": {
@@ -1182,7 +1182,7 @@ window.STUDY_DATASETS.push({
         "cv": "Vysvětli na konkrétním příkladu rozdíl mezi imperativním sčítáním prvků pole cyklem a funkcionálním přístupem přes fold."
       },
       "Princip výpočtu a redukční krok": {
-        "ex": "Výraz \\((\\lambda x\\). x+1) 4 se jedním redukčním krokem přepíše na 4+1 a dalším na 5 – výpočet je řetězec přepisů až do normálního tvaru.",
+        "ex": "Výraz (λx. x+1) 4 se jedním redukčním krokem přepíše na 4+1 a dalším na 5 – výpočet je řetězec přepisů až do normálního tvaru.",
         "cv": "Postupnými redukčními kroky vyhodnoť výraz double (double 3), kde double x = x+x, a zapiš každý mezikrok."
       },
       "Redukční strategie a jejich vlastnosti": {
@@ -1194,7 +1194,7 @@ window.STUDY_DATASETS.push({
         "cv": "Pomocí map, filter a fold napiš výraz, který z [1..10] vybere sudá čísla, umocní je na druhou a sečte."
       },
       "Nepojmenované funkce": {
-        "ex": "Místo pojmenované funkce se ve volání map přímo zapíše lambda – krátká funkce „na místě“ bez jména, například \\(\\lambda x \\to  x\\cdot x\\).",
+        "ex": "Místo pojmenované funkce se ve volání map přímo zapíše lambda – krátká funkce „na místě“ bez jména, například λx → x·x.",
         "cv": "Přepiš pojmenovanou funkci inc x = x+1 na ekvivalentní lambda výraz a použij ji ve volání map nad seznamem [1,2,3]."
       },
       "Elementární programování v Haskellu": {
@@ -1204,15 +1204,15 @@ window.STUDY_DATASETS.push({
     },
     "Regulární jazyky": {
       "Chomského hierarchie formálních jazyků": {
-        "ex": "Jazyk slov nad \\(\\{a,b\\}\\) sudé délky je regulární (typ 3), jazyk \\(a^{n}b^{n}\\) je bezkontextový (typ 2) a \\(a^{n}b^{n}c^{n}\\) už ani bezkontextový není.",
-        "cv": "Zařaď do Chomského hierarchie tři jazyky: všechna slova obsahující „ab“, jazyk \\(a^{n}b^{n}\\) a jazyk \\(a^{n}b^{n}c^{n},\\) a zdůvodni to."
+        "ex": "Jazyk slov nad {a,b} sudé délky je regulární (typ 3), jazyk aⁿbⁿ je bezkontextový (typ 2) a aⁿbⁿcⁿ už ani bezkontextový není.",
+        "cv": "Zařaď do Chomského hierarchie tři jazyky: všechna slova obsahující „ab“, jazyk aⁿbⁿ a jazyk aⁿbⁿcⁿ, a zdůvodni to."
       },
       "Regulární jazyky, jejich reprezentace a převody": {
         "ex": "Jazyk slov končících na „ab“ popíšeme regulárním výrazem (a|b)*ab, ekvivalentní pravolineární gramatikou i konečným automatem.",
         "cv": "Pro regulární výraz (a|b)*ab sestroj odpovídající konečný automat a slovně popiš, který jazyk přijímá."
       },
       "Varianty konečných automatů": {
-        "ex": "DKA pro slova se sudým počtem znaků a má dva stavy; tentýž jazyk lze popsat i NKA, případně NKA s \\(\\varepsilon -p\\)řechody.",
+        "ex": "DKA pro slova se sudým počtem znaků a má dva stavy; tentýž jazyk lze popsat i NKA, případně NKA s ε-přechody.",
         "cv": "Navrhni deterministický konečný automat, který přijímá právě binární řetězce dělitelné třemi (čteno jako číslo)."
       },
       "Nedeterminismus a determinizace automatů": {
@@ -1220,8 +1220,8 @@ window.STUDY_DATASETS.push({
         "cv": "Pro malý NKA se 3 stavy proveď determinizaci podmnožinovou konstrukcí a zapiš přechodovou tabulku výsledného DKA."
       },
       "Uzávěrové vlastnosti regulárních jazyků": {
-        "ex": "Jsou-li L1 i L2 regulární, je regulární i jejich průnik, sjednocení a doplněk; že \\(L=a^{n}b^{n}\\) regulární není, dokážeme pumping lemmatem.",
-        "cv": "Pumping lemmatem dokaž, že jazyk L=\\(\\{a^{n}b^{n} | n\\ge 0\\}\\) není regulární."
+        "ex": "Jsou-li L1 i L2 regulární, je regulární i jejich průnik, sjednocení a doplněk; že L=aⁿbⁿ regulární není, dokážeme pumping lemmatem.",
+        "cv": "Pumping lemmatem dokaž, že jazyk L={aⁿbⁿ | n≥0} není regulární."
       }
     },
     "Rozhodnutelnost": {
@@ -1230,8 +1230,8 @@ window.STUDY_DATASETS.push({
         "cv": "Zformuluj problém „obsahuje seznam duplicitní prvek?“ jako rozhodovací problém a popiš algoritmus, který ho řeší."
       },
       "Turingův stroj": {
-        "ex": "Turingův stroj pro rozpoznání slov \\(a^{n}b^{n}\\) střídavě škrtá a a b na pásce a v konečném řízení si pamatuje jen aktuální stav, ne počty symbolů.",
-        "cv": "Navrhni přechody Turingova stroje, který na pásce zdvojnásobí počet symbolů a (z \\(a^{n}\\) udělá \\(a^{2n})\\)."
+        "ex": "Turingův stroj pro rozpoznání slov aⁿbⁿ střídavě škrtá a a b na pásce a v konečném řízení si pamatuje jen aktuální stav, ne počty symbolů.",
+        "cv": "Navrhni přechody Turingova stroje, který na pásce zdvojnásobí počet symbolů a (z aⁿ udělá a²ⁿ)."
       },
       "Problém zastavení": {
         "ex": "Neexistuje program, který by o libovolném programu a vstupu řekl, zda skončí – předpoklad jeho existence vede sporem k programu, jenž skončí právě tehdy, když neskončí.",
@@ -1256,15 +1256,15 @@ window.STUDY_DATASETS.push({
     },
     "Složitost": {
       "Složitost algoritmu versus složitost problému": {
-        "ex": "Bublinkové řazení má složitost \\(O(n^{2}),\\) mergesort \\(O(n\\log n)\\); složitost problému řazení porovnáváním je přitom dokázaných \\(\\Omega (n\\) log n).",
-        "cv": "Pro problém násobení dvou matic \\(n\\times n\\) uveď složitost naivního algoritmu a vysvětli rozdíl mezi složitostí algoritmu a složitostí problému."
+        "ex": "Bublinkové řazení má složitost O(n²), mergesort O(n log n); složitost problému řazení porovnáváním je přitom dokázaných Ω(n log n).",
+        "cv": "Pro problém násobení dvou matic n×n uveď složitost naivního algoritmu a vysvětli rozdíl mezi složitostí algoritmu a složitostí problému."
       },
       "Složitostní třídy (P, NP, PSPACE)": {
         "ex": "Hledání nejkratší cesty je v P, ověření řešení Sudoku je v NP (řešení se snadno zkontroluje), vyhodnocení kvantifikované formule je v PSPACE.",
         "cv": "Pro tři problémy – třídění, SAT, hledání nejkratší cesty – urči, do které třídy (P či NP) patří, a zdůvodni to."
       },
       "Vztahy mezi třídami a příklady problémů": {
-        "ex": "Platí \\(P\\subseteq NP\\subseteq PSPACE;\\) zda je některá inkluze ostrá, se neví – otázka P vs. NP je nejslavnějším otevřeným problémem informatiky.",
+        "ex": "Platí P⊆NP⊆PSPACE; zda je některá inkluze ostrá, se neví – otázka P vs. NP je nejslavnějším otevřeným problémem informatiky.",
         "cv": "Nakresli diagram inkluzí tříd P, NP, PSPACE a ke každé třídě doplň jeden typický problém."
       },
       "Těžkost a úplnost problému": {
@@ -1336,7 +1336,7 @@ window.STUDY_DATASETS.push({
         "cv": "Napiš funkci v C, která přes ukazatel zvýší hodnotu předané proměnné o 1, a ukaž její volání pomocí &."
       },
       "Pole a ukazatelová aritmetika": {
-        "ex": "Pro int a[5] je a[i] totéž co *(a+i); jméno pole se chová jako ukazatel na první prvek a posun o i znamená \\(i\\cdot sizeof(int)\\) bajtů.",
+        "ex": "Pro int a[5] je a[i] totéž co *(a+i); jméno pole se chová jako ukazatel na první prvek a posun o i znamená i·sizeof(int) bajtů.",
         "cv": "Projdi pole pěti intů pomocí ukazatelové aritmetiky (bez indexování hranatými závorkami) a vypiš jeho prvky."
       },
       "Způsoby ladění programu (debugging)": {
@@ -1350,8 +1350,8 @@ window.STUDY_DATASETS.push({
         "cv": "Převeď číslo 45 z desítkové soustavy do dvojkové a šestnáctkové a výsledek ověř zpětným převodem."
       },
       "Zobrazení celého čísla v počítači a aritmetika": {
-        "ex": "Na 8 bitech je \\(-5\\) v doplňkovém kódu 11111011; jeho sečtení s 00000101 (tedy 5) dá 00000000, což potvrzuje správnost kódu.",
-        "cv": "Zapiš číslo \\(-12\\) v osmibitovém doplňkovém kódu a ukaž, kdy při sčítání dvou kladných čísel nastane přetečení."
+        "ex": "Na 8 bitech je −5 v doplňkovém kódu 11111011; jeho sečtení s 00000101 (tedy 5) dá 00000000, což potvrzuje správnost kódu.",
+        "cv": "Zapiš číslo −12 v osmibitovém doplňkovém kódu a ukaž, kdy při sčítání dvou kladných čísel nastane přetečení."
       },
       "Kódy (vnitřní, vnější, detekční a opravné)": {
         "ex": "Paritní bit přidaný k bajtu odhalí jednu chybu; Hammingův kód přidá víc redundantních bitů a jednu chybu nejen odhalí, ale i opraví.",
@@ -1384,7 +1384,7 @@ window.STUDY_DATASETS.push({
         "cv": "Pro tabulky OBJEDNÁVKA a ZÁKAZNÍK urči primární klíče a navrhni cizí klíč, který je propojuje."
       },
       "Relační algebra (projekce, selekce, agregace, přejmenování)": {
-        "ex": "Selekce \\(\\sigma (ro\\)čník=1)(STUDENT) vybere prváky, projekce \\(\\pi (jm\\)éno)(STUDENT) vybere jen sloupec jméno a agregace spočítá počet studentů.",
+        "ex": "Selekce σ(ročník=1)(STUDENT) vybere prváky, projekce π(jméno)(STUDENT) vybere jen sloupec jméno a agregace spočítá počet studentů.",
         "cv": "Zapiš v relační algebře dotaz „jména studentů 3. ročníku“ pomocí selekce a projekce nad tabulkou STUDENT."
       },
       "Spojování relací": {
@@ -1392,7 +1392,7 @@ window.STUDY_DATASETS.push({
         "cv": "Pro tabulky ZAMĚSTNANEC(id, jméno, id_odd) a ODDĚLENÍ(id_odd, název) zapiš spojení, které ke každému zaměstnanci přiřadí název oddělení."
       },
       "Funkční závislosti": {
-        "ex": "V tabulce s atributy (ISBN, název, autor) platí ISBN \\(\\to \\) název, autor – ISBN jednoznačně určuje zbytek; opačně to neplatí.",
+        "ex": "V tabulce s atributy (ISBN, název, autor) platí ISBN → název, autor – ISBN jednoznačně určuje zbytek; opačně to neplatí.",
         "cv": "Pro relaci OBJEDNÁVKA(č_obj, datum, č_zák, jméno_zák) vypiš platné funkční závislosti a urči z nich klíč."
       },
       "Normální formy (1NF, 2NF, 3NF, BCNF)": {
@@ -1414,7 +1414,7 @@ window.STUDY_DATASETS.push({
         "cv": "Dostaneš tabulky Student(id, jmeno, prijmeni, rocnik, email) a Zapis(student_id, predmet). Napiš dotaz na studenty 2. ročníku zapsané v předmětu IB002 a vysvětli význam JOIN a WHERE."
       },
       "Příkazy pro dotazování a aktualizaci dat": {
-        "ex": "SELECT data čte, INSERT přidá řádek, UPDATE \\(\\dots \\) WHERE změní vybrané řádky a DELETE \\(\\dots \\) WHERE je smaže.",
+        "ex": "SELECT data čte, INSERT přidá řádek, UPDATE … WHERE změní vybrané řádky a DELETE … WHERE je smaže.",
         "cv": "Napiš čtveřici SQL příkazů: vlož nového studenta, zvyš ročník studentovi s daným id, vyber všechny prváky a smaž studenta podle id."
       },
       "Agregační funkce": {
@@ -1426,7 +1426,7 @@ window.STUDY_DATASETS.push({
         "cv": "Navrhni trigger, který při smazání zákazníka zapíše záznam do auditní tabulky se jménem a časem."
       },
       "Definice dat a integritní omezení": {
-        "ex": "CREATE TABLE s PRIMARY KEY, FOREIGN KEY a CHECK(věk \\(\\ge \\) 18) zajistí, že databáze sama odmítne nekonzistentní data.",
+        "ex": "CREATE TABLE s PRIMARY KEY, FOREIGN KEY a CHECK(věk ≥ 18) zajistí, že databáze sama odmítne nekonzistentní data.",
         "cv": "Napiš CREATE TABLE pro tabulku Zaměstnanec s primárním klíčem, cizím klíčem na Oddělení a omezeními NOT NULL a CHECK."
       },
       "Transakční zpracování a jeho vlastnosti": {
@@ -1434,7 +1434,7 @@ window.STUDY_DATASETS.push({
         "cv": "Zapiš transakci převodu peněz mezi účty a vysvětli, jak se projeví atomicita, konzistence, izolace a trvalost při chybě uprostřed operace."
       },
       "Základní principy vyhodnocování dotazů": {
-        "ex": "Dotaz hledající studenta podle id projde bez indexu celou tabulku, s indexem (B-stromem) nad id ho najde v čase \\(O(\\log n)\\).",
+        "ex": "Dotaz hledající studenta podle id projde bez indexu celou tabulku, s indexem (B-stromem) nad id ho najde v čase O(log n).",
         "cv": "Vysvětli, proč index na prijmeni zrychlí SELECT s WHERE prijmeni='Novák', ale může zpomalit INSERT a zabírat místo."
       }
     },
@@ -1498,7 +1498,7 @@ window.STUDY_DATASETS.push({
         "cv": "Porovnej souvislou, zřetězenou a indexovou alokaci bloků z hlediska rychlosti přístupu a náchylnosti k fragmentaci."
       },
       "Adresářová struktura a její reprezentace na disku": {
-        "ex": "Adresář je na disku tabulka dvojic jméno \\(\\to \\) číslo i-uzlu; i-uzel pak drží metadata souboru a odkazy na jeho datové bloky.",
+        "ex": "Adresář je na disku tabulka dvojic jméno → číslo i-uzlu; i-uzel pak drží metadata souboru a odkazy na jeho datové bloky.",
         "cv": "Popiš, jaké kroky souborový systém udělá při otevření souboru zadaného cestou /home/user/data.txt."
       },
       "Vstup a výstup mapovaný do paměti": {
@@ -1634,12 +1634,12 @@ window.STUDY_DATASETS.push({
     },
     "Digitální systémy": {
       "Teorie zobrazení dat a kódování informací včetně operací": {
-        "ex": "Osmibitový doplňkový kód reprezentuje \\(-1\\) jako 11111111; přičtením 00000001 vznikne 00000000 po zahození přenosu. Stejná bitová posloupnost může mít různý význam podle interpretace.",
-        "cv": "Zapiš číslo \\(-7\\) v osmibitovém doplňkovém kódu a vysvětli, proč stejné bity mohou jako unsigned znamenat jiné číslo."
+        "ex": "Osmibitový doplňkový kód reprezentuje −1 jako 11111111; přičtením 00000001 vznikne 00000000 po zahození přenosu. Stejná bitová posloupnost může mít různý význam podle interpretace.",
+        "cv": "Zapiš číslo −7 v osmibitovém doplňkovém kódu a vysvětli, proč stejné bity mohou jako unsigned znamenat jiné číslo."
       },
       "Algebraické, grafické a algoritmické minimalizační metody": {
-        "ex": "Funkci AB + \\(A\\neg B\\) lze algebraicky upravit na \\(A(B+\\neg B)=A\\). Karnaughova mapa ukáže totéž seskupením dvou sousedních jedniček lišících se jen v proměnné B.",
-        "cv": "Minimalizuj \\(F(A,B,C)=\\Sigma m(1,3,5,7),\\) vysvětli výsledek pravdivostní tabulkou nebo Karnaughovou mapou a řekni, proč proměnné A a B vypadnou."
+        "ex": "Funkci AB + A¬B lze algebraicky upravit na A(B+¬B)=A. Karnaughova mapa ukáže totéž seskupením dvou sousedních jedniček lišících se jen v proměnné B.",
+        "cv": "Minimalizuj F(A,B,C)=Σm(1,3,5,7), vysvětli výsledek pravdivostní tabulkou nebo Karnaughovou mapou a řekni, proč proměnné A a B vypadnou."
       },
       "Optimalizace zpoždění, logických prvků a testovatelnosti": {
         "ex": "Dvouúrovňový součin-součet může mít malé zpoždění, ale více hradel. Naopak sdílení mezivýrazů šetří hradla, může však prodloužit kritickou cestu a zkomplikovat testování vnitřních uzlů.",
@@ -1722,129 +1722,129 @@ window.STUDY_DATASETS.push({
   "solutions": {
     "Lineární algebra": {
       "Operace s vektory a maticemi": {
-        "ex": "Sčítání i násobení skalárem se provádí po složkách, proto \\(a+b=(5,-2,2)\\) a \\(3a=(3,-6,9)\\). Součin \\(A\\cdot B\\) existuje, je-li počet sloupců A roven počtu řádků B; rozměr výsledku je (řádky \\(A)\\times (sloupce\\) B), tedy \\(2\\times 2,\\) kdežto \\(B\\cdot A\\) vyjde \\(3\\times 3\\) – už různý rozměr ukazuje nekomutativitu.",
-        "cv": "\\(2a-b = (4,2,-2)-(1,3,0) = (3,-1,-2)\\). \\(A\\cdot B = \\begin{pmatrix}1\\cdot 3+2\\cdot 2 & 1\\cdot 1+2\\cdot 4\\\\0\\cdot 3+1\\cdot 2 & 0\\cdot 1+1\\cdot 4\\end{pmatrix} = \\begin{pmatrix}7 & 9\\\\2 & 4\\end{pmatrix}\\). \\(B\\cdot A = \\begin{pmatrix}3\\cdot 1+1\\cdot 0 & 3\\cdot 2+1\\cdot 1\\\\2\\cdot 1+4\\cdot 0 & 2\\cdot 2+4\\cdot 1\\end{pmatrix} = \\begin{pmatrix}3 & 7\\\\2 & 8\\end{pmatrix} \\ne  A\\cdot B\\)."
+        "ex": "Sčítání i násobení skalárem se provádí po složkách, proto a+b=(5,−2,2) a 3a=(3,−6,9). Součin A·B existuje, je-li počet sloupců A roven počtu řádků B; rozměr výsledku je (řádky A)×(sloupce B), tedy 2×2, kdežto B·A vyjde 3×3 – už různý rozměr ukazuje nekomutativitu.",
+        "cv": "2a−b = (4,2,−2)−(1,3,0) = (3,−1,−2). A·B = [[1·3+2·2, 1·1+2·4],[0·3+1·2, 0·1+1·4]] = [[7,9],[2,4]]. B·A = [[3·1+1·0, 3·2+1·1],[2·1+4·0, 2·2+4·1]] = [[3,7],[2,8]] ≠ A·B."
       },
       "Vlastnosti lineárních operací a skalární součin": {
-        "ex": "\\(u\\cdot v = 1\\cdot 2 + 2\\cdot (-1) + 2\\cdot 0\\) = 0; nulový skalární součin znamená kolmost. Délky: |u| = \\(\\sqrt{1+4+4}\\) = 3, |v| = \\(\\sqrt{4+1+0} = \\sqrt{5}\\). Protože cos \\(\\varphi  = (u\\cdot v)/(|u|\\cdot |v|)\\) = 0, je úhel \\(90^{\\circ}\\).",
-        "cv": "\\(u\\cdot v = 1\\cdot 2 + 0\\cdot 1 + 1\\cdot (-2)\\) = 0. |u| = \\(\\sqrt{1+0+1} = \\sqrt{2},\\) |v| = \\(\\sqrt{4+1+4}\\) = 3. cos \\(\\varphi  = 0/(\\sqrt{2}\\cdot 3)\\) = 0 \\(\\Rightarrow  \\varphi  = 90^{\\circ},\\) vektory jsou kolmé (úhel pravý)."
+        "ex": "u·v = 1·2 + 2·(−1) + 2·0 = 0; nulový skalární součin znamená kolmost. Délky: |u| = √(1+4+4) = 3, |v| = √(4+1+0) = √5. Protože cos φ = (u·v)/(|u|·|v|) = 0, je úhel 90°.",
+        "cv": "u·v = 1·2 + 0·1 + 1·(−2) = 0. |u| = √(1+0+1) = √2, |v| = √(4+1+4) = 3. cos φ = 0/(√2·3) = 0 ⇒ φ = 90°, vektory jsou kolmé (úhel pravý)."
       },
       "Gaussova eliminace": {
         "ex": "Od 2. řádku odečteme dvojnásobek prvního, od 3. řádku první; vznikne trojúhelníkový tvar. Zpětnou substitucí vyjde z=3, y=2, x=1. Jediné řešení odpovídá tomu, že matice soustavy má plnou hodnost 3.",
-        "cv": "\\(R2-2R1: -3y-z=-7\\). \\(R3-3R1: -2y-4z=-3\\). Z první \\(z=7-3y,\\) dosazením do druhé: 10y=25 \\(\\Rightarrow \\) y=2,5, \\(z=-0,5, x=4-y-z=2\\). Hodnost matice je 3 = počet neznámých \\(\\Rightarrow \\) jediné řešení (2; 2,5; \\(-0,5)\\)."
+        "cv": "R2−2R1: −3y−z=−7. R3−3R1: −2y−4z=−3. Z první z=7−3y, dosazením do druhé: 10y=25 ⇒ y=2,5, z=−0,5, x=4−y−z=2. Hodnost matice je 3 = počet neznámých ⇒ jediné řešení (2; 2,5; −0,5)."
       },
       "Determinant": {
-        "ex": "Pro matici \\(2\\times 2\\) je det = \\(ad-bc,\\) takže det(\\(\\begin{pmatrix}2 & 1\\\\3 & 4\\end{pmatrix}\\)) = \\(2\\cdot 4 - 1\\cdot 3\\) = 5. Nenulová hodnota \\(\\Rightarrow \\) matice je regulární. Číslo 5 udává, že transformace zvětší obsah pětkrát; kladné znaménko znamená zachování orientace.",
-        "cv": "Rozvoj podle 1. sloupce (prvky 1, 0, 2): det = \\(1\\cdot det(\\begin{pmatrix}3 & 4\\\\0 & 1\\end{pmatrix}\\)) \\(-\\) 0 + \\(2\\cdot det(\\begin{pmatrix}2 & 0\\\\3 & 4\\end{pmatrix}\\)) = \\(1\\cdot (3-0) + 2\\cdot (8-0)\\) = 3 + 16 = 19. Nenulový determinant \\(\\Rightarrow \\) matice je regulární a má inverzi."
+        "ex": "Pro matici 2×2 je det = ad−bc, takže det([[2,1],[3,4]]) = 2·4 − 1·3 = 5. Nenulová hodnota ⇒ matice je regulární. Číslo 5 udává, že transformace zvětší obsah pětkrát; kladné znaménko znamená zachování orientace.",
+        "cv": "Rozvoj podle 1. sloupce (prvky 1, 0, 2): det = 1·det([[3,4],[0,1]]) − 0 + 2·det([[2,0],[3,4]]) = 1·(3−0) + 2·(8−0) = 3 + 16 = 19. Nenulový determinant ⇒ matice je regulární a má inverzi."
       },
       "Vlastní čísla a vektory a jejich geometrický význam": {
-        "ex": "Matice \\(\\begin{pmatrix}2 & 0\\\\0 & 3\\end{pmatrix}\\) je diagonální, vlastní čísla jsou přímo prvky diagonály: 2 a 3. K číslu 2 patří vektor (1,0), protože \\(A\\cdot (1,0)=(2,0)=2\\cdot (1,0);\\) k číslu 3 vektor (0,1). Transformace jen natáhne osy, jejich směr se nemění.",
-        "cv": "\\(det(A-\\lambda I)=0: (2-\\lambda )^{2}-1=0 \\Rightarrow  2-\\lambda =\\)±1 \\(\\Rightarrow  \\lambda _{1}=1, \\lambda _{2}=3\\). Pro \\(\\lambda =1\\) dává \\((A-I)v=0\\) rovnici \\(v_{1}+v_{2}=0,\\) vektor \\((1,-1)\\). Pro \\(\\lambda =3\\) rovnici \\(v_{1}-v_{2}=0,\\) vektor (1,1). Ověření: \\(A\\cdot (1,1)=(3,3)=3\\cdot (1,1)\\). ✓"
+        "ex": "Matice [[2,0],[0,3]] je diagonální, vlastní čísla jsou přímo prvky diagonály: 2 a 3. K číslu 2 patří vektor (1,0), protože A·(1,0)=(2,0)=2·(1,0); k číslu 3 vektor (0,1). Transformace jen natáhne osy, jejich směr se nemění.",
+        "cv": "det(A−λI)=0: (2−λ)²−1=0 ⇒ 2−λ=±1 ⇒ λ₁=1, λ₂=3. Pro λ=1 dává (A−I)v=0 rovnici v₁+v₂=0, vektor (1,−1). Pro λ=3 rovnici v₁−v₂=0, vektor (1,1). Ověření: A·(1,1)=(3,3)=3·(1,1). ✓"
       },
       "Inverzní matice": {
-        "ex": "Pro \\(2\\times 2\\) platí \\(A^{-1} = (1/det)\\cdot \\begin{pmatrix}d & -b\\\\-c & a\\end{pmatrix}\\). U A=\\(\\begin{pmatrix}2 & 1\\\\5 & 3\\end{pmatrix}\\) je det = \\(2\\cdot 3-1\\cdot 5\\) = 1, takže \\(A^{-1} = \\begin{pmatrix}3 & -1\\\\-5 & 2\\end{pmatrix}\\). Kontrola: \\(A\\cdot A^{-1} = \\begin{pmatrix}1 & 0\\\\0 & 1\\end{pmatrix}\\) = I.",
-        "cv": "det(A) = \\(2\\cdot 3-1\\cdot 5\\) = 1, \\(A^{-1} = \\begin{pmatrix}3 & -1\\\\-5 & 2\\end{pmatrix}\\). x = \\(A^{-1}\\cdot b = (3\\cdot 1-1\\cdot 4, -5\\cdot 1+2\\cdot 4) = (-1,\\) 3). Kontrola \\(A\\cdot x = (2\\cdot (-1)+1\\cdot 3, 5\\cdot (-1)+3\\cdot 3)\\) = (1, 4) = b. ✓"
+        "ex": "Pro 2×2 platí A⁻¹ = (1/det)·[[d,−b],[−c,a]]. U A=[[2,1],[5,3]] je det = 2·3−1·5 = 1, takže A⁻¹ = [[3,−1],[−5,2]]. Kontrola: A·A⁻¹ = [[1,0],[0,1]] = I.",
+        "cv": "det(A) = 2·3−1·5 = 1, A⁻¹ = [[3,−1],[−5,2]]. x = A⁻¹·b = (3·1−1·4, −5·1+2·4) = (−1, 3). Kontrola A·x = (2·(−1)+1·3, 5·(−1)+3·3) = (1, 4) = b. ✓"
       },
       "Vektorové podprostory": {
-        "ex": "Rovina x+y+z=0 prochází počátkem, obsahuje tedy nulový vektor. Součet dvou jejích vektorů má součet souřadnic 0+0=0 a násobek má \\(c\\cdot 0=0\\) – obě uzavřenosti platí. Rovina x+y+z=1 počátek neobsahuje, proto podprostorem není.",
-        "cv": "Nulový vektor: 0+0+0=0 ✓. Součet: z \\(x_{1}+y_{1}+z_{1}=0\\) a \\(x_{2}+y_{2}+z_{2}=0\\) plyne \\((x_{1}+x_{2})+(y_{1}+y_{2})+(z_{1}+z_{2})=0\\) ✓. Násobek: \\(c\\cdot x+c\\cdot y+c\\cdot z=c\\cdot 0=0\\) ✓. M je podprostor dimenze 2; báze například \\(\\{(1,-1,0),(1,0,-1)\\}\\)."
+        "ex": "Rovina x+y+z=0 prochází počátkem, obsahuje tedy nulový vektor. Součet dvou jejích vektorů má součet souřadnic 0+0=0 a násobek má c·0=0 – obě uzavřenosti platí. Rovina x+y+z=1 počátek neobsahuje, proto podprostorem není.",
+        "cv": "Nulový vektor: 0+0+0=0 ✓. Součet: z x₁+y₁+z₁=0 a x₂+y₂+z₂=0 plyne (x₁+x₂)+(y₁+y₂)+(z₁+z₂)=0 ✓. Násobek: c·x+c·y+c·z=c·0=0 ✓. M je podprostor dimenze 2; báze například {(1,−1,0),(1,0,−1)}."
       },
       "Vektorové báze": {
-        "ex": "Vektory (1,0,0),(0,1,0),(0,0,1) jsou lineárně nezávislé a generují celé \\(R^{3},\\) tvoří tedy bázi. Báze (1,1,0),(0,1,1),(1,0,1) je jiná, ale má stejný počet prvků – 3. Tento počet je dimenze a na volbě báze nezávisí.",
-        "cv": "Platí v3 = v1 + v2, protože (1,0,1)+(0,1,1)=(1,1,2). Vektory jsou tedy lineárně závislé. Nezávislé jsou jen v1 a v2, takže dimenze prostoru, který generují, je 2 (rovina v \\(R^{3})\\)."
+        "ex": "Vektory (1,0,0),(0,1,0),(0,0,1) jsou lineárně nezávislé a generují celé R³, tvoří tedy bázi. Báze (1,1,0),(0,1,1),(1,0,1) je jiná, ale má stejný počet prvků – 3. Tento počet je dimenze a na volbě báze nezávisí.",
+        "cv": "Platí v3 = v1 + v2, protože (1,0,1)+(0,1,1)=(1,1,2). Vektory jsou tedy lineárně závislé. Nezávislé jsou jen v1 a v2, takže dimenze prostoru, který generují, je 2 (rovina v R³)."
       },
       "Lineární transformace": {
-        "ex": "\\(T(x,y)=(2x-y,\\) x+3y) je lineární – dosazením lze ověřit T(u+v)=T(u)+T(v) i \\(T(c\\cdot u)=c\\cdot T(u)\\). Sloupce matice jsou obrazy bázových vektorů: T(1,0)=(2,1), \\(T(0,1)=(-1,3),\\) matice je tedy \\(\\begin{pmatrix}2 & -1\\\\1 & 3\\end{pmatrix}\\).",
-        "cv": "Linearita: rozepsáním po složkách vyjde \\(T(au+bv)=a\\cdot T(u)+b\\cdot T(v)\\) ✓. Matice má ve sloupcích obrazy bázových vektorů: T(1,0)=(1,3), \\(T(0,1)=(2,-1),\\) tedy \\(\\begin{pmatrix}1 & 2\\\\3 & -1\\end{pmatrix}\\). \\(T(2,-1) = (2+2\\cdot (-1), 3\\cdot 2-(-1))\\) = (0, 7)."
+        "ex": "T(x,y)=(2x−y, x+3y) je lineární – dosazením lze ověřit T(u+v)=T(u)+T(v) i T(c·u)=c·T(u). Sloupce matice jsou obrazy bázových vektorů: T(1,0)=(2,1), T(0,1)=(−1,3), matice je tedy [[2,−1],[1,3]].",
+        "cv": "Linearita: rozepsáním po složkách vyjde T(au+bv)=a·T(u)+b·T(v) ✓. Matice má ve sloupcích obrazy bázových vektorů: T(1,0)=(1,3), T(0,1)=(2,−1), tedy [[1,2],[3,−1]]. T(2,−1) = (2+2·(−1), 3·2−(−1)) = (0, 7)."
       }
     },
     "Základy matematické analýzy": {
       "Relace a zobrazení": {
-        "ex": "Relace „je dělitelem“ obsahuje dvojici (a,b) právě tehdy, když a dělí b – například (2,4) i (1,3). Zobrazení \\(f(x)=x^{2}\\) není prosté: různým vstupům \\(-1\\) a 1 přiřadí stejný výstup, tedy \\(f(-1)=f(1)=1\\).",
-        "cv": "f(x)=2x+1 je prostá (z \\(2x_{1}+1=2x_{2}+1\\) plyne \\(x_{1}=x_{2})\\) i surjektivní (každé y má vzor \\(x=(y-1)/2),\\) tedy bijektivní. \\(g(x)=x^{2}\\) prostá není \\((g(-2)=g(2))\\) a surjektivní z R do R také ne (záporné hodnoty nemají vzor)."
+        "ex": "Relace „je dělitelem“ obsahuje dvojici (a,b) právě tehdy, když a dělí b – například (2,4) i (1,3). Zobrazení f(x)=x² není prosté: různým vstupům −1 a 1 přiřadí stejný výstup, tedy f(−1)=f(1)=1.",
+        "cv": "f(x)=2x+1 je prostá (z 2x₁+1=2x₂+1 plyne x₁=x₂) i surjektivní (každé y má vzor x=(y−1)/2), tedy bijektivní. g(x)=x² prostá není (g(−2)=g(2)) a surjektivní z R do R také ne (záporné hodnoty nemají vzor)."
       },
       "Vlastnosti reálných funkcí": {
-        "ex": "\\(f(x)=x^{2}\\) je definovaná na celém R. Sudost: \\(f(-x)=(-x)^{2}=x^{2}=f(x)\\) ✓. Hodnoty jsou vždy nezáporné, takže je zdola omezená nulou. Derivace 2x je pro záporná x záporná (funkce klesá) a pro kladná x kladná (roste).",
-        "cv": "Definiční obor \\(f(x)=1/(x-2)\\) je R bez bodu 2 (jmenovatel nesmí být nula). Na \\((-\\infty ,2)\\) i na \\((2,\\infty )\\) je funkce klesající. Není sudá ani lichá. Omezená není – v okolí bodu 2 roste hodnota nade všechny meze."
+        "ex": "f(x)=x² je definovaná na celém R. Sudost: f(−x)=(−x)²=x²=f(x) ✓. Hodnoty jsou vždy nezáporné, takže je zdola omezená nulou. Derivace 2x je pro záporná x záporná (funkce klesá) a pro kladná x kladná (roste).",
+        "cv": "Definiční obor f(x)=1/(x−2) je R bez bodu 2 (jmenovatel nesmí být nula). Na (−∞,2) i na (2,∞) je funkce klesající. Není sudá ani lichá. Omezená není – v okolí bodu 2 roste hodnota nade všechny meze."
       },
       "Polynomy": {
-        "ex": "\\(p(x)=x^{3}-x = x(x^{2}-1) = x(x-1)(x+1),\\) kořeny jsou tedy \\(-1,\\) 0, 1. Stupeň 3 je lichý a vedoucí koeficient kladný, proto p(x) roste do \\(+\\infty \\) pro x jdoucí do \\(+\\infty \\) a klesá do \\(-\\infty \\) pro x jdoucí do \\(-\\infty \\).",
-        "cv": "\\(p(x)=x^{3}-4x = x(x^{2}-4) = x(x-2)(x+2)\\). Reálné kořeny: \\(-2,\\) 0, 2. Stupeň je 3. Vedoucí člen \\(x^{3}\\) má lichý stupeň a kladný koeficient \\(\\Rightarrow \\) pro x do \\(+\\infty \\) jde p do \\(+\\infty ,\\) pro x do \\(-\\infty \\) jde p do \\(-\\infty \\)."
+        "ex": "p(x)=x³−x = x(x²−1) = x(x−1)(x+1), kořeny jsou tedy −1, 0, 1. Stupeň 3 je lichý a vedoucí koeficient kladný, proto p(x) roste do +∞ pro x jdoucí do +∞ a klesá do −∞ pro x jdoucí do −∞.",
+        "cv": "p(x)=x³−4x = x(x²−4) = x(x−2)(x+2). Reálné kořeny: −2, 0, 2. Stupeň je 3. Vedoucí člen x³ má lichý stupeň a kladný koeficient ⇒ pro x do +∞ jde p do +∞, pro x do −∞ jde p do −∞."
       },
       "Spojité funkce a limity": {
-        "ex": "Pro \\(x\\ne 1\\) platí \\((x^{2}-1)/(x-1) = ((x-1)(x+1))/(x-1)\\) = x+1, takže limita pro \\(x\\to 1\\) je 2. V bodě 1 funkce spojitá není (není tam definovaná), ale dodefinováním f(1)=2 se „díra“ zacelí.",
-        "cv": "Pro \\(x\\ne 2\\) je \\((x^{2}-4)/(x-2) = ((x-2)(x+2))/(x-2)\\) = x+2, limita pro \\(x\\to 2\\) je tedy 4. Aby byla funkce v bodě 2 spojitá, dodefinujeme ji hodnotou rovnou limitě, tj. f(2)=4."
+        "ex": "Pro x≠1 platí (x²−1)/(x−1) = ((x−1)(x+1))/(x−1) = x+1, takže limita pro x→1 je 2. V bodě 1 funkce spojitá není (není tam definovaná), ale dodefinováním f(1)=2 se „díra“ zacelí.",
+        "cv": "Pro x≠2 je (x²−4)/(x−2) = ((x−2)(x+2))/(x−2) = x+2, limita pro x→2 je tedy 4. Aby byla funkce v bodě 2 spojitá, dodefinujeme ji hodnotou rovnou limitě, tj. f(2)=4."
       },
       "Derivace": {
-        "ex": "f′\\((x)=3x^{2}-3;\\) z f′(x)=0 plyne \\(x^{2}=1,\\) tedy x=±1. Druhá derivace f″(x)=6x: v bodě \\(-1\\) je f″\\((-1)=-6\\) (záporná) \\(\\Rightarrow \\) lokální maximum, v bodě 1 je f″(1)=6 (kladná) \\(\\Rightarrow \\) lokální minimum.",
-        "cv": "f′\\((x)=3x^{2}-3=3(x-1)(x+1)\\). Na \\((-\\infty ,-1)\\) a \\((1,\\infty )\\) je f′ kladná – funkce roste; na \\((-1,1)\\) je záporná – klesá. V \\(x=-1\\) přechod z růstu na klesání \\(\\Rightarrow \\) lokální maximum \\(f(-1)=2;\\) v x=1 \\(\\Rightarrow \\) lokální minimum \\(f(1)=-2\\)."
+        "ex": "f′(x)=3x²−3; z f′(x)=0 plyne x²=1, tedy x=±1. Druhá derivace f″(x)=6x: v bodě −1 je f″(−1)=−6 (záporná) ⇒ lokální maximum, v bodě 1 je f″(1)=6 (kladná) ⇒ lokální minimum.",
+        "cv": "f′(x)=3x²−3=3(x−1)(x+1). Na (−∞,−1) a (1,∞) je f′ kladná – funkce roste; na (−1,1) je záporná – klesá. V x=−1 přechod z růstu na klesání ⇒ lokální maximum f(−1)=2; v x=1 ⇒ lokální minimum f(1)=−2."
       },
       "Neurčitý a určitý integrál": {
-        "ex": "Primitivní funkce k \\(x^{2}\\) je \\(x^{3}/3,\\) protože \\((x^{3}/3)\\)′\\(=x^{2}\\). Newtonova–Leibnizova věta: \\(\\int _{0}^{2} x^{2}\\) dx = \\([x^{3}/3]_{0}^{2} = 2^{3}/3 - 0^{3}/3\\) = 8/3.",
-        "cv": "Primitivní funkce k \\(x^{2}+1\\) je \\(x^{3}/3\\) + x. Dosazení mezí: \\(\\int _{0}^{2} (x^{2}+1)\\) dx = \\([x^{3}/3 + x]_{0}^{2}\\) = (8/3 + 2) \\(-\\) 0 = 8/3 + 6/3 = 14/3."
+        "ex": "Primitivní funkce k x² je x³/3, protože (x³/3)′=x². Newtonova–Leibnizova věta: ∫₀² x² dx = [x³/3]₀² = 2³/3 − 0³/3 = 8/3.",
+        "cv": "Primitivní funkce k x²+1 je x³/3 + x. Dosazení mezí: ∫₀² (x²+1) dx = [x³/3 + x]₀² = (8/3 + 2) − 0 = 8/3 + 6/3 = 14/3."
       },
       "Geometrický význam": {
-        "ex": "f′(x)=2x, takže f′(2)=4 je směrnice tečny v bodě (2,4). Primitivní funkce k x je \\(x^{2}/2,\\) proto \\(\\int _{0}^{1}\\) x dx = \\([x^{2}/2]_{0}^{1}\\) = 1/2 – obsah pravoúhlého trojúhelníka s odvěsnami délky 1.",
-        "cv": "f(1)=1 a směrnice f′\\((1)=2\\cdot 1=2\\). Rovnice tečny: \\(y-1 = 2(x-1),\\) tedy y = \\(2x-1\\). Obsah pod grafem: \\(\\int _{0}^{1} x^{2}\\) dx = \\([x^{3}/3]_{0}^{1}\\) = 1/3."
+        "ex": "f′(x)=2x, takže f′(2)=4 je směrnice tečny v bodě (2,4). Primitivní funkce k x je x²/2, proto ∫₀¹ x dx = [x²/2]₀¹ = 1/2 – obsah pravoúhlého trojúhelníka s odvěsnami délky 1.",
+        "cv": "f(1)=1 a směrnice f′(1)=2·1=2. Rovnice tečny: y−1 = 2(x−1), tedy y = 2x−1. Obsah pod grafem: ∫₀¹ x² dx = [x³/3]₀¹ = 1/3."
       },
       "Diferenciální počet": {
-        "ex": "f′\\((x)=3x^{2}-3\\) dává extrémy v x=±1 (maximum v \\(-1,\\) minimum v 1). f″(x)=6x je nulová v 0, kde se mění konvexita \\(\\Rightarrow \\) inflexní bod (0,0). Taylorův polynom v 0: z f(0)=0 a f′\\((0)=-3\\) plyne lineární přiblížení \\(-3x\\).",
-        "cv": "Definiční obor R. f′\\((x)=3x^{2}-3:\\) roste na \\((-\\infty ,-1)\\) a \\((1,\\infty ),\\) klesá na \\((-1,1);\\) lokální maximum \\((-1,2),\\) minimum \\((1,-2)\\). f″(x)=6x: pro záporná x konkávní, pro kladná konvexní, inflexní bod (0,0). Funkce je lichá a neomezená."
+        "ex": "f′(x)=3x²−3 dává extrémy v x=±1 (maximum v −1, minimum v 1). f″(x)=6x je nulová v 0, kde se mění konvexita ⇒ inflexní bod (0,0). Taylorův polynom v 0: z f(0)=0 a f′(0)=−3 plyne lineární přiblížení −3x.",
+        "cv": "Definiční obor R. f′(x)=3x²−3: roste na (−∞,−1) a (1,∞), klesá na (−1,1); lokální maximum (−1,2), minimum (1,−2). f″(x)=6x: pro záporná x konkávní, pro kladná konvexní, inflexní bod (0,0). Funkce je lichá a neomezená."
       }
     },
     "Popisná statistika": {
       "Popisná statistika": {
         "ex": "Z [4,5,5,6,8] spočítáme průměr (4+5+5+6+8)/5 = 5,6 a rozsah od 4 do 8. Tyto charakteristiky popisují pouze tuto třídu – o úrovni jiných tříd nevypovídají, protože popisná statistika nezobecňuje na populaci.",
-        "cv": "Tabulka četností: známka 1 \\(\\to  1\\times ,\\) 2 \\(\\to  2\\times ,\\) 3 \\(\\to  3\\times ,\\) 4 \\(\\to  1\\times \\) (celkem 7 hodnot). Vhodný graf je sloupcový diagram, kde výška sloupce odpovídá četnosti dané známky."
+        "cv": "Tabulka četností: známka 1 → 1×, 2 → 2×, 3 → 3×, 4 → 1× (celkem 7 hodnot). Vhodný graf je sloupcový diagram, kde výška sloupce odpovídá četnosti dané známky."
       },
       "Střední hodnota": {
         "ex": "Průměr = součet / počet = (25+27+30+28+200)/5 = 310/5 = 62. Většina hodnot leží kolem 28, ale jediná hodnota 200 průměr vytáhne nahoru – ukazuje to citlivost průměru na odlehlé hodnoty.",
-        "cv": "Průměr [5,7,7,9,12] = 40/5 = 8. Po přidání hodnoty 100: (40+100)/6 = 140/6 \\(\\approx \\) 23,3. Jediná odlehlá hodnota průměr téměř ztrojnásobila, ačkoli většina dat zůstala kolem 8."
+        "cv": "Průměr [5,7,7,9,12] = 40/5 = 8. Po přidání hodnoty 100: (40+100)/6 = 140/6 ≈ 23,3. Jediná odlehlá hodnota průměr téměř ztrojnásobila, ačkoli většina dat zůstala kolem 8."
       },
       "Medián": {
         "ex": "Seřazená data [25,27,28,30,200] mají 5 hodnot, medián je prostřední (třetí) = 28. Odlehlá hodnota 200 medián neovlivní, protože medián závisí jen na pořadí, ne na velikosti krajních hodnot.",
         "cv": "Data jsou seřazená, 7 hodnot. Medián = 4. hodnota = 8. Dolní kvartil (medián [3,5,7]) = 5, horní kvartil (medián [10,12,15]) = 12. Krabicový graf: krabice od 5 do 12, čára uvnitř na 8, vousy k 3 a 15."
       },
       "Rozptyl": {
-        "ex": "[5,5,5]: průměr 5, všechny odchylky 0 \\(\\Rightarrow \\) rozptyl 0. [2,5,8]: průměr 5, odchylky \\(-3,\\) 0, 3, jejich kvadráty 9, 0, 9, průměr kvadrátů = 18/3 = 6. Stejný průměr, ale různá variabilita.",
-        "cv": "Průměr = 40/8 = 5. Odchylky: \\(-3,-1,-1,-1,0,0,2,4;\\) kvadráty: 9,1,1,1,0,0,4,16, součet 32. Rozptyl = 32/8 = 4, směrodatná odchylka = \\(\\sqrt{4}\\) = 2 – hodnoty leží typicky asi 2 jednotky od průměru."
+        "ex": "[5,5,5]: průměr 5, všechny odchylky 0 ⇒ rozptyl 0. [2,5,8]: průměr 5, odchylky −3, 0, 3, jejich kvadráty 9, 0, 9, průměr kvadrátů = 18/3 = 6. Stejný průměr, ale různá variabilita.",
+        "cv": "Průměr = 40/8 = 5. Odchylky: −3,−1,−1,−1,0,0,2,4; kvadráty: 9,1,1,1,0,0,4,16, součet 32. Rozptyl = 32/8 = 4, směrodatná odchylka = √4 = 2 – hodnoty leží typicky asi 2 jednotky od průměru."
       },
       "Korelace": {
         "ex": "Korelace +0,7 znamená, že vyšší výška obvykle provází vyšší hmotnost (silný, ne dokonalý vztah). Prodej zmrzliny a počet utonutí korelují proto, že obojí roste s teplotou – jde o společnou příčinu, ne kauzalitu mezi nimi.",
-        "cv": "S rostoucím x roste i y \\((2\\to 4\\to 5\\to 9),\\) korelace je tedy kladná a poměrně silná. Příklad bez kauzality: počet čápů a porodnost v regionech korelují kladně, ale jeden nezpůsobuje druhý – obojí souvisí s venkovskostí oblasti."
+        "cv": "S rostoucím x roste i y (2→4→5→9), korelace je tedy kladná a poměrně silná. Příklad bez kauzality: počet čápů a porodnost v regionech korelují kladně, ale jeden nezpůsobuje druhý – obojí souvisí s venkovskostí oblasti."
       },
       "Odhady statistik a jejich spolehlivost": {
         "ex": "Z výběru 100 lidí je bodový odhad podpory 40 %. Konfidenční interval k němu připojuje nejistotu danou velikostí vzorku – pro n=100 je řádově ±10 %, pro n=1000 klesne zhruba na třetinu, protože šířka klesá s odmocninou z n.",
-        "cv": "Šířka konfidenčního intervalu je úměrná \\(1/\\sqrt{n}\\). Zvětšíme-li n čtyřikrát, dělíme šířku \\(\\sqrt{4}\\) = 2 – interval se zúží na polovinu. Čtyřnásobek dat tedy zpřesní odhad dvakrát."
+        "cv": "Šířka konfidenčního intervalu je úměrná 1/√n. Zvětšíme-li n čtyřikrát, dělíme šířku √4 = 2 – interval se zúží na polovinu. Čtyřnásobek dat tedy zpřesní odhad dvakrát."
       },
       "Distribuční funkce": {
-        "ex": "Distribuční funkce \\(F(x)=P(X\\le x)\\). Pro kostku: \\(F(3)=P(X\\le 3)=P(1)+P(2)+P(3)=3/6=1/2\\). F je schodovitá, v každé celočíselné hodnotě skočí o 1/6 a roste od 0 do 1.",
-        "cv": "\\(F(x)=P(X\\le x):\\) pro x menší než 1 je F=0; na intervalu [1,2) je F=0,2; na [2,3) je F=0,2+0,5=0,7; pro \\(x\\ge 3\\) je F=1. Graf je schodovitý se skoky 0,2; 0,5; 0,3 v bodech 1, 2 a 3."
+        "ex": "Distribuční funkce F(x)=P(X≤x). Pro kostku: F(3)=P(X≤3)=P(1)+P(2)+P(3)=3/6=1/2. F je schodovitá, v každé celočíselné hodnotě skočí o 1/6 a roste od 0 do 1.",
+        "cv": "F(x)=P(X≤x): pro x menší než 1 je F=0; na intervalu [1,2) je F=0,2; na [2,3) je F=0,2+0,5=0,7; pro x≥3 je F=1. Graf je schodovitý se skoky 0,2; 0,5; 0,3 v bodech 1, 2 a 3."
       },
       "Rozdělení náhodných veličin a jejich příklady": {
-        "ex": "Počet líců z 10 hodů: pevný počet pokusů s pravděpodobností 1/2 \\(\\Rightarrow \\) binomické rozdělení. Počet e-mailů za hodinu: počet vzácných událostí za interval \\(\\Rightarrow \\) Poissonovo. Výška lidí: spojitá veličina daná mnoha vlivy \\(\\Rightarrow \\) přibližně normální.",
-        "cv": "Hod kostkou \\(20\\times \\) a počítání šestek: pevný počet pokusů \\(\\Rightarrow \\) binomické rozdělení. Čekací doba na zákazníka: spojitá doba mezi vzácnými událostmi \\(\\Rightarrow \\) exponenciální rozdělení. Chyba měření délky: součet mnoha malých vlivů \\(\\Rightarrow \\) normální rozdělení."
+        "ex": "Počet líců z 10 hodů: pevný počet pokusů s pravděpodobností 1/2 ⇒ binomické rozdělení. Počet e-mailů za hodinu: počet vzácných událostí za interval ⇒ Poissonovo. Výška lidí: spojitá veličina daná mnoha vlivy ⇒ přibližně normální.",
+        "cv": "Hod kostkou 20× a počítání šestek: pevný počet pokusů ⇒ binomické rozdělení. Čekací doba na zákazníka: spojitá doba mezi vzácnými událostmi ⇒ exponenciální rozdělení. Chyba měření délky: součet mnoha malých vlivů ⇒ normální rozdělení."
       }
     },
     "Grafy a jejich prohledávání": {
       "Typy grafů": {
-        "ex": "Silniční síť: města jsou vrcholy, silnice hrany bez směru s délkou jako vahou \\(\\Rightarrow \\) neorientovaný ohodnocený graf. Závislosti úkolů mají směr a nesmějí tvořit cyklus \\(\\Rightarrow \\) orientovaný acyklický graf. Rodokmen je souvislý a bez cyklů \\(\\Rightarrow \\) strom.",
-        "cv": "Přátelství je vzájemné \\(\\Rightarrow \\) neorientovaný graf. Odkazy mezi stránkami mají směr (A odkazuje na B, opačně nemusí) \\(\\Rightarrow \\) orientovaný graf. Potrubí s průtoky má u každé trubky směr toku i číselný průtok \\(\\Rightarrow \\) orientovaný ohodnocený graf."
+        "ex": "Silniční síť: města jsou vrcholy, silnice hrany bez směru s délkou jako vahou ⇒ neorientovaný ohodnocený graf. Závislosti úkolů mají směr a nesmějí tvořit cyklus ⇒ orientovaný acyklický graf. Rodokmen je souvislý a bez cyklů ⇒ strom.",
+        "cv": "Přátelství je vzájemné ⇒ neorientovaný graf. Odkazy mezi stránkami mají směr (A odkazuje na B, opačně nemusí) ⇒ orientovaný graf. Potrubí s průtoky má u každé trubky směr toku i číselný průtok ⇒ orientovaný ohodnocený graf."
       },
       "Stromy": {
-        "ex": "Strom je souvislý a bez cyklů, proto má strom s n vrcholy vždy \\(n-1\\) hran (zde \\(6-1=5)\\). Mezi každými dvěma vrcholy vede právě jedna cesta; přidání další hrany spojí dva už propojené vrcholy, čímž vznikne cyklus.",
-        "cv": "Strom se 7 vrcholy má přesně \\(7-1\\) = 6 hran. Cesta mezi dvěma listy je jediná – vede přes jejich nejbližšího společného předka. Přidání hrany mezi dva libovolné vrcholy by vytvořilo cyklus."
+        "ex": "Strom je souvislý a bez cyklů, proto má strom s n vrcholy vždy n−1 hran (zde 6−1=5). Mezi každými dvěma vrcholy vede právě jedna cesta; přidání další hrany spojí dva už propojené vrcholy, čímž vznikne cyklus.",
+        "cv": "Strom se 7 vrcholy má přesně 7−1 = 6 hran. Cesta mezi dvěma listy je jediná – vede přes jejich nejbližšího společného předka. Přidání hrany mezi dva libovolné vrcholy by vytvořilo cyklus."
       },
       "Stupně vrcholů": {
-        "ex": "Stupeň vrcholu je počet hran z něj vedoucích. V trojúhelníku ABC má každý vrchol stupeň 2 a součet stupňů je 6. Princip podání rukou: každá hrana přispěje do součtu stupňů dvakrát, takže součet = \\(2\\cdot (po\\)čet hran) = \\(2\\cdot 3\\).",
+        "ex": "Stupeň vrcholu je počet hran z něj vedoucích. V trojúhelníku ABC má každý vrchol stupeň 2 a součet stupňů je 6. Princip podání rukou: každá hrana přispěje do součtu stupňů dvakrát, takže součet = 2·(počet hran) = 2·3.",
         "cv": "Součet stupňů = 3+3+2+2+2 = 12. Podle principu podání rukou je součet stupňů roven dvojnásobku počtu hran, takže hran je 12/2 = 6. Součet je sudé číslo, takže takový graf může existovat."
       },
       "Orientované grafy": {
-        "ex": "Hrana \\(A\\to B\\) v grafu závislostí znamená, že A musí předcházet B. Orientovaný cyklus by způsobil, že každá úloha v něm nepřímo čeká sama na sebe – závislosti by nešlo splnit a úlohy by byly neřešitelné.",
-        "cv": "Každý vrchol má jednu příchozí a jednu odchozí hranu, takže vstupní i výstupní stupeň je u všech tří vrcholů roven 1. Hrany \\(A\\to B\\to C\\to A\\) tvoří orientovaný cyklus – ten v grafu existuje."
+        "ex": "Hrana A→B v grafu závislostí znamená, že A musí předcházet B. Orientovaný cyklus by způsobil, že každá úloha v něm nepřímo čeká sama na sebe – závislosti by nešlo splnit a úlohy by byly neřešitelné.",
+        "cv": "Každý vrchol má jednu příchozí a jednu odchozí hranu, takže vstupní i výstupní stupeň je u všech tří vrcholů roven 1. Hrany A→B→C→A tvoří orientovaný cyklus – ten v grafu existuje."
       },
       "Reprezentace grafů": {
-        "ex": "Matice sousednosti grafu se 4 vrcholy má \\(4\\times 4\\) = 16 buněk bez ohledu na počet hran – je rychlá na dotaz „existuje hrana?“, ale paměťově náročná. Seznamy sousedů ukládají jen skutečné hrany, takže pro řídký graf jsou úspornější.",
+        "ex": "Matice sousednosti grafu se 4 vrcholy má 4×4 = 16 buněk bez ohledu na počet hran – je rychlá na dotaz „existuje hrana?“, ale paměťově náročná. Seznamy sousedů ukládají jen skutečné hrany, takže pro řídký graf jsou úspornější.",
         "cv": "Matice sousednosti má jedničky na pozicích (1,2),(2,1),(2,3),(3,2),(3,4),(4,3),(1,4),(4,1), jinde nuly. Seznamy sousedů: 1:[2,4], 2:[1,3], 3:[2,4], 4:[3,1]. Matice má 16 buněk, seznamy jen 8 položek – pro tento řídký graf úspornější."
       },
       "Algoritmy prohledávání do hloubky a do šířky a jejich využití": {
@@ -1852,8 +1852,8 @@ window.STUDY_DATASETS.push({
         "cv": "BFS od A: zařadíme A, pak jeho sousedy, pak sousedy sousedů – pořadí je po vrstvách podle vzdálenosti. DFS od A: jdeme co nejhlouběji jednou větví a teprve při zaseknutí se vracíme (backtracking). Oba projdou všech 7 vrcholů v lineárním čase, ale v jiném pořadí."
       },
       "Komponenty souvislosti": {
-        "ex": "Komponenta je maximální množina vzájemně dosažitelných vrcholů. V grafu s hranami AB a CD nelze přejít z \\(\\{A,B\\}\\) do \\(\\{C,D\\}\\), jde tedy o dvě komponenty. Najdeme je tak, že spustíme DFS z A a poté znovu z prvního nenavštíveného vrcholu.",
-        "cv": "Hrany AB a BC spojují A, B, C; hrana DE spojuje D, E; vrchol F nemá žádnou hranu. Komponenty jsou tedy tři: \\(\\{A,B,C\\}, \\{D,E\\}\\) a {F}. Najdeme je opakovaným spuštěním DFS z dosud nenavštíveného vrcholu."
+        "ex": "Komponenta je maximální množina vzájemně dosažitelných vrcholů. V grafu s hranami AB a CD nelze přejít z {A,B} do {C,D}, jde tedy o dvě komponenty. Najdeme je tak, že spustíme DFS z A a poté znovu z prvního nenavštíveného vrcholu.",
+        "cv": "Hrany AB a BC spojují A, B, C; hrana DE spojuje D, E; vrchol F nemá žádnou hranu. Komponenty jsou tedy tři: {A,B,C}, {D,E} a {F}. Najdeme je opakovaným spuštěním DFS z dosud nenavštíveného vrcholu."
       }
     },
     "Grafové algoritmy": {
@@ -1862,16 +1862,16 @@ window.STUDY_DATASETS.push({
         "cv": "Stačí nakreslit 4 vrcholy a hrany s kladnými vahami, například AB=10, AC=25, BC=15, CD=8, BD=30. Nejdražší je hrana s nejvyšší vahou – zde BD s váhou 30."
       },
       "Definice nejkratší cesty": {
-        "ex": "Přímá hrana \\(A\\to B\\) má váhu 5, ale cesta \\(A\\to C\\to B\\) má váhu 2+1=3. Nejkratší cesta je ta s nejmenším součtem vah hran, nikoli ta s nejmenším počtem hran – proto vede přes vrchol C.",
+        "ex": "Přímá hrana A→B má váhu 5, ale cesta A→C→B má váhu 2+1=3. Nejkratší cesta je ta s nejmenším součtem vah hran, nikoli ta s nejmenším počtem hran – proto vede přes vrchol C.",
         "cv": "Nejkratší cestu najdeme porovnáním součtů vah všech cest mezi danými vrcholy a vybereme minimum. Obsahuje-li graf na cestě záporný cyklus, lze cyklus opakovat a součet vah neomezeně snižovat – minimum neexistuje, cesta tedy není definována."
       },
       "Minimální kostry grafu": {
-        "ex": "Kostra propojuje všechny vrcholy a je stromem (bez cyklu), má proto \\(n-1\\) hran. Minimální kostra je ta s nejmenším součtem vah – u sítě měst odpovídá nejlevnějšímu způsobu, jak je všechna propojit kabelem.",
-        "cv": "Hladově přidáváme nejlevnější hrany, které nevytvoří cyklus, dokud nemáme \\(n-1\\) = 4 hrany spojující všech 5 vrcholů. Celková váha kostry je součet vah těchto čtyř vybraných hran."
+        "ex": "Kostra propojuje všechny vrcholy a je stromem (bez cyklu), má proto n−1 hran. Minimální kostra je ta s nejmenším součtem vah – u sítě měst odpovídá nejlevnějšímu způsobu, jak je všechna propojit kabelem.",
+        "cv": "Hladově přidáváme nejlevnější hrany, které nevytvoří cyklus, dokud nemáme n−1 = 4 hrany spojující všech 5 vrcholů. Celková váha kostry je součet vah těchto čtyř vybraných hran."
       },
       "Algoritmy pro hledání nejkratších cest (Dijkstra, Bellman–Ford)": {
         "ex": "Dijkstrův algoritmus opakovaně vybírá nejbližší dosud nezpracovaný vrchol a relaxuje jeho hrany. Funguje jen pro nezáporné váhy – záporná hrana by mohla zlevnit cestu k už uzavřenému vrcholu. Pro záporné váhy slouží Bellman–Ford.",
-        "cv": "Začneme vzdáleností 0 u A a \\(\\infty \\) u ostatních. Opakovaně vybereme nejbližší neuzavřený vrchol a relaxujeme jeho hrany (zmenšíme vzdálenost souseda, je-li cesta přes daný vrchol kratší). Po zpracování všech vrcholů obsahuje tabulka nejkratší vzdálenosti z A."
+        "cv": "Začneme vzdáleností 0 u A a ∞ u ostatních. Opakovaně vybereme nejbližší neuzavřený vrchol a relaxujeme jeho hrany (zmenšíme vzdálenost souseda, je-li cesta přes daný vrchol kratší). Po zpracování všech vrcholů obsahuje tabulka nejkratší vzdálenosti z A."
       },
       "Algoritmy pro hledání minimálních koster": {
         "ex": "Kruskal třídí hrany podle váhy a přidává nejlevnější, které nevytvoří cyklus (cyklus hlídá struktura union-find). Prim nechává strom růst z jednoho vrcholu a vždy přidá nejlevnější hranu vedoucí ven. Oba jsou hladové a díky řezovému lemmatu optimální.",
@@ -1880,8 +1880,8 @@ window.STUDY_DATASETS.push({
     },
     "Stromové datové struktury": {
       "Binární vyhledávací stromy": {
-        "ex": "Při vkládání 5,3,8,1,4 jde 3 vlevo od 5, 8 vpravo, 1 vlevo od 3, 4 vpravo od 3. Hledání 4: 5 (menší \\(\\to \\) vlevo), 3 (větší \\(\\to \\) vpravo), nález. Vzestupná posloupnost 1,2,3,4,5 vkládá každý prvek vpravo \\(\\Rightarrow \\) strom degeneruje na seznam.",
-        "cv": "7 je kořen; 3 jde vlevo (menší), 9 vpravo (větší); 1 vlevo od 3; 5 vpravo od 3; 8 vlevo od 9. Hledání klíče 5: 7 (5 je menší \\(\\to \\) vlevo), 3 (5 je větší \\(\\to \\) vpravo), 5 – nález po 3 porovnáních."
+        "ex": "Při vkládání 5,3,8,1,4 jde 3 vlevo od 5, 8 vpravo, 1 vlevo od 3, 4 vpravo od 3. Hledání 4: 5 (menší → vlevo), 3 (větší → vpravo), nález. Vzestupná posloupnost 1,2,3,4,5 vkládá každý prvek vpravo ⇒ strom degeneruje na seznam.",
+        "cv": "7 je kořen; 3 jde vlevo (menší), 9 vpravo (větší); 1 vlevo od 3; 5 vpravo od 3; 8 vlevo od 9. Hledání klíče 5: 7 (5 je menší → vlevo), 3 (5 je větší → vpravo), 5 – nález po 3 porovnáních."
       },
       "B-stromy": {
         "ex": "Index nad milionem záznamů má v B-stromu hloubku jen 3–4, protože každý uzel má mnoho potomků (vysoký větvící faktor). Jeden uzel odpovídá diskovému bloku, takže nalezení záznamu vyžaduje jen 3–4 pomalá čtení z disku.",
@@ -1892,38 +1892,38 @@ window.STUDY_DATASETS.push({
         "cv": "Pravidla žádají, aby každá cesta od uzlu k listům obsahovala stejný počet černých uzlů a aby se červené uzly neopakovaly za sebou. Nejkratší cesta může být celá černá, nejdelší střídá černá–červená – má tedy nejvýše dvojnásobek uzlů, proto je hloubka logaritmická."
       },
       "Haldy": {
-        "ex": "V min-haldě je každý rodič menší nebo roven svým potomkům, takže nejmenší prvek je vždy v kořeni a získáme ho v konstantním čase. Pole [1,3,2,7,4] tuto vlastnost splňuje: \\(1\\le 3, 1\\le 2, 3\\le 7, 3\\le 4\\).",
-        "cv": "Stavbou haldy z \\([9,4,7,1,-2,6,5]\\) vznikne min-halda s kořenem \\(-2\\). Extract-min: vyjmeme \\(-2,\\) na kořen dáme poslední prvek a probubláme dolů \\(\\Rightarrow \\) kořenem se stane 1. Druhý extract-min vyjme 1 a po probublání je kořenem 4. Každá operace trvá \\(O(\\log n)\\)."
+        "ex": "V min-haldě je každý rodič menší nebo roven svým potomkům, takže nejmenší prvek je vždy v kořeni a získáme ho v konstantním čase. Pole [1,3,2,7,4] tuto vlastnost splňuje: 1≤3, 1≤2, 3≤7, 3≤4.",
+        "cv": "Stavbou haldy z [9,4,7,1,−2,6,5] vznikne min-halda s kořenem −2. Extract-min: vyjmeme −2, na kořen dáme poslední prvek a probubláme dolů ⇒ kořenem se stane 1. Druhý extract-min vyjme 1 a po probublání je kořenem 4. Každá operace trvá O(log n)."
       },
       "Související operace a jejich složitost": {
-        "ex": "Ve vyváženém BST je hloubka \\(O(\\log n)\\), takže hledání projde nejvýše log n uzlů. Zvrhne-li se BST na seznam (například vkládáním seřazených dat), je hloubka n a hledání trvá O(n) – proto se používají samovyvažující stromy.",
-        "cv": "Vyvážený BST: search, insert i delete vše \\(O(\\log n)\\). Nevyvážený BST: tytéž operace v nejhorším případě O(n). Halda: nalezení minima O(1), insert a extract-min \\(O(\\log n)\\), hledání obecného prvku O(n)."
+        "ex": "Ve vyváženém BST je hloubka O(log n), takže hledání projde nejvýše log n uzlů. Zvrhne-li se BST na seznam (například vkládáním seřazených dat), je hloubka n a hledání trvá O(n) – proto se používají samovyvažující stromy.",
+        "cv": "Vyvážený BST: search, insert i delete vše O(log n). Nevyvážený BST: tytéž operace v nejhorším případě O(n). Halda: nalezení minima O(1), insert a extract-min O(log n), hledání obecného prvku O(n)."
       },
       "Typické implementace a příklady použití": {
-        "ex": "Vyvážené stromy udržují prvky seřazené a umožňují rychlé hledání – proto implementují množiny a slovníky (std::map). B-stromy minimalizují diskové přístupy \\(\\Rightarrow \\) databázové indexy. Halda dává rychlý přístup k minimu \\(\\Rightarrow \\) prioritní fronta v Dijkstrově algoritmu.",
-        "cv": "Slovník (mapa klíč\\(\\to hodnota):\\) vyvážený binární vyhledávací strom, nebo hašovací tabulka. Prioritní fronta: halda – rychlé vložení i odebrání prvku s nejvyšší prioritou. Databázový index: B-strom, protože minimalizuje počet čtení diskových bloků."
+        "ex": "Vyvážené stromy udržují prvky seřazené a umožňují rychlé hledání – proto implementují množiny a slovníky (std::map). B-stromy minimalizují diskové přístupy ⇒ databázové indexy. Halda dává rychlý přístup k minimu ⇒ prioritní fronta v Dijkstrově algoritmu.",
+        "cv": "Slovník (mapa klíč→hodnota): vyvážený binární vyhledávací strom, nebo hašovací tabulka. Prioritní fronta: halda – rychlé vložení i odebrání prvku s nejvyšší prioritou. Databázový index: B-strom, protože minimalizuje počet čtení diskových bloků."
       }
     },
     "Návrh algoritmů": {
       "Metoda rozděl a panuj": {
-        "ex": "Binární vyhledávání porovná hledaný prvek s prostředním: je-li menší, hledá v levé polovině, jinak v pravé. Každý krok zahodí polovinu dat, takže po \\(log_{2}n\\) krocích zbude jediný prvek – odtud složitost \\(O(\\log n)\\).",
-        "cv": "Rozdělení: pole se rozpůlí na dvě poloviny. Řešení: každá polovina se rekurzivně seřadí mergesortem. Sloučení: dvě seřazené poloviny se slijí v lineárním čase. Rekurence \\(T(n)=2\\cdot T(n/2)+O(n)\\) dává složitost \\(O(n\\log n)\\)."
+        "ex": "Binární vyhledávání porovná hledaný prvek s prostředním: je-li menší, hledá v levé polovině, jinak v pravé. Každý krok zahodí polovinu dat, takže po log₂n krocích zbude jediný prvek – odtud složitost O(log n).",
+        "cv": "Rozdělení: pole se rozpůlí na dvě poloviny. Řešení: každá polovina se rekurzivně seřadí mergesortem. Sloučení: dvě seřazené poloviny se slijí v lineárním čase. Rekurence T(n)=2·T(n/2)+O(n) dává složitost O(n log n)."
       },
       "Výhody a nevýhody použití rekurze": {
-        "ex": "Rekurzivní \\(fib(n)=fib(n-1)+fib(n-2)\\) volá tytéž podproblémy znovu a znovu – počet volání roste exponenciálně. Memoizace (uložení už spočtených hodnot) nebo převod na iteraci tuto duplicitu odstraní.",
-        "cv": "Funkce: fact(n) = (n=0) ? 1 : \\(n\\cdot fact(n-1)\\). Každé volání zabere jeden rámec na zásobníku; při velmi velkém n (řádově desetitisíce volání podle limitu zásobníku) zásobník přeteče a program spadne. Bezpečnější je iterativní verze."
+        "ex": "Rekurzivní fib(n)=fib(n−1)+fib(n−2) volá tytéž podproblémy znovu a znovu – počet volání roste exponenciálně. Memoizace (uložení už spočtených hodnot) nebo převod na iteraci tuto duplicitu odstraní.",
+        "cv": "Funkce: fact(n) = (n=0) ? 1 : n·fact(n−1). Každé volání zabere jeden rámec na zásobníku; při velmi velkém n (řádově desetitisíce volání podle limitu zásobníku) zásobník přeteče a program spadne. Bezpečnější je iterativní verze."
       },
       "Odstranění rekurze": {
         "ex": "Koncová rekurze, kde je rekurzivní volání poslední operací, se převede na prostý cyklus. Obecná rekurze (například průchod stromem do obou potomků) se nahradí explicitním zásobníkem, do nějž ukládáme, co ještě zbývá zpracovat.",
-        "cv": "Iterativně: výsledek = 1; pro i od 2 do n opakuj výsledek = vý\\(sledek\\cdot i;\\) vrať výsledek. Ušetří se režie volání funkcí a spotřeba zásobníku – iterativní verze používá konstantní paměť a nehrozí přetečení zásobníku."
+        "cv": "Iterativně: výsledek = 1; pro i od 2 do n opakuj výsledek = výsledek·i; vrať výsledek. Ušetří se režie volání funkcí a spotřeba zásobníku – iterativní verze používá konstantní paměť a nehrozí přetečení zásobníku."
       },
       "Řadicí rekurzivní algoritmy": {
-        "ex": "Mergesort dělí pole vždy přesně na poloviny, proto má spolehlivě \\(O(n\\log n)\\). Quicksort dělí podle pivotu; vyjde-li pivot vždy krajní (například na seřazeném poli s prvním prvkem jako pivotem), jsou části velikosti 0 a \\(n-1 \\Rightarrow  O(n^{2})\\).",
-        "cv": "Mergesort: [5,2,8,1,9,3] \\(\\to \\) [5,2,8] a [1,9,3] \\(\\to \\) rekurzivně seřadit na [2,5,8] a [1,3,9] \\(\\to \\) sloučit na [1,2,3,5,8,9]. Quicksort s pivotem 5: menší [2,1,3], větší [8,9] \\(\\to \\) rekurzivně [1,2,3] a [8,9] \\(\\to \\) výsledek [1,2,3,5,8,9]."
+        "ex": "Mergesort dělí pole vždy přesně na poloviny, proto má spolehlivě O(n log n). Quicksort dělí podle pivotu; vyjde-li pivot vždy krajní (například na seřazeném poli s prvním prvkem jako pivotem), jsou části velikosti 0 a n−1 ⇒ O(n²).",
+        "cv": "Mergesort: [5,2,8,1,9,3] → [5,2,8] a [1,9,3] → rekurzivně seřadit na [2,5,8] a [1,3,9] → sloučit na [1,2,3,5,8,9]. Quicksort s pivotem 5: menší [2,1,3], větší [8,9] → rekurzivně [1,2,3] a [8,9] → výsledek [1,2,3,5,8,9]."
       },
       "Vztah rekurze a matematické indukce": {
         "ex": "Rekurzivní algoritmus i indukční důkaz mají stejnou kostru: ukončovací podmínka odpovídá bázi indukce, rekurzivní volání na menším vstupu indukčnímu kroku. Protože se velikost problému s každým voláním zmenšuje, indukce zaručuje i konečnost výpočtu.",
-        "cv": "Báze: sum(0)=0 = \\(0\\cdot 1/2\\) ✓. Indukční krok: předpokládejme \\(sum(n-1)=(n-1)\\cdot n/2\\). Pak \\(sum(n)=n+sum(n-1)=n+(n-1)\\cdot n/2 = (2n+n^{2}-n)/2 = (n^{2}+n)/2\\) = n(n+1)/2. ✓ Tvrzení platí pro všechna n."
+        "cv": "Báze: sum(0)=0 = 0·1/2 ✓. Indukční krok: předpokládejme sum(n−1)=(n−1)·n/2. Pak sum(n)=n+sum(n−1)=n+(n−1)·n/2 = (2n+n²−n)/2 = (n²+n)/2 = n(n+1)/2. ✓ Tvrzení platí pro všechna n."
       }
     },
     "Funkcionální programování": {
@@ -1932,8 +1932,8 @@ window.STUDY_DATASETS.push({
         "cv": "Imperativně: zavedeme proměnnou součet=0 a cyklem ji v každém kroku měníme (součet = součet + prvek) – stav se mění. Funkcionálně: foldr (+) 0 seznam – fold rekurzivně sloučí prvky do jediné hodnoty bez měnitelné proměnné a bez cyklu."
       },
       "Princip výpočtu a redukční krok": {
-        "ex": "Redex je část výrazu, kterou lze přepsat. \\((\\lambda x\\). x+1) 4 má redex celé aplikace: dosadíme 4 za x a vznikne 4+1; to je další redex, jehož přepisem získáme 5 – normální tvar, který je výsledkem.",
-        "cv": "double (double 3) \\(\\to \\) double (3+3) \\(\\to \\) double 6 \\(\\to \\) 6+6 \\(\\to \\) 12. Každý krok přepíše jeden redex podle definice double x = x+x; po vyčerpání redexů zůstane normální tvar 12."
+        "ex": "Redex je část výrazu, kterou lze přepsat. (λx. x+1) 4 má redex celé aplikace: dosadíme 4 za x a vznikne 4+1; to je další redex, jehož přepisem získáme 5 – normální tvar, který je výsledkem.",
+        "cv": "double (double 3) → double (3+3) → double 6 → 6+6 → 12. Každý krok přepíše jeden redex podle definice double x = x+x; po vyčerpání redexů zůstane normální tvar 12."
       },
       "Redukční strategie a jejich vlastnosti": {
         "ex": "fst (3, ⊥) vrací první složku dvojice. Líná strategie vyhodnocuje argument až při potřebě – druhá složka ⊥ se nikdy nevyžádá a výsledek je 3. Striktní strategie vyhodnotí oba argumenty předem, narazí na ⊥ a zacyklí se.",
@@ -1944,8 +1944,8 @@ window.STUDY_DATASETS.push({
         "cv": "foldr (+) 0 (map (^2) (filter even [1..10])). filter even [1..10] = [2,4,6,8,10]; map (^2) z toho udělá [4,16,36,64,100]; foldr (+) 0 sečte na výsledek 220."
       },
       "Nepojmenované funkce": {
-        "ex": "Krátkou jednorázovou funkci není nutné pojmenovávat – přímo na místě použití se zapíše lambda. Místo definice square x = \\(x\\cdot x\\) se ve volání map napíše \\(\\lambda x \\to  x\\cdot x\\). Pojem pochází z lambda kalkulu, teoretického základu funkcionálního programování.",
-        "cv": "Pojmenovaná funkce inc x = x+1 odpovídá lambda výrazu \\(\\lambda x \\to \\) x+1 (v Haskellu zapsanému jako anonymní funkce). Volání map \\((\\lambda x \\to \\) x+1) [1,2,3] dá výsledek [2,3,4]."
+        "ex": "Krátkou jednorázovou funkci není nutné pojmenovávat – přímo na místě použití se zapíše lambda. Místo definice square x = x·x se ve volání map napíše λx → x·x. Pojem pochází z lambda kalkulu, teoretického základu funkcionálního programování.",
+        "cv": "Pojmenovaná funkce inc x = x+1 odpovídá lambda výrazu λx → x+1 (v Haskellu zapsanému jako anonymní funkce). Volání map (λx → x+1) [1,2,3] dá výsledek [2,3,4]."
       },
       "Elementární programování v Haskellu": {
         "ex": "Funkce v Haskellu se definuje rovnicemi s pattern matchingem. length [] = 0 pokrývá prázdný seznam (báze rekurze); length (_:xs) = 1 + length xs zpracuje neprázdný seznam – jednička za hlavu plus délka zbytku.",
@@ -1954,16 +1954,16 @@ window.STUDY_DATASETS.push({
     },
     "Regulární jazyky": {
       "Chomského hierarchie formálních jazyků": {
-        "ex": "Slova nad \\(\\{a,b\\}\\) sudé délky pozná konečný automat (stačí pamatovat paritu délky) \\(\\Rightarrow \\) regulární, typ 3. Jazyk \\(a^{n}b^{n}\\) vyžaduje počítat a, na to stačí zásobník \\(\\Rightarrow \\) bezkontextový, typ 2. \\(a^{n}b^{n}c^{n}\\) vyžaduje hlídat tři počty zároveň – zásobník nestačí.",
-        "cv": "„Slova obsahující ab“ pozná konečný automat \\(\\Rightarrow \\) regulární, typ 3. \\(a^{n}b^{n}\\) vyžaduje porovnat dva počty, na to stačí zásobníkový automat \\(\\Rightarrow \\) bezkontextový, typ 2. \\(a^{n}b^{n}c^{n}\\) vyžaduje porovnat tři počty – ani zásobníkový automat nestačí, jazyk je až kontextový, typ 1."
+        "ex": "Slova nad {a,b} sudé délky pozná konečný automat (stačí pamatovat paritu délky) ⇒ regulární, typ 3. Jazyk aⁿbⁿ vyžaduje počítat a, na to stačí zásobník ⇒ bezkontextový, typ 2. aⁿbⁿcⁿ vyžaduje hlídat tři počty zároveň – zásobník nestačí.",
+        "cv": "„Slova obsahující ab“ pozná konečný automat ⇒ regulární, typ 3. aⁿbⁿ vyžaduje porovnat dva počty, na to stačí zásobníkový automat ⇒ bezkontextový, typ 2. aⁿbⁿcⁿ vyžaduje porovnat tři počty – ani zásobníkový automat nestačí, jazyk je až kontextový, typ 1."
       },
       "Regulární jazyky, jejich reprezentace a převody": {
         "ex": "Tři reprezentace jsou ekvivalentní: regulární výraz, pravolineární gramatika a konečný automat popisují přesně tutéž třídu jazyků. Mezi nimi existují algoritmické převody, například z regulárního výrazu na automat Thompsonovou konstrukcí.",
         "cv": "Automat má 3 stavy: q0 (počáteční), q1, q2 (přijímající). Z q0 přes b zpět do q0, přes a do q1. Z q1 přes a zpět do q1, přes b do q2. Z q2 přes a do q1, přes b do q0. Automat přijímá právě slova končící dvojicí „ab“."
       },
       "Varianty konečných automatů": {
-        "ex": "Konečný automat má stavy, abecedu, přechodovou funkci, počáteční a přijímající stavy. DKA má pro stav a symbol právě jeden přechod, NKA může mít více, NKA s \\(\\varepsilon -p\\)řechody navíc přechody bez čtení symbolu. Všechny varianty rozpoznávají regulární jazyky.",
-        "cv": "Stavy odpovídají zbytku po dělení 3: s0, s1, s2 (s0 je počáteční i přijímající). Přečtení bitu b znamená nové číslo \\(2\\cdot star\\)é+b: ze s0 přes \\(0\\to s0, 1\\to s1;\\) ze s1 přes \\(0\\to s2, 1\\to s0;\\) ze s2 přes \\(0\\to s1, 1\\to s2\\). Slovo je přijato, skončí-li ve stavu s0."
+        "ex": "Konečný automat má stavy, abecedu, přechodovou funkci, počáteční a přijímající stavy. DKA má pro stav a symbol právě jeden přechod, NKA může mít více, NKA s ε-přechody navíc přechody bez čtení symbolu. Všechny varianty rozpoznávají regulární jazyky.",
+        "cv": "Stavy odpovídají zbytku po dělení 3: s0, s1, s2 (s0 je počáteční i přijímající). Přečtení bitu b znamená nové číslo 2·staré+b: ze s0 přes 0→s0, 1→s1; ze s1 přes 0→s2, 1→s0; ze s2 přes 0→s1, 1→s2. Slovo je přijato, skončí-li ve stavu s0."
       },
       "Nedeterminismus a determinizace automatů": {
         "ex": "NKA pro slova končící na „ab“ má 3 stavy a může „uhodnout“, kde začíná koncové ab. Podmnožinová konstrukce vytvoří DKA, jehož stavy jsou množiny stavů NKA – tedy které stavy NKA mohou být po přečtení daného prefixu aktivní.",
@@ -1971,7 +1971,7 @@ window.STUDY_DATASETS.push({
       },
       "Uzávěrové vlastnosti regulárních jazyků": {
         "ex": "Uzavřenost se dokazuje konstrukcí: pro průnik se sestrojí součinový automat, pro doplněk se prohodí přijímající a nepřijímající stavy DKA, pro sjednocení a zřetězení se automaty pospojují. Výsledkem je vždy opět konečný automat, jazyk je tedy regulární.",
-        "cv": "Předpokládejme, že \\(L=a^{n}b^{n}\\) je regulární s konstantou p z pumping lemmatu. Vezmeme slovo \\(a^{p}b^{p}\\). Lemma rozdělí slovo na xyz, kde y leží v prvních p znacích, tedy \\(y=a^{k}\\) s \\(k\\ge 1\\). Napumpováním vznikne \\(a^{p+k}b^{p},\\) kde počty a a b nesouhlasí – slovo do L nepatří. Spor \\(\\Rightarrow \\) L není regulární."
+        "cv": "Předpokládejme, že L=aⁿbⁿ je regulární s konstantou p z pumping lemmatu. Vezmeme slovo aᵖbᵖ. Lemma rozdělí slovo na xyz, kde y leží v prvních p znacích, tedy y=aᵏ s k≥1. Napumpováním vznikne aᵖ⁺ᵏbᵖ, kde počty a a b nesouhlasí – slovo do L nepatří. Spor ⇒ L není regulární."
       }
     },
     "Rozhodnutelnost": {
@@ -1980,12 +1980,12 @@ window.STUDY_DATASETS.push({
         "cv": "Rozhodovací problém: vstupem je seznam, otázka „obsahuje dva stejné prvky?“, odpověď ANO/NE. Algoritmus: prvky vkládej postupně do množiny; narazíš-li na prvek, který už v ní je, vrať ANO, jinak po projití celého seznamu vrať NE. Skončí po konečném počtu kroků."
       },
       "Turingův stroj": {
-        "ex": "Stroj pro \\(a^{n}b^{n}\\) střídavě škrtá jedno a a jedno b a vrací hlavu zpět. V konečném řízení si pamatuje jen fázi (hledám a / hledám b), nikoli kolik jich už zpracoval – počty „pamatuje“ samotná páska.",
-        "cv": "Stroj prochází vstup \\(a^{n}\\) a každé a zpracuje tak, že ho označí a na konec pásky dopíše dvě nová a. Postup opakuje pro každé původní a; po vyčerpání vstupu obsahuje páska \\(a^{2n}\\). Klíčové je systematicky střídat čtení vlevo a zápis vpravo."
+        "ex": "Stroj pro aⁿbⁿ střídavě škrtá jedno a a jedno b a vrací hlavu zpět. V konečném řízení si pamatuje jen fázi (hledám a / hledám b), nikoli kolik jich už zpracoval – počty „pamatuje“ samotná páska.",
+        "cv": "Stroj prochází vstup aⁿ a každé a zpracuje tak, že ho označí a na konec pásky dopíše dvě nová a. Postup opakuje pro každé původní a; po vyčerpání vstupu obsahuje páska a²ⁿ. Klíčové je systematicky střídat čtení vlevo a zápis vpravo."
       },
       "Problém zastavení": {
         "ex": "Kdyby existoval univerzální „detektor zastavení“ H, šel by z něj sestrojit program D, který se zacyklí právě tehdy, když H tvrdí, že D skončí. Předpoklad existence H tedy vede ke sporu – H existovat nemůže.",
-        "cv": "Předpokládejme program H(p,v), jenž řekne, zda p na vstupu v skončí. Sestrojíme D(p): zavolá H(p,p); řekne-li H „skončí“, D se zacyklí, jinak skončí. Spustíme D(D): D skončí \\(\\Rightarrow \\) H řekl „skončí“ \\(\\Rightarrow \\) D se měl zacyklit, a naopak. Spor \\(\\Rightarrow \\) H nemůže existovat."
+        "cv": "Předpokládejme program H(p,v), jenž řekne, zda p na vstupu v skončí. Sestrojíme D(p): zavolá H(p,p); řekne-li H „skončí“, D se zacyklí, jinak skončí. Spustíme D(D): D skončí ⇒ H řekl „skončí“ ⇒ D se měl zacyklit, a naopak. Spor ⇒ H nemůže existovat."
       },
       "Rozhodnutelnost a částečná rozhodnutelnost": {
         "ex": "Problém zastavení je částečně rozhodnutelný: program odsimulujeme – skončí-li, odpovíme ANO. Záporné případy ale poznat neumíme: pokud program běží dál, nikdy nevíme, zda se nezastaví později – simulace u nich neskončí.",
@@ -2001,20 +2001,20 @@ window.STUDY_DATASETS.push({
       },
       "Diagonalizace": {
         "ex": "Předpokládáme, že lze všechna reálná čísla z (0,1) vypsat do seznamu. Zkonstruujeme číslo lišící se od n-tého čísla seznamu na n-té číslici. To se liší od každého čísla v seznamu, takže v seznamu být nemůže – seznam tedy nebyl úplný.",
-        "cv": "Předpokládejme seznam všech nekonečných posloupností nul a jedniček \\(s_{1}, s_{2}, s_{3}, \\dots \\) Sestrojíme posloupnost t, jejíž n-tý prvek je opakem n-tého prvku posloupnosti \\(s_{n}\\). Pak se t liší od každé \\(s_{n}\\) aspoň na n-té pozici, takže v seznamu chybí – posloupností je nespočetně mnoho."
+        "cv": "Předpokládejme seznam všech nekonečných posloupností nul a jedniček s₁, s₂, s₃, … Sestrojíme posloupnost t, jejíž n-tý prvek je opakem n-tého prvku posloupnosti sₙ. Pak se t liší od každé sₙ aspoň na n-té pozici, takže v seznamu chybí – posloupností je nespočetně mnoho."
       }
     },
     "Složitost": {
       "Složitost algoritmu versus složitost problému": {
-        "ex": "Bublinkové řazení dělá až \\(n^{2}\\) porovnání \\(\\Rightarrow  O(n^{2});\\) mergesort \\(O(n\\log n)\\). Složitost problému řazení porovnáváním je dolním odhadem \\(\\Omega (n\\) log n) – žádný algoritmus založený na porovnávání nemůže být asymptoticky rychlejší.",
-        "cv": "Naivní algoritmus násobení matic \\(n\\times n\\) počítá \\(n^{2}\\) prvků, každý jako součet n součinů \\(\\Rightarrow  O(n^{3})\\). To je složitost konkrétního algoritmu (horní mez problému). Složitost problému je složitost nejlepšího možného algoritmu – ta je nižší a její přesná hodnota není známa."
+        "ex": "Bublinkové řazení dělá až n² porovnání ⇒ O(n²); mergesort O(n log n). Složitost problému řazení porovnáváním je dolním odhadem Ω(n log n) – žádný algoritmus založený na porovnávání nemůže být asymptoticky rychlejší.",
+        "cv": "Naivní algoritmus násobení matic n×n počítá n² prvků, každý jako součet n součinů ⇒ O(n³). To je složitost konkrétního algoritmu (horní mez problému). Složitost problému je složitost nejlepšího možného algoritmu – ta je nižší a její přesná hodnota není známa."
       },
       "Složitostní třídy (P, NP, PSPACE)": {
-        "ex": "Nejkratší cesta se najde v polynomiálním čase \\(\\Rightarrow \\) třída P. U Sudoku se navržené řešení snadno (polynomiálně) ověří, i když ho těžko hledáme \\(\\Rightarrow \\) NP. Vyhodnocení kvantifikované formule potřebuje polynomiální prostor \\(\\Rightarrow \\) PSPACE.",
-        "cv": "Třídění: existuje algoritmus \\(O(n\\log n)\\), běží v polynomiálním čase \\(\\Rightarrow \\) P (a tím i NP). SAT: navržené ohodnocení proměnných se ověří dosazením v polynomiálním čase \\(\\Rightarrow \\) NP. Hledání nejkratší cesty: Dijkstrův algoritmus běží polynomiálně \\(\\Rightarrow \\) P."
+        "ex": "Nejkratší cesta se najde v polynomiálním čase ⇒ třída P. U Sudoku se navržené řešení snadno (polynomiálně) ověří, i když ho těžko hledáme ⇒ NP. Vyhodnocení kvantifikované formule potřebuje polynomiální prostor ⇒ PSPACE.",
+        "cv": "Třídění: existuje algoritmus O(n log n), běží v polynomiálním čase ⇒ P (a tím i NP). SAT: navržené ohodnocení proměnných se ověří dosazením v polynomiálním čase ⇒ NP. Hledání nejkratší cesty: Dijkstrův algoritmus běží polynomiálně ⇒ P."
       },
       "Vztahy mezi třídami a příklady problémů": {
-        "ex": "Každý problém řešitelný v polynomiálním čase lze v polynomiálním čase i ověřit, takže P \\(\\subseteq \\) NP; každý ověřitelný v polynomiálním čase lze řešit v polynomiálním prostoru, takže NP \\(\\subseteq \\) PSPACE. Zda jsou inkluze ostré, není známo.",
+        "ex": "Každý problém řešitelný v polynomiálním čase lze v polynomiálním čase i ověřit, takže P ⊆ NP; každý ověřitelný v polynomiálním čase lze řešit v polynomiálním prostoru, takže NP ⊆ PSPACE. Zda jsou inkluze ostré, není známo.",
         "cv": "Diagram: tři vnořené oblasti, P uvnitř NP a NP uvnitř PSPACE. Do P patří třídění a hledání nejkratší cesty, do NP problém SAT a barvení grafu, do PSPACE vyhodnocování kvantifikovaných booleovských formulí. Otázka P = NP je nejznámějším otevřeným problémem oboru."
       },
       "Těžkost a úplnost problému": {
@@ -2061,7 +2061,7 @@ window.STUDY_DATASETS.push({
       },
       "Polymorfismus": {
         "ex": "Polymorfismus dovoluje zacházet s různými objekty přes společné rozhraní. Pole Tvar může obsahovat Kruh i Čtverec; volání vykresli() se dynamicky naváže na skutečný typ objektu. Klient tedy nemusí psát podmínky podle typu každého tvaru.",
-        "cv": "Rozhraní Tvar definuje obvod(). Třída Kruh vrací \\(2\\pi r,\\) třída Obdelnik vrací 2*(a+b). Seznam [Kruh(1), Obdelnik(2,3)] lze projít cyklem a pro každý prvek zavolat t.obvod(). Volající zná jen rozhraní Tvar, konkrétní výpočet řeší implementace dané třídy."
+        "cv": "Rozhraní Tvar definuje obvod(). Třída Kruh vrací 2πr, třída Obdelnik vrací 2*(a+b). Seznam [Kruh(1), Obdelnik(2,3)] lze projít cyklem a pro každý prvek zavolat t.obvod(). Volající zná jen rozhraní Tvar, konkrétní výpočet řeší implementace dané třídy."
       }
     },
     "Principy nízkoúrovňového programování": {
@@ -2096,12 +2096,12 @@ window.STUDY_DATASETS.push({
     },
     "Architektury": {
       "Číselné soustavy a vztahy mezi nimi": {
-        "ex": "13 děleno dvěma dává zbytky 1,0,1,1 čtené odzadu, tedy \\(1101_{2}\\). Šestnáctkově je 13 jedna cifra D. Zpětně \\(1101_{2} = 1\\cdot 8+1\\cdot 4+0\\cdot 2+1\\) = 13 a \\(D_{16}\\) = 13.",
-        "cv": "45 dělením dvěma: zbytky 1,0,1,1,0,1 čtené odzadu dávají \\(101101_{2}\\). Do hexu seskupíme 0010 1101, tedy \\(2D_{16}\\). Kontrola: \\(2\\cdot 16+13=45\\) a \\(101101_{2}\\) = 32+8+4+1=45."
+        "ex": "13 děleno dvěma dává zbytky 1,0,1,1 čtené odzadu, tedy 1101₂. Šestnáctkově je 13 jedna cifra D. Zpětně 1101₂ = 1·8+1·4+0·2+1 = 13 a D₁₆ = 13.",
+        "cv": "45 dělením dvěma: zbytky 1,0,1,1,0,1 čtené odzadu dávají 101101₂. Do hexu seskupíme 0010 1101, tedy 2D₁₆. Kontrola: 2·16+13=45 a 101101₂ = 32+8+4+1=45."
       },
       "Zobrazení celého čísla v počítači a aritmetika": {
-        "ex": "V doplňkovém kódu dostaneme \\(-5\\) tak, že 00000101 invertujeme na 11111010 a přičteme 1: 11111011. Součet s +5 je 11111011 + 00000101 = 1 00000000; přenos mimo 8 bitů se zahodí a výsledek je nula.",
-        "cv": "+12 je 00001100, inverze 11110011, plus 1 dává 11110100, tedy \\(-12\\) v 8 bitech. Přetečení při sčítání kladných nastane, když výsledek přesáhne 127, například 01111111 + 00000001 = 10000000, což má znaménkový bit 1 a interpretuje se jako \\(-128\\)."
+        "ex": "V doplňkovém kódu dostaneme −5 tak, že 00000101 invertujeme na 11111010 a přičteme 1: 11111011. Součet s +5 je 11111011 + 00000101 = 1 00000000; přenos mimo 8 bitů se zahodí a výsledek je nula.",
+        "cv": "+12 je 00001100, inverze 11110011, plus 1 dává 11110100, tedy −12 v 8 bitech. Přetečení při sčítání kladných nastane, když výsledek přesáhne 127, například 01111111 + 00000001 = 10000000, což má znaménkový bit 1 a interpretuje se jako −128."
       },
       "Kódy (vnitřní, vnější, detekční a opravné)": {
         "ex": "Paritní bit doplní počet jedniček na sudý nebo lichý. Jedna změna bitu paritu převrátí a chyba se odhalí. Dvě změny ji ale mohou zachovat. Hammingův kód používá více kontrolních bitů, jejichž syndrom ukáže pozici jedné chybné cifry.",
@@ -2109,7 +2109,7 @@ window.STUDY_DATASETS.push({
       },
       "Obvody a paměti (parametry, architektura)": {
         "ex": "Kombinační obvod nemá paměť; výstup sčítačky je funkcí aktuálních vstupů. Sekvenční obvod obsahuje stav, typicky klopné obvody, takže výstup závisí i na minulosti. Registr je sada klopných obvodů uchovávající více bitů.",
-        "cv": "Poloviční sčítačka má vstupy A,B. Tabulka: \\(00\\to S=0,C=0; 01\\to S=1,C=0; 10\\to S=1,C=0; 11\\to S=0,C=1\\). Součet S je XOR(A,B), přenos C je AND(A,B). Obvod tedy tvoří jedna brána XOR a jedna brána AND."
+        "cv": "Poloviční sčítačka má vstupy A,B. Tabulka: 00→S=0,C=0; 01→S=1,C=0; 10→S=1,C=0; 11→S=0,C=1. Součet S je XOR(A,B), přenos C je AND(A,B). Obvod tedy tvoří jedna brána XOR a jedna brána AND."
       },
       "Procesor, programování, mikroprogramování": {
         "ex": "V cyklu fetch-decode-execute procesor podle PC načte instrukci do instrukčního registru, zvýší PC nebo připraví skok, dekodér určí operaci a operandy a výkonná část provede ALU operaci, přístup do paměti nebo změnu řízení. Mikroprogramovaný řadič rozkládá složité instrukce na mikrooperace.",
@@ -2123,7 +2123,7 @@ window.STUDY_DATASETS.push({
     "Databáze": {
       "Relační model dat": {
         "ex": "Relace je množina n-tic stejného schématu. STUDENT(id,jméno,ročník) má atributy se svými doménami a každý řádek je jedna n-tice. Pořadí řádků ani sloupců není podstatou relace; důležité jsou hodnoty atributů a integritní omezení.",
-        "cv": "KNIHA(isbn: text, nazev: text, autor: text, rok: celé číslo, stav: \\(\\{volná,půjčená\\}\\)) je relace, protože všechny řádky mají stejné atributy a hodnoty pocházejí z určených domén. Každý řádek reprezentuje jednu knihu nebo jeden exemplář podle zvoleného modelu."
+        "cv": "KNIHA(isbn: text, nazev: text, autor: text, rok: celé číslo, stav: {volná,půjčená}) je relace, protože všechny řádky mají stejné atributy a hodnoty pocházejí z určených domén. Každý řádek reprezentuje jednu knihu nebo jeden exemplář podle zvoleného modelu."
       },
       "Relační schéma": {
         "ex": "Schéma popisuje strukturu a typy: KNIHA(ISBN:text, název:text, rok:int). Instance relace je aktuální obsah tabulky, který se mění vložením či smazáním řádků. Schéma je stabilnější kontrakt, podle něhož databáze kontroluje data.",
@@ -2134,28 +2134,28 @@ window.STUDY_DATASETS.push({
         "cv": "ZÁKAZNÍK(id_zak, jmeno, email) má primární klíč id_zak. OBJEDNÁVKA(id_obj, datum, id_zak, castka) má primární klíč id_obj. Atribut OBJEDNÁVKA.id_zak je cizí klíč na ZÁKAZNÍK(id_zak), takže každá objednávka patří existujícímu zákazníkovi."
       },
       "Relační algebra (projekce, selekce, agregace, přejmenování)": {
-        "ex": "Selekce filtruje řádky podle podmínky, projekce vybírá atributy, přejmenování mění názvy atributů nebo relací a agregace shrnuje skupiny. Výraz \\(\\sigma (ro\\)čník=1)(STUDENT) zachová celé řádky prváků, \\(\\pi (jm\\)éno)(...) z nich vybere jen jména.",
-        "cv": "Dotaz „jména studentů 3. ročníku“ zapíšeme \\(\\pi _jm\\)é\\(no(\\sigma _ro\\)čník=3(STUDENT)). Nejprve selekce omezí relaci na studenty třetího ročníku, potom projekce ponechá pouze atribut jméno."
+        "ex": "Selekce filtruje řádky podle podmínky, projekce vybírá atributy, přejmenování mění názvy atributů nebo relací a agregace shrnuje skupiny. Výraz σ(ročník=1)(STUDENT) zachová celé řádky prváků, π(jméno)(...) z nich vybere jen jména.",
+        "cv": "Dotaz „jména studentů 3. ročníku“ zapíšeme π_jméno(σ_ročník=3(STUDENT)). Nejprve selekce omezí relaci na studenty třetího ročníku, potom projekce ponechá pouze atribut jméno."
       },
       "Spojování relací": {
-        "ex": "Join kombinuje související řádky z více relací. Přirozené spojení STUDENT \\(\\bowtie \\) OBOR přes id_oboru spojí jen dvojice se stejnou hodnotou id_oboru a výsledkem je tabulka obsahující údaje studenta i název oboru.",
-        "cv": "Výraz může být ZAMĚSTNANEC \\(\\bowtie_{\\text{ZAMĚSTNANEC.id\\_odd}=\\text{ODDĚLENÍ.id\\_odd}}\\) ODDĚLENÍ a následně projekce \\(\\pi_{\\text{id,jméno,název}}\\)(...). Pokud mají oba atributy stejný název id_odd, lze použít i přirozené spojení po tomto atributu."
+        "ex": "Join kombinuje související řádky z více relací. Přirozené spojení STUDENT ⋈ OBOR přes id_oboru spojí jen dvojice se stejnou hodnotou id_oboru a výsledkem je tabulka obsahující údaje studenta i název oboru.",
+        "cv": "Výraz může být ZAMĚSTNANEC ⋈_{ZAMĚSTNANEC.id_odd = ODDĚLENÍ.id_odd} ODDĚLENÍ a následně projekce π_{id,jméno,název}(...). Pokud mají oba atributy stejný název id_odd, lze použít i přirozené spojení po tomto atributu."
       },
       "Funkční závislosti": {
-        "ex": "\\(ISBN\\to n\\)ázev,autor říká, že dvě n-tice se stejným ISBN musí mít stejný název a autora. Ná\\(zev\\to ISBN\\) obecně neplatí, protože různé knihy mohou mít stejný název. Funkční závislosti popisují sémantiku dat a určují klíče i normalizaci.",
-        "cv": "Pro OBJEDNÁVKA(č_obj, datum, č_zák, jméno_zák) typicky platí č\\(_obj\\to datum,\\)č_zák a č_zá\\(k\\to jm\\)éno_zák. Z tranzitivity plyne č\\(_obj\\to jm\\)éno_zák. Klíčem je č_obj, protože určí všechny ostatní atributy; závislost č_zá\\(k\\to jm\\)éno_zák ale způsobuje redundanci údajů o zákazníkovi."
+        "ex": "ISBN→název,autor říká, že dvě n-tice se stejným ISBN musí mít stejný název a autora. Název→ISBN obecně neplatí, protože různé knihy mohou mít stejný název. Funkční závislosti popisují sémantiku dat a určují klíče i normalizaci.",
+        "cv": "Pro OBJEDNÁVKA(č_obj, datum, č_zák, jméno_zák) typicky platí č_obj→datum,č_zák a č_zák→jméno_zák. Z tranzitivity plyne č_obj→jméno_zák. Klíčem je č_obj, protože určí všechny ostatní atributy; závislost č_zák→jméno_zák ale způsobuje redundanci údajů o zákazníkovi."
       },
       "Normální formy (1NF, 2NF, 3NF, BCNF)": {
         "ex": "1NF vyžaduje atomické hodnoty bez opakujících se seznamů v buňce. Sloupec telefony obsahující více čísel porušuje 1NF; správně vznikne samostatná relace TELEFON(osoba_id,telefon) nebo více řádků, kde každá hodnota je atomická.",
         "cv": "U STUDENT(č_stud,předmět,jméno_uč,kabinet_uč) je přirozený klíč (č_stud,předmět), ale předmět určuje jméno_uč a jméno_uč určuje kabinet_uč. Nejde o 3NF kvůli tranzitivním a částečným závislostem neklíčových atributů. Rozklad na ZÁPIS(č_stud,předmět), VÝUKA(předmět,jméno_uč) a UČITEL(jméno_uč,kabinet_uč) redundanci odstraní."
       },
       "Vztahy mezi normálními formami": {
-        "ex": "Normální formy jsou hierarchické: BCNF \\(\\Rightarrow \\) 3NF \\(\\Rightarrow \\) 2NF \\(\\Rightarrow \\) 1NF. Silnější forma splňuje všechny slabší požadavky. Přechod výš obvykle snižuje redundanci a aktualizační anomálie, ale může zvýšit počet spojení v dotazech.",
+        "ex": "Normální formy jsou hierarchické: BCNF ⇒ 3NF ⇒ 2NF ⇒ 1NF. Silnější forma splňuje všechny slabší požadavky. Přechod výš obvykle snižuje redundanci a aktualizační anomálie, ale může zvýšit počet spojení v dotazech.",
         "cv": "Pořadí od nejslabší: 1NF požaduje atomické hodnoty; 2NF navíc odstraňuje závislost neklíčových atributů na části složeného klíče; 3NF odstraňuje tranzitivní závislosti neklíčových atributů; BCNF požaduje, aby levá strana každé netriviální funkční závislosti byla nadklíčem."
       },
       "Dekompozice relačních schémat a normalizace": {
         "ex": "Rozklad STUDENT(č_stud,předmět,jméno_uč) na ZÁPIS(č_stud,předmět) a VÝUKA(předmět,jméno_uč) odstraní opakování jména učitele u každého studenta stejného předmětu. Spojením podle předmětu lze původní informaci obnovit, pokud předmět jednoznačně určuje učitele.",
-        "cv": "Například R(č_obj,datum,č_zák,jméno_zák) s č\\(_obj\\to datum,\\)č_zák a č_zá\\(k\\to jm\\)éno_zák rozložíme na OBJ(č_obj,datum,č_zák) a ZAK(č_zák,jméno_zák). Průnik je č_zák, který je klíčem ZAK, takže spojení je bezeztrátové. Závislosti č\\(_obj\\to datum,\\)č_zák a č_zá\\(k\\to jm\\)éno_zák jsou zachovány v jednotlivých relacích."
+        "cv": "Například R(č_obj,datum,č_zák,jméno_zák) s č_obj→datum,č_zák a č_zák→jméno_zák rozložíme na OBJ(č_obj,datum,č_zák) a ZAK(č_zák,jméno_zák). Průnik je č_zák, který je klíčem ZAK, takže spojení je bezeztrátové. Závislosti č_obj→datum,č_zák a č_zák→jméno_zák jsou zachovány v jednotlivých relacích."
       }
     },
     "SQL, transakce a zpracování dotazů": {
@@ -2211,15 +2211,15 @@ window.STUDY_DATASETS.push({
       },
       "Vlákno, plánování vláken a procesů": {
         "ex": "Proces vlastní adresní prostor a prostředky, vlákna uvnitř procesu sdílejí paměť, ale mají vlastní zásobník a kontext běhu. Plánovač přepíná runnable vlákna na CPU. Round-robin dává každému časové kvantum, čímž zlepšuje odezvu interaktivních úloh.",
-        "cv": "Postup: u FCFS se úlohy seřadí podle příchodu; čekání úlohy je součet dob běhu předchozích úloh. U round-robin se simuluje fronta po kvantech, nedokončená úloha jde na konec. Pro každou úlohu spočítej čas dokončení, čekání = dokončení \\(-\\) příchod \\(-\\) vlastní běh, a průměr je součet čekání dělený počtem úloh."
+        "cv": "Postup: u FCFS se úlohy seřadí podle příchodu; čekání úlohy je součet dob běhu předchozích úloh. U round-robin se simuluje fronta po kvantech, nedokončená úloha jde na konec. Pro každou úlohu spočítej čas dokončení, čekání = dokončení − příchod − vlastní běh, a průměr je součet čekání dělený počtem úloh."
       },
       "Souběžnost, uváznutí, přidělování zdrojů": {
         "ex": "Deadlock vznikne, když vlákno T1 drží zámek A a čeká na B, zatímco T2 drží B a čeká na A. Jsou splněny podmínky vzájemného vyloučení, drž a čekej, nepreemptivnost a cyklické čekání. Jednotné pořadí zamykání, například vždy A potom B, cyklus odstraní.",
         "cv": "Situace: T1 zamkne L1 a pak žádá L2; T2 zamkne L2 a pak žádá L1. Obě čekají navždy. Oprava: stanovit globální pořadí zámků a vynutit, že každé vlákno zamyká nejprve L1 a teprve potom L2, případně použít try-lock s uvolněním a opakováním."
       },
       "Vznik procesu v POSIX a copy-on-write": {
-        "ex": "fork vytvoří potomka jako kopii procesu. V rodiči vrátí PID potomka, v potomkovi 0, při chybě \\(-1\\). Copy-on-write znamená, že stránky se fyzicky nekopírují hned; oba procesy je sdílejí jen pro čtení a kopie vznikne až při zápisu.",
-        "cv": "Příklad: pid_t pid=fork(); if (pid==0) { /* potomek */ } else if (pid>0) \\(\\{ /* rodič, pid je PID potomka */ \\}\\) else { /* chyba */ }. Po fork běží oba procesy od stejného místa programu, ale návratová hodnota jim umožní zvolit odlišnou větev."
+        "ex": "fork vytvoří potomka jako kopii procesu. V rodiči vrátí PID potomka, v potomkovi 0, při chybě −1. Copy-on-write znamená, že stránky se fyzicky nekopírují hned; oba procesy je sdílejí jen pro čtení a kopie vznikne až při zápisu.",
+        "cv": "Příklad: pid_t pid=fork(); if (pid==0) { /* potomek */ } else if (pid>0) { /* rodič, pid je PID potomka */ } else { /* chyba */ }. Po fork běží oba procesy od stejného místa programu, ale návratová hodnota jim umožní zvolit odlišnou větev."
       }
     },
     "Souborové systémy": {
@@ -2232,8 +2232,8 @@ window.STUDY_DATASETS.push({
         "cv": "Seřaď požadavky podle čísla stopy. Od aktuální pozice nejprve vezmi všechny požadavky ve zvoleném směru v rostoucím nebo klesajícím pořadí, poté otoč směr a obsluž zbytek. Celkový pohyb je součet absolutních rozdílů mezi po sobě navštívenými stopami, včetně případného dojezdu na kraj podle varianty SCAN."
       },
       "RAID": {
-        "ex": "RAID 0 stripuje data a zvyšuje propustnost, ale nemá redundanci. RAID 1 zrcadlí stejná data, takže kapacita je poloviční, ale jeden disk může selhat. RAID 5 rozkládá data i paritu, využitelná kapacita je \\(N-1\\) disků a snese výpadek jednoho disku.",
-        "cv": "RAID 0: kapacita součet disků, vysoká rychlost, žádná odolnost. RAID 1: kapacita jedné kopie, rychlé čtení, zápis jako na jeden disk, přežije selhání jedné kopie. RAID 5: kapacita \\((N-1)\\) disků, dobré čtení, zápisy dražší kvůli paritě, přežije výpadek jednoho disku."
+        "ex": "RAID 0 stripuje data a zvyšuje propustnost, ale nemá redundanci. RAID 1 zrcadlí stejná data, takže kapacita je poloviční, ale jeden disk může selhat. RAID 5 rozkládá data i paritu, využitelná kapacita je N−1 disků a snese výpadek jednoho disku.",
+        "cv": "RAID 0: kapacita součet disků, vysoká rychlost, žádná odolnost. RAID 1: kapacita jedné kopie, rychlé čtení, zápis jako na jeden disk, přežije selhání jedné kopie. RAID 5: kapacita (N−1) disků, dobré čtení, zápisy dražší kvůli paritě, přežije výpadek jednoho disku."
       },
       "Šifrování disku": {
         "ex": "Full-disk encryption chrání data v klidu: bez klíče jsou bloky na disku nerozlišitelné od náhodných dat. Po přihlášení se data transparentně dešifrují pro běžící systém, takže nechrání před malwarem aktivním v odemčené relaci.",
@@ -2267,7 +2267,7 @@ window.STUDY_DATASETS.push({
       },
       "Fyzická vrstva, signály a jejich kódování": {
         "ex": "Fyzická vrstva řeší reprezentaci bitů v médiu. NRZ drží jednu úroveň pro 1 a druhou pro 0, ale dlouhé sekvence stejných bitů ztěžují synchronizaci. Manchester vkládá přechod uprostřed bitového intervalu, takže nese i hodinovou informaci za cenu vyšší šířky pásma.",
-        "cv": "U NRZ lze 1011 zakreslit jako vysoká, nízká, vysoká, vysoká úroveň v po sobě jdoucích intervalech. U Manchesteru má každý bit přechod uprostřed; podle zvolené konvence například 1 jako nízká\\(\\to vysok\\)á a 0 jako vysoká\\(\\to n\\)ízká. Sekvence 1011 tedy obsahuje středové přechody v každém bitu."
+        "cv": "U NRZ lze 1011 zakreslit jako vysoká, nízká, vysoká, vysoká úroveň v po sobě jdoucích intervalech. U Manchesteru má každý bit přechod uprostřed; podle zvolené konvence například 1 jako nízká→vysoká a 0 jako vysoká→nízká. Sekvence 1011 tedy obsahuje středové přechody v každém bitu."
       },
       "Řízení přístupu k médiu": {
         "ex": "CSMA/CD: stanice poslouchá médium, vysílá, a pokud detekuje kolizi, přeruší vysílání a opakuje po náhodné prodlevě. U Wi-Fi stanice při vysílání špatně detekuje kolizi, protože vlastní signál přehluší příjem a existují skryté stanice; proto používá CSMA/CA, tedy vyhýbání kolizím.",
@@ -2283,7 +2283,7 @@ window.STUDY_DATASETS.push({
       },
       "Zajištěný přenos, sestavení a ukončení spojení": {
         "ex": "TCP handshake synchronizuje počáteční sekvenční čísla: klient pošle SYN, server SYN-ACK, klient ACK. Spolehlivost potom stojí na číslování bajtů, potvrzeních a retransmisích. Pokud potvrzení nepřijde včas nebo ACK přeskočí očekávaný rozsah, odesílatel ztracená data pošle znovu.",
-        "cv": "Sled zpráv: klient \\(\\to \\) server SYN(seq=x), server \\(\\to \\) klient SYN-ACK(seq=y, ack=x+1), klient \\(\\to \\) server ACK(ack=y+1). Příjemce pozná ztrátu podle mezery v sekvenčních číslech nebo opakovaně potvrzuje poslední souvisle přijatý bajt. Odesílatel reaguje timeoutem nebo fast retransmit po duplicitních ACK."
+        "cv": "Sled zpráv: klient → server SYN(seq=x), server → klient SYN-ACK(seq=y, ack=x+1), klient → server ACK(ack=y+1). Příjemce pozná ztrátu podle mezery v sekvenčních číslech nebo opakovaně potvrzuje poslední souvisle přijatý bajt. Odesílatel reaguje timeoutem nebo fast retransmit po duplicitních ACK."
       },
       "Transportní protokoly": {
         "ex": "TCP volíme tam, kde je nutná úplnost a pořadí dat; cena je handshake, potvrzování a řízení zahlcení. UDP volíme tam, kde je důležitá nízká latence nebo jednoduchý dotaz/odpověď a aplikace si případnou spolehlivost řeší sama.",
@@ -2384,11 +2384,11 @@ window.STUDY_DATASETS.push({
     },
     "Digitální systémy": {
       "Teorie zobrazení dat a kódování informací včetně operací": {
-        "ex": "Doplňkový kód sjednocuje sčítání kladných a záporných čísel: stejná sčítačka zpracuje oba případy. Význam bitů ale závisí na typu: 11111111 je \\(-1\\) jako signed 8bit, ale 255 jako unsigned.",
-        "cv": "+7 je 00000111, inverze 11111000 a plus 1 dává 11111001. Jako signed je to \\(-7,\\) jako unsigned je to 249. Interpretace není uložena v bitech, ale v typu a operaci, která je používá."
+        "ex": "Doplňkový kód sjednocuje sčítání kladných a záporných čísel: stejná sčítačka zpracuje oba případy. Význam bitů ale závisí na typu: 11111111 je −1 jako signed 8bit, ale 255 jako unsigned.",
+        "cv": "+7 je 00000111, inverze 11111000 a plus 1 dává 11111001. Jako signed je to −7, jako unsigned je to 249. Interpretace není uložena v bitech, ale v typu a operaci, která je používá."
       },
       "Algebraické, grafické a algoritmické minimalizační metody": {
-        "ex": "Výraz AB + \\(A\\neg B\\) obsahuje společný faktor A. Protože \\(B+\\neg B=1,\\) zůstane A. Obvod se zjednoduší z kombinace dvou AND a jednoho OR na pouhý signál A.",
+        "ex": "Výraz AB + A¬B obsahuje společný faktor A. Protože B+¬B=1, zůstane A. Obvod se zjednoduší z kombinace dvou AND a jednoho OR na pouhý signál A.",
         "cv": "Mintermy 1, 3, 5, 7 odpovídají všem kombinacím, kde C=1 bez ohledu na A a B. Karnaughova mapa dovolí seskupit všechny čtyři jedničky, takže F=C. Proměnné A a B se ve skupině mění, a proto nejsou ve výsledném implicantu."
       },
       "Optimalizace zpoždění, logických prvků a testovatelnosti": {
@@ -2397,7 +2397,7 @@ window.STUDY_DATASETS.push({
       },
       "Kombinační konstrukční prvky digitálních systémů": {
         "ex": "Multiplexer lze chápat jako hardwarový výběr podle adresy. Když datové vstupy nastavíme na hodnoty pravdivostní tabulky, adresové vstupy reprezentují proměnné a výstup realizuje danou funkci.",
-        "cv": "Poloviční sčítačka: pro A,B je součet S=A XOR B a přenos C=A AND B. Tabulka: \\(00\\to 00, 01\\to 10, 10\\to 10, 11\\to 01,\\) pokud zapisujeme S,C. Stačí hradlo XOR a hradlo AND."
+        "cv": "Poloviční sčítačka: pro A,B je součet S=A XOR B a přenos C=A AND B. Tabulka: 00→00, 01→10, 10→10, 11→01, pokud zapisujeme S,C. Stačí hradlo XOR a hradlo AND."
       },
       "Sekvenční obvody a kódování vnitřních stavů": {
         "ex": "Kódování stavů není jen formální detail. Binární kód šetří registry, ale přechodová logika může být složitější. One-hot používá jeden klopný obvod na stav, ale přechody se často vyjadřují jednodušeji.",
@@ -2418,7 +2418,7 @@ window.STUDY_DATASETS.push({
         "cv": "Pole lze rozdělit na bloky mezi vlákna nebo procesy. Každý počítá lokální histogram, čímž se vyhne souběžným zápisům do sdílených čítačů. Na konci se lokální histogramy redukují součtem po kategoriích. Synchronizace je potřeba při závěrečném sloučení nebo při použití sdíleného histogramu s atomickými operacemi."
       },
       "Výkonnostní analýza paralelních algoritmů": {
-        "ex": "Amdahlův zákon: S(p)=1/((1-f)+f/p). Pro f=0,9 a \\(p\\to \\infty \\) zůstane jmenovatel 0,1, tedy maximum 10. Přidávání procesorů nepomůže odstranit sekvenční část.",
+        "ex": "Amdahlův zákon: S(p)=1/((1-f)+f/p). Pro f=0,9 a p→∞ zůstane jmenovatel 0,1, tedy maximum 10. Přidávání procesorů nepomůže odstranit sekvenční část.",
         "cv": "Amdahlův zákon: S = 1 / ((1 - p) + p/n). Pro p=0,8 a n=4 je S = 1 / (0,2 + 0,8/4) = 1 / 0,4 = 2,5. I s nekonečně mnoha procesory by limit byl 1/0,2 = 5, protože sekvenční část zůstává bottleneckem."
       },
       "Paralelní algoritmy se sdílenou pamětí": {

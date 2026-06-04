@@ -1,13 +1,18 @@
-// Converts Unicode math in Informatika.js into KaTeX \( ... \) fragments.
-// Deterministic: always reads tools/Informatika.pristine.js, writes ../Informatika.js.
+// Converts Unicode math in a dataset file into KaTeX \( ... \) fragments.
+// Deterministic: reads tools/<base>.pristine.js, writes ../<file>.
 // Pipeline: (1) wrap math spans in delimiters, (2) translate Unicode->LaTeX inside spans.
-// Run: node tools/mathify.js   (add "report" arg to print residual unconverted math)
+// Run: node tools/mathify.js [File.js] [report]
+//   e.g. node tools/mathify.js PVA.js report   (defaults to Informatika.js)
 const fs = require("fs");
 const path = require("path");
 const T = String.raw;
 
-const pristine = path.join(__dirname, "Informatika.pristine.js");
-const out = path.join(__dirname, "..", "Informatika.js");
+const args = process.argv.slice(2);
+const REPORT = args.includes("report");
+const file = args.find(a => a.endsWith(".js")) || "Informatika.js";
+const base = path.basename(file).replace(/\.js$/, "");
+const pristine = path.join(__dirname, base + ".pristine.js");
+const out = path.join(__dirname, "..", file);
 let text = fs.readFileSync(pristine, "utf8");
 
 // ----- delimiters (file-source text: two backslashes so JS runtime = \( \) ) -----
@@ -123,6 +128,7 @@ const report = Object.entries(counts).sort((a, b) => b[1] - a[1]);
 console.log("wrote " + out);
 console.log("residual strong-math chars outside spans: " +
   report.reduce((n, e) => n + e[1], 0));
-if (process.argv[2] === "report") {
+console.log("(" + file + ")");
+if (REPORT) {
   console.log(report.map(e => "  " + e[0] + " : " + e[1]).join("\n"));
 }

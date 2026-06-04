@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
 <meta name="theme-color" content="#07090f">
-<title>🧠 Informatika Brainrot</title>
+<title>🧠 szbreels</title>
 <link rel="stylesheet" href="vendor/katex/katex.min.css">
 <style>
   :root {
@@ -37,7 +37,7 @@
     scroll-snap-stop: always;
     display: grid;
     place-items: center;
-    padding: max(14px, env(safe-area-inset-top)) 14px max(14px, env(safe-area-inset-bottom));
+    padding: calc(70px + env(safe-area-inset-top)) 14px max(16px, env(safe-area-inset-bottom));
     position: relative;
     isolation: isolate;
   }
@@ -112,11 +112,37 @@
     background: rgba(255,255,255,.07); border: 1px solid var(--line); color: var(--muted);
   }
 
+  .topbar {
+    position: fixed; top: max(10px, env(safe-area-inset-top)); left: 0; right: 0;
+    z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    pointer-events: none;
+  }
   .brand {
-    position: fixed; top: max(12px, env(safe-area-inset-top)); left: 0; right: 0;
-    text-align: center; z-index: 5; pointer-events: none;
+    text-align: center;
     font-size: .82rem; font-weight: 800; letter-spacing: .02em;
     color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.6);
+  }
+  .switch {
+    display: flex; gap: 6px; padding: 5px;
+    max-width: calc(100vw - 24px); overflow-x: auto; scrollbar-width: none;
+    border-radius: 999px; pointer-events: auto;
+    background: rgba(10,13,24,.55); border: 1px solid var(--line);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  }
+  .switch::-webkit-scrollbar { display: none; }
+  .pill {
+    flex: 0 0 auto; cursor: pointer; white-space: nowrap;
+    font: inherit; font-size: .76rem; font-weight: 700;
+    padding: 7px 13px; border-radius: 999px;
+    border: 1px solid transparent; background: transparent; color: var(--muted);
+    transition: background .15s, color .15s;
+  }
+  .pill[aria-pressed="true"] { background: #fff; color: #0b0e1c; }
+
+  .subj {
+    font-size: .66rem; font-weight: 800; letter-spacing: .03em;
+    padding: 4px 9px; border-radius: 999px; color: #0b0e1c;
+    background: var(--subj, #c9d6ff);
   }
   .home {
     position: fixed; top: max(12px, env(safe-area-inset-top));
@@ -138,27 +164,44 @@
 </head>
 <body>
 <a class="home" href="index.html" aria-label="Zpět na hlavní appku">←</a>
-<div class="brand">🧠 informatika brainrot</div>
+<div class="topbar">
+  <div class="brand">🧠 szbreels</div>
+  <div class="switch" id="switch" role="tablist" aria-label="Předmět"></div>
+</div>
 <div class="feed" id="feed" tabindex="0"></div>
 
 <script src="Informatika.js"></script>
+<script src="PVA.js"></script>
+<script src="CS.js"></script>
 <script src="vendor/katex/katex.min.js"></script>
 <script src="vendor/katex/contrib/auto-render.min.js"></script>
 <script>
 const DATASETS = window.STUDY_DATASETS || [];
-const DATA = DATASETS.find(d => d.id === "informatika") || DATASETS[0] || { topics: [] };
-const LABELS = DATA.categoryLabels || {};
 
-// Flatten every subtopic (dílčí pojem) into a bite-sized card item.
+// Subjects offered in the switcher (id "all" = mixed feed). Short labels + tag colours.
+const SUBJECTS = [
+  { id: "all", label: "Vše", short: "", color: "#c9d6ff" },
+  { id: "informatika", label: "Informatika", short: "Info", color: "#9ab8ff" },
+  { id: "pva", label: "PVA", short: "PVA", color: "#7fe0a8" },
+  { id: "cs", label: "Kyber", short: "Kyber", color: "#ff9ec4" }
+];
+const SUBJ = {};
+SUBJECTS.forEach(s => { SUBJ[s.id] = s; });
+
+// Flatten every subtopic (dílčí pojem) of every dataset into a bite-sized card item.
 const ITEMS = [];
-(DATA.topics || []).forEach(topic => {
-  (topic.scope || []).forEach(s => {
-    ITEMS.push({
-      okruh: topic.title,
-      cat: LABELS[topic.cat] || topic.cat,
-      codes: topic.codes || [],
-      title: s.t,
-      def: s.d
+DATASETS.forEach(ds => {
+  const labels = ds.categoryLabels || {};
+  (ds.topics || []).forEach(topic => {
+    (topic.scope || []).forEach(s => {
+      ITEMS.push({
+        datasetId: ds.id,
+        okruh: topic.title,
+        cat: labels[topic.cat] || topic.cat,
+        codes: topic.codes || [],
+        title: s.t,
+        def: s.d
+      });
     });
   });
 });
@@ -186,17 +229,18 @@ const TITLES = [
 
 const feed = document.getElementById("feed");
 
-// shuffle-bag so concepts don't repeat until the whole set has been seen
+// shuffle-bag over the active pool so concepts don't repeat until all are seen
+let pool = ITEMS;
 let bag = [];
 function nextItem() {
   if (!bag.length) {
-    bag = [...ITEMS.keys()];
+    bag = [...pool.keys()];
     for (let i = bag.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [bag[i], bag[j]] = [bag[j], bag[i]];
     }
   }
-  return ITEMS[bag.pop()];
+  return pool[bag.pop()];
 }
 
 let made = 0;
@@ -215,6 +259,12 @@ function makeReel(item, idx) {
   card.style.setProperty("--title", TITLES[idx % TITLES.length]);
 
   const top = el("div", "reel-top");
+  const sub = SUBJ[item.datasetId];
+  if (sub && sub.short) {
+    const tag = el("span", "subj", sub.short);
+    tag.style.setProperty("--subj", sub.color);
+    top.appendChild(tag);
+  }
   top.appendChild(el("span", "chip", "📚 " + item.okruh));
   top.appendChild(el("span", "cat", item.cat));
   card.appendChild(top);
@@ -275,11 +325,45 @@ function maybeExtend() {
   }
 }
 
-if (!ITEMS.length) {
-  feed.innerHTML = '<section class="reel"><article class="reel-card"><h2 class="reel-title">Nic k zobrazení</h2><div class="reel-def">Nepodařilo se načíst data Informatiky.</div></article></section>';
-} else {
+// ----- subject switcher -----
+const switchEl = document.getElementById("switch");
+let activeId = "all";
+
+function setSubject(id) {
+  if (!SUBJ[id]) id = "all";
+  activeId = id;
+  pool = id === "all" ? ITEMS : ITEMS.filter(it => it.datasetId === id);
+  bag = [];
+  made = 0;
+  feed.innerHTML = "";
+  [...switchEl.children].forEach(b => b.setAttribute("aria-pressed", String(b.dataset.id === id)));
+  if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + id);
   appendBatch(5);
+  feed.scrollTop = 0;
 }
+
+SUBJECTS.forEach(s => {
+  if (s.id !== "all" && !ITEMS.some(it => it.datasetId === s.id)) return; // skip empty datasets
+  const b = el("button", "pill", s.label);
+  b.dataset.id = s.id;
+  b.setAttribute("role", "tab");
+  b.setAttribute("aria-pressed", "false");
+  b.addEventListener("click", () => setSubject(s.id));
+  switchEl.appendChild(b);
+});
+
+if (!ITEMS.length) {
+  feed.innerHTML = '<section class="reel"><article class="reel-card"><h2 class="reel-title">Nic k zobrazení</h2><div class="reel-def">Nepodařilo se načíst data.</div></article></section>';
+} else {
+  const start = location.hash.slice(1);
+  setSubject(SUBJ[start] ? start : "all");
+}
+
+// allow switching subject by editing the URL hash (e.g. /szbreels#pva)
+window.addEventListener("hashchange", () => {
+  const id = location.hash.slice(1);
+  if (SUBJ[id] && id !== activeId) setSubject(id);
+});
 
 // hide the swipe hint after the first move; keep the feed topped up
 feed.addEventListener("scroll", () => {

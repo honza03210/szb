@@ -18,11 +18,13 @@ package manager, no network, no framework.
   filters, the shuffle-bag random draw (each topic appears once per round),
   rendering, and `localStorage`/cookie progress tracking. All logic lives in
   one inline `<script>` after the dataset `<script src>` tags.
-- `brainrot.html` — a standalone TikTok/Reels-style vertical snap-scroll feed
-  of random Informatika **subtopics** (one concept per full-screen card,
-  shuffle-bag order, infinite append on scroll, KaTeX-rendered). Served at the
-  pretty URL `/brainrot` (see `tools/serve.js`; GitHub Pages resolves it too).
-  Self-contained; loads only `Informatika.js` + KaTeX.
+- `szbreels.html` — a standalone TikTok/Reels-style vertical snap-scroll feed
+  of random **subtopics** (one concept per full-screen card, shuffle-bag order,
+  infinite append on scroll, KaTeX-rendered). A top switcher picks the subject —
+  `Vše` (all datasets mixed) / `Informatika` / `PVA` / `Kyber` — deep-linkable
+  via hash (`/szbreels#pva`); each card carries a subject tag in mixed mode.
+  Served at the pretty URL `/szbreels` (see `tools/serve.js`; GitHub Pages
+  resolves it too). Loads all three datasets + KaTeX.
 - `Informatika.js`, `PVA.js`, `CS.js` — datasets. Each does
   `window.STUDY_DATASETS = window.STUDY_DATASETS || []` then `.push({...})`.
   `index.html` flattens all datasets into `TOPICS`, `DETAIL`, and `SOLUTIONS`
@@ -66,14 +68,12 @@ from `file://`. After each card is built, `typesetMath()` runs
 `renderMathInElement` over it with delimiters `\( … \)` (inline) and `$$ … $$`
 (display).
 
-- **`Informatika.js` writes math as LaTeX inside `\( … \)`**, e.g.
+- **All three datasets write math as LaTeX inside `\( … \)`**, e.g.
   `\\(A^{\\top}\\)`, `\\(\\lambda\\)`, `\\(\\frac{...}{...}\\)`. Backslashes are
   **doubled** in the JS source so the runtime string is a single backslash.
   Fractions are currently left as inline slashes (`a/b`); everything else
   (matrices → `pmatrix`, sums, roots, sub/superscripts, Greek, set-builders,
   accents) is real LaTeX.
-- `PVA.js` and `CS.js` still use plain Unicode math (not yet migrated). They
-  render fine as text; to convert them, point the converter at them.
 - When KaTeX (`renderMathInElement`) is absent, `typesetMath()` no-ops, so the
   page degrades to showing the raw `\( … \)` source rather than breaking.
 
@@ -81,10 +81,11 @@ from `file://`. After each card is built, `typesetMath()` runs
 
 `tools/` holds the migration + check scripts (not loaded by the app):
 
-- `tools/mathify.js` — one-shot converter: reads the pristine snapshot
-  `tools/Informatika.pristine.js`, wraps Unicode math spans in `\( … \)`, and
-  translates the contents to LaTeX. Re-runnable and deterministic. Run with
-  `report` to list any math left outside spans.
+- `tools/mathify.js [File.js] [report]` — one-shot converter: reads the pristine
+  snapshot `tools/<base>.pristine.js`, wraps Unicode math spans in `\( … \)`,
+  and translates the contents to LaTeX, writing `<File.js>`. Defaults to
+  `Informatika.js`; pristine snapshots exist for all three datasets. Re-runnable
+  and deterministic. Add `report` to list any math left outside spans.
 - `tools/check-katex.js <file>` — compiles every `\( … \)` / `$$ … $$` fragment
   with the bundled KaTeX and reports any that fail. **Run this after editing
   math** in a dataset: `node tools/check-katex.js Informatika.js` (expect
