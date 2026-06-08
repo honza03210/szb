@@ -24,7 +24,7 @@ http
       res.writeHead(403).end("forbidden");
       return;
     }
-    // extensionless pretty URLs (e.g. /szbreels -> szbreels.html)
+    // extensionless pretty URLs (e.g. /reels -> reels.html)
     if (!path.extname(file) && fs.existsSync(file + ".html")) file += ".html";
     fs.readFile(file, (err, data) => {
       if (err) {

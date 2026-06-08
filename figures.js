@@ -2,7 +2,7 @@
 // window.renderFigure(spec) -> HTML string for a <figure> with an inline SVG.
 // Spec types: graph, automaton, curve, nested, layers.
 // Colours come from the page theme via CSS vars (with fallbacks), so the same
-// figure looks right on the dark cards in index.html and szbreels.html.
+// figure looks right on the dark cards in index.html and reels.html.
 (function () {
   "use strict";
   const STYLE = `

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
 <meta name="theme-color" content="#07090f">
-<title>🧠 szbreels</title>
+<title>🧠 reels</title>
 <link rel="stylesheet" href="vendor/katex/katex.min.css">
 <style>
   :root {
@@ -165,7 +165,7 @@
 <body>
 <a class="home" href="index.html" aria-label="Zpět na hlavní appku">←</a>
 <div class="topbar">
-  <div class="brand">🧠 szbreels</div>
+  <div class="brand">🧠 reels</div>
   <div class="switch" id="switch" role="tablist" aria-label="Předmět"></div>
 </div>
 <div class="feed" id="feed" tabindex="0"></div>
@@ -366,7 +366,7 @@ if (!ITEMS.length) {
   setSubject(SUBJ[start] ? start : "all");
 }
 
-// allow switching subject by editing the URL hash (e.g. /szbreels#pva)
+// allow switching subject by editing the URL hash (e.g. /reels#pva)
 window.addEventListener("hashchange", () => {
   const id = location.hash.slice(1);
   if (SUBJ[id] && id !== activeId) setSubject(id);

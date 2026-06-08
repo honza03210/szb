@@ -18,12 +18,12 @@ package manager, no network, no framework.
   filters, the shuffle-bag random draw (each topic appears once per round),
   rendering, and `localStorage`/cookie progress tracking. All logic lives in
   one inline `<script>` after the dataset `<script src>` tags.
-- `szbreels.html` — a standalone TikTok/Reels-style vertical snap-scroll feed
+- `reels.html` — a standalone TikTok/Reels-style vertical snap-scroll feed
   of random **subtopics** (one concept per full-screen card, shuffle-bag order,
   infinite append on scroll, KaTeX-rendered). A top switcher picks the subject —
   `Vše` (all datasets mixed) / `Informatika` / `PVA` / `Kyber` — deep-linkable
-  via hash (`/szbreels#pva`); each card carries a subject tag in mixed mode.
-  Served at the pretty URL `/szbreels` (see `tools/serve.js`; GitHub Pages
+  via hash (`/reels#pva`); each card carries a subject tag in mixed mode.
+  Served at the pretty URL `/reels` (see `tools/serve.js`; GitHub Pages
   resolves it too). Loads all three datasets + KaTeX.
 - `Informatika.js`, `PVA.js`, `CS.js` — datasets. Each does
   `window.STUDY_DATASETS = window.STUDY_DATASETS || []` then `.push({...})`.
@@ -98,7 +98,7 @@ from `file://`. After each card is built, `typesetMath()` runs
 `figures.js` is a tiny dependency-free helper exposing `window.renderFigure(spec)`
 → an HTML string for a `<figure>` with a themed inline SVG (colours come from the
 page CSS vars, so figures match the dark cards). Loaded by both `index.html` and
-`szbreels.html`; figures render right after a subtopic's definition.
+`reels.html`; figures render right after a subtopic's definition.
 
 - A scope item may carry an optional `fig` spec:
   `{ t, d, fig: { type, ...} }`. Supported `type`s: `graph` (nodes+edges, also
