@@ -175,6 +175,7 @@
 <script src="CS.js"></script>
 <script src="vendor/katex/katex.min.js"></script>
 <script src="vendor/katex/contrib/auto-render.min.js"></script>
+<script src="figures.js"></script>
 <script>
 const DATASETS = window.STUDY_DATASETS || [];
 
@@ -200,7 +201,8 @@ DATASETS.forEach(ds => {
         cat: labels[topic.cat] || topic.cat,
         codes: topic.codes || [],
         title: s.t,
-        def: s.d
+        def: s.d,
+        fig: s.fig
       });
     });
   });
@@ -273,6 +275,11 @@ function makeReel(item, idx) {
 
   const def = el("div", "reel-def");
   def.textContent = item.def;
+  if (item.fig && window.renderFigure) {
+    const fw = document.createElement("div");
+    fw.innerHTML = window.renderFigure(item.fig);
+    if (fw.firstElementChild) def.appendChild(fw.firstElementChild);
+  }
   card.appendChild(def);
 
   if (item.codes.length) {

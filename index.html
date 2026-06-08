@@ -332,6 +332,7 @@
 <script src="CS.js"></script>
 <script src="vendor/katex/katex.min.js"></script>
 <script src="vendor/katex/contrib/auto-render.min.js"></script>
+<script src="figures.js"></script>
 <script>
 const DATASETS = window.STUDY_DATASETS || [];
 const DATASET_BY_ID = new Map();
@@ -534,6 +535,11 @@ function render(topic) {
     d.open = true;
     d.appendChild(el("summary", null, s.t));
     d.appendChild(el("p", "sub-def", s.d));
+    if (s.fig && window.renderFigure) {
+      const fw = document.createElement("div");
+      fw.innerHTML = window.renderFigure(s.fig);
+      if (fw.firstElementChild) d.appendChild(fw.firstElementChild);
+    }
     d.appendChild(makeExtra("Praktický příklad",
       practicalExample(topic, s.t), exampleSolution(topic, s.t)));
     d.appendChild(makeExtra("Cvičení",
